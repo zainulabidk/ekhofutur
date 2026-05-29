@@ -88,4 +88,5 @@ export const CREATIONS = [
   "https://i.postimg.cc/kXWypPgB/20260110-113349.avif",
 ];
 
+/** Navbar / marketing logo (remote). Favicons: `src/app/icon.png`, `apple-icon.png`, `public/favicon.png`. */
 export const LOGO_URL = "https://i.postimg.cc/T2J3XnZb/TRANSPARENT.png";
