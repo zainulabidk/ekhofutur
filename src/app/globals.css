@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --accent: #ffd700;
+  --accent-hover: #f5cc00;
+  --muted: #64748b;
+  --surface: #f9fafb;
+  --footer-from: #000000;
+  --footer-via: #1f2a44;
+  --footer-to: #4682b4;
+  --radius-card: 1.25rem;
+  --radius-section: 2rem;
+  --font-sans: var(--font-poppins), system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --font-sans: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Lightweight scroll-in (GPU-friendly: opacity + transform only) */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+  transition:
+    opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal:not(.reveal-visible) {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}
+
+.highlight-bar {
+  @apply relative inline-block px-1;
+}
+
+.highlight-bar > span:first-child {
+  @apply relative z-10 italic;
+}
+
+.highlight-bar::after {
+  content: "";
+  @apply absolute left-0 bottom-1 w-full h-[55%] bg-yellow-400 -z-0;
+}
+
+.heading-display {
+  @apply text-4xl md:text-7xl font-black uppercase italic tracking-tighter leading-none;
+}
+
+.heading-section {
+  @apply text-3xl md:text-5xl font-black uppercase italic tracking-tighter;
+}
+
+.eyebrow {
+  @apply text-[10px] font-black uppercase tracking-[0.35em] text-black/30;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-black text-white font-black uppercase tracking-widest text-[10px] hover:bg-yellow-400 hover:text-black transition-colors duration-200;
+}
+
+.section-padding {
+  @apply py-14 md:py-20 px-6 md:px-12 lg:px-20;
+}
+
+.section-padding-tight {
+  @apply py-10 md:py-14 px-6 md:px-12 lg:px-20;
+}
+
+.container-site {
+  @apply max-w-7xl mx-auto w-full;
+}
+
+/* Hero slide crossfade */
+.hero-slide {
+  @apply absolute inset-0 transition-opacity duration-700 ease-out;
+}
+
+.hero-slide-active {
+  @apply opacity-100 z-10;
+}
+
+.hero-slide-inactive {
+  @apply opacity-0 z-0 pointer-events-none;
+}
+
+.hero-text-in {
+  animation: heroTextIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes heroTextIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes navIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  color: transparent;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,51 @@
+{
+  "name": "ekhofutur",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ekho Futur is a visionary conglomerate building the future across diverse industries.",
+  "author": "Ekho Futur",
+  "license": "MIT",
+  "homepage": "https://ekhofutur.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ekhofutur/ekhofutur.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ekhofutur/ekhofutur/issues"
+  },
+  "keywords": [
+    "Ekho Futur",
+    "visionary conglomerate",
+    "diverse industries",
+    "future building"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.8.0",
+    "next": "16.2.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
