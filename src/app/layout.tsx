@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth scroll-pt-24">
+    <html lang="en" className="scroll-smooth">
       <body className={`${poppins.variable} font-poppins antialiased min-h-screen`}>
         {children}
         <WhatsAppButton />

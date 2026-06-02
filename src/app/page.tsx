@@ -8,9 +8,9 @@ import { Testimonials, ContactForm } from "./components/Testimonials";
 
 export default function Home() {
   return (
-    <SiteShell>
+    <SiteShell className="relative min-h-screen bg-white font-poppins snap-y snap-proximity">
       <Hero />
-      <div className="relative z-10 bg-white">
+      <div id="main-content" className="relative z-10 bg-white snap-start">
         <WhatWeDo />
         <LatestCreations />
         <Categories />

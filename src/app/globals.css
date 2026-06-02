@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  --site-nav-height: 4.5rem;
   --background: #ffffff;
   --foreground: #0a0a0a;
   --accent: #ffd700;
@@ -21,14 +22,24 @@
   --font-sans: var(--font-sans);
 }
 
+@media (min-width: 768px) {
+  :root {
+    --site-nav-height: 5rem;
+  }
+}
+
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
+  scroll-padding-top: var(--site-nav-height);
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .snap-y {
+    scroll-snap-type: none;
   }
 }
 
@@ -43,7 +54,15 @@ body {
 
 /* Anchor targets clear fixed navbar */
 [id] {
-  scroll-margin-top: 5.5rem;
+  scroll-margin-top: var(--site-nav-height);
+}
+
+/* Homepage: hero + fixed nav = one screen */
+.home-hero-viewport {
+  height: 100svh;
+  height: 100dvh;
+  max-height: 100svh;
+  max-height: 100dvh;
 }
 
 /* Lightweight scroll-in (GPU-friendly: opacity + transform only) */

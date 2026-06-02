@@ -19,7 +19,7 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "relative flex items-center justify-center overflow-hidden bg-black pt-20",
+        "relative flex items-center justify-center overflow-hidden bg-black pt-[var(--site-nav-height)]",
         height === "lg" ? "h-[50vh] min-h-[360px]" : "h-[42vh] min-h-[300px]"
       )}
     >

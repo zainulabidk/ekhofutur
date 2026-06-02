@@ -4,9 +4,10 @@ import { PageHero } from "../components/ui/PageHero";
 import { MediaSlot } from "../components/ui/MediaSlot";
 import { Reveal } from "../components/ui/Reveal";
 import { ServiceVentureContent } from "../components/services/ServiceVentureContent";
-import { VENTURES } from "../constants/site";
+import { VENTURES, getNavServiceGroups } from "../constants/site";
 import { SITE_MEDIA } from "../constants/media";
 import { getVentureContent } from "../constants/ventureContent";
+import { ArrowRight } from "lucide-react";
 
 const FEATURED_ORDER = [
   "builders",
@@ -26,6 +27,8 @@ const otherVentures = VENTURES.filter(
   (v) => !FEATURED_ORDER.includes(v.id as (typeof FEATURED_ORDER)[number])
 );
 
+const navGroups = getNavServiceGroups();
+
 export default function ServicesPage() {
   return (
     <SiteShell>
@@ -37,8 +40,71 @@ export default function ServicesPage() {
         height="md"
       />
 
+      {/* All ventures — one screen overview */}
+      <section className="border-b border-black/5 bg-surface min-h-[calc(100svh-var(--site-nav-height))] flex flex-col">
+        <div className="container-site py-8 md:py-10 flex flex-col flex-1 min-h-0">
+          <Reveal className="shrink-0 mb-6 md:mb-8">
+            <h2 className="heading-section">Explore ventures</h2>
+            <p className="text-slate-500 font-medium mt-2 max-w-xl">
+              Every Echo Futur brand at a glance — open Menu anytime for quick navigation.
+            </p>
+          </Reveal>
+
+          <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain scrollbar-hide -mx-1 px-1">
+            <div className="space-y-8 pb-4">
+              {navGroups.map((group, gIdx) => (
+                <Reveal key={group.category} delay={gIdx * 30}>
+                  <p className="text-[10px] font-black uppercase tracking-[0.35em] text-slate-400 mb-3">
+                    {group.category}
+                  </p>
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+                    {group.items.map((item) => {
+                      const venture = VENTURES.find((v) => v.href === item.href);
+                      if (!venture) return null;
+                      return (
+                        <li key={item.id}>
+                          <Link
+                            href={item.href}
+                            className="group flex flex-col rounded-2xl overflow-hidden border border-slate-200/80 bg-white hover:border-yellow-400 hover:shadow-md transition-all h-full"
+                          >
+                            <div className="relative aspect-[4/3] bg-slate-100">
+                              <MediaSlot
+                                src={item.image}
+                                alt={item.name}
+                                fill
+                                sizes="(max-width: 640px) 50vw, 200px"
+                                imageClassName="group-hover:scale-105 transition-transform duration-300"
+                                placeholderLabel={item.name}
+                              />
+                            </div>
+                            <div className="p-3 flex-1 flex flex-col gap-1">
+                              <span className="text-[11px] font-black uppercase italic leading-tight text-slate-900 line-clamp-2 group-hover:text-[#4682B4] transition-colors">
+                                {item.name}
+                              </span>
+                              <span className="text-[9px] text-slate-400 uppercase tracking-wider mt-auto flex items-center gap-1">
+                                View
+                                <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                              </span>
+                            </div>
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding">
         <div className="container-site space-y-16 md:space-y-20">
+          <Reveal>
+            <h2 className="heading-section">Venture details</h2>
+            <p className="text-slate-500 font-medium mt-2">In-depth information for each service.</p>
+          </Reveal>
+
           {featuredVentures.map((venture, idx) => {
             const content = getVentureContent(venture.id);
             if (!content) return null;
@@ -47,10 +113,9 @@ export default function ServicesPage() {
               <Reveal
                 key={venture.id}
                 delay={idx * 40}
-                className="grid grid-cols-1 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-8 lg:gap-12 items-start border-b border-slate-100 pb-16 md:pb-20 last:border-0 last:pb-0"
+                className="grid grid-cols-1 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-8 lg:gap-12 items-start border-b border-slate-100 pb-16 md:pb-20 last:border-0 last:pb-0 scroll-mt-[calc(var(--site-nav-height)+1rem)]"
               >
-                {/* Left: imagery */}
-                <div className="lg:sticky lg:top-28 grid grid-cols-2 gap-2 md:gap-3">
+                <div className="lg:sticky lg:top-[calc(var(--site-nav-height)+1rem)] grid grid-cols-2 gap-2 md:gap-3 self-start">
                   {venture.images.slice(0, 4).map((img, i) => (
                     <div
                       key={i}
@@ -68,7 +133,6 @@ export default function ServicesPage() {
                   ))}
                 </div>
 
-                {/* Right: full venture copy */}
                 <ServiceVentureContent venture={venture} content={content} />
               </Reveal>
             );
@@ -103,16 +167,16 @@ export default function ServicesPage() {
                     />
                   </div>
                   <div className="p-6">
-                  <p className="eyebrow mb-2">{venture.category}</p>
-                  <h3 className="text-xl font-black uppercase italic mb-2">
-                    {venture.title}
-                  </h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4 line-clamp-3">
-                    {venture.description}
-                  </p>
-                  <Link href={venture.href} className="btn-primary text-[9px] py-3 px-6">
-                    Explore
-                  </Link>
+                    <p className="eyebrow mb-2">{venture.category}</p>
+                    <h3 className="text-xl font-black uppercase italic mb-2">
+                      {venture.title}
+                    </h3>
+                    <p className="text-slate-500 text-sm leading-relaxed mb-4 line-clamp-3">
+                      {venture.description}
+                    </p>
+                    <Link href={venture.href} className="btn-primary text-[9px] py-3 px-6">
+                      Explore
+                    </Link>
                   </div>
                 </Reveal>
               ))}
