@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { MediaSlot } from "./ui/MediaSlot";
 import { Reveal } from "./ui/Reveal";
 import { VENTURES } from "../constants/site";
 
@@ -34,12 +34,13 @@ export function IndustryTimeline() {
                       key={i}
                       className="relative aspect-square rounded-xl overflow-hidden"
                     >
-                      <Image
+                      <MediaSlot
                         src={img}
-                        alt=""
+                        alt={item.title}
                         fill
-                        className="object-cover hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 1024px) 50vw, 200px"
+                        imageClassName="hover:scale-105 transition-transform duration-500"
+                        placeholderLabel={item.title}
                       />
                     </div>
                   ))}

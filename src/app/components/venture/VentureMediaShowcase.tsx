@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { Play } from "lucide-react";
 import { Reveal } from "../ui/Reveal";
+import { MediaSlot } from "../ui/MediaSlot";
 import type { VentureMedia } from "@/lib/venture-media";
 import { cn } from "@/lib/cn";
 
@@ -38,12 +38,13 @@ export function VentureMediaShowcase({
               delay={i * 50}
               className="relative aspect-square rounded-2xl overflow-hidden bg-black/5"
             >
-              <Image
+              <MediaSlot
                 src={src}
                 alt={`${title} ${i + 1}`}
                 fill
-                className="object-cover hover:scale-105 transition-transform duration-500 ease-out"
                 sizes="(max-width: 768px) 50vw, 280px"
+                imageClassName="hover:scale-105 transition-transform duration-500 ease-out"
+                placeholderLabel={`${title} ${i + 1}`}
               />
             </Reveal>
           ))}

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Reveal } from "./ui/Reveal";
+import { MediaSlot } from "./ui/MediaSlot";
 import { CREATIONS } from "../constants/data";
 
 export function LatestCreations() {
@@ -21,16 +21,17 @@ export function LatestCreations() {
         <div className="hidden md:flex items-stretch gap-2 h-[320px] w-full max-w-4xl mx-auto">
           {CREATIONS.map((src, idx) => (
             <Reveal
-              key={src}
+              key={src + idx}
               delay={idx * 50}
               className="relative group flex-1 min-w-0 rounded-xl overflow-hidden shadow-md hover:flex-[2] transition-[flex] duration-500 ease-out"
             >
-              <Image
+              <MediaSlot
                 src={src}
                 alt={`Creation ${idx + 1}`}
                 fill
-                className="object-cover grayscale group-hover:grayscale-0 transition-[filter,transform] duration-500 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 20vw"
+                imageClassName="grayscale group-hover:grayscale-0 transition-[filter,transform] duration-500 group-hover:scale-105"
+                placeholderLabel={`Creation ${idx + 1}`}
               />
             </Reveal>
           ))}
@@ -39,15 +40,15 @@ export function LatestCreations() {
         <div className="md:hidden flex gap-3 overflow-x-auto pb-2 snap-x snap-mandatory scrollbar-hide">
           {CREATIONS.map((src, idx) => (
             <div
-              key={src}
+              key={src + idx}
               className="relative snap-center shrink-0 w-[240px] h-[280px] rounded-2xl overflow-hidden shadow-lg"
             >
-              <Image
+              <MediaSlot
                 src={src}
                 alt={`Creation ${idx + 1}`}
                 fill
-                className="object-cover"
                 sizes="240px"
+                placeholderLabel={`Photo ${idx + 1}`}
               />
             </div>
           ))}

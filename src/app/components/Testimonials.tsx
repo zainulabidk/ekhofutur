@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Quote } from "lucide-react";
+import { MediaSlot } from "./ui/MediaSlot";
 import { TESTIMONIALS } from "../constants/data";
 import { COMPANY_CONTACT } from "../constants/site";
 import { Reveal } from "./ui/Reveal";
@@ -34,8 +34,14 @@ export function Testimonials() {
                   </p>
                   <h5 className="text-black font-black uppercase text-sm italic">{t.name}</h5>
                 </div>
-                <div className="relative w-12 h-12 rounded-full border-2 border-yellow-400 overflow-hidden shrink-0">
-                  <Image src={t.image} alt={t.name} fill className="object-cover" sizes="48px" />
+                <div className="relative w-12 h-12 rounded-full border-2 border-yellow-400 overflow-hidden shrink-0 bg-slate-100">
+                  <MediaSlot
+                    src={t.image}
+                    alt={t.name}
+                    fill
+                    sizes="48px"
+                    placeholderLabel=" "
+                  />
                 </div>
               </div>
               <p className="text-black/70 font-medium leading-relaxed italic border-l-2 border-yellow-400 pl-4 mb-4 line-clamp-5">

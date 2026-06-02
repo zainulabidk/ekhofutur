@@ -1,23 +1,25 @@
-import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, Layers, Heart, Sparkles } from "lucide-react";
 import { Reveal } from "./ui/Reveal";
+import { MediaSlot } from "./ui/MediaSlot";
 import { SITE } from "../constants/site";
+import { SITE_MEDIA } from "../constants/media";
 
 const FEATURES = [
   {
     title: "Diverse Portfolio",
     desc: "Excellence across fashion, healthcare, technology, and more.",
-    icon: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/aboutSection/flashEmoji.png",
+    icon: Layers,
   },
   {
     title: "Customer First",
     desc: "Solutions tailored to your needs at every touchpoint.",
-    icon: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/aboutSection/colorsEmoji.png",
+    icon: Heart,
   },
   {
     title: "Innovation",
     desc: "Modern technology with timeless quality.",
-    icon: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/aboutSection/puzzelEmoji.png",
+    icon: Sparkles,
   },
 ];
 
@@ -45,8 +47,8 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 border-b border-white/10 pb-12 md:pb-16">
           {FEATURES.map((f, i) => (
             <Reveal key={f.title} delay={i * 60} className="space-y-4">
-              <div className="size-14 p-3 bg-white/10 border border-white/15 rounded-xl">
-                <Image src={f.icon} alt="" width={36} height={36} className="w-9 h-9" />
+              <div className="size-14 p-3 bg-white/10 border border-white/15 rounded-xl flex items-center justify-center">
+                <f.icon className="w-7 h-7 text-yellow-400" strokeWidth={1.5} />
               </div>
               <h3 className="text-xl font-black uppercase tracking-tight">{f.title}</h3>
               <p className="text-slate-300 font-medium leading-relaxed">{f.desc}</p>
@@ -56,12 +58,13 @@ export function About() {
 
         <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
           <Reveal className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden shadow-2xl">
-            <Image
-              src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80"
-              alt="Our businesses"
+            <MediaSlot
+              src={SITE_MEDIA.homeAbout}
+              alt="Ekho Future team"
               fill
-              className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
+              placeholderLabel="Team photo"
+              placeholderSubtext="Ekho Future"
             />
           </Reveal>
           <Reveal delay={80} className="space-y-4">

@@ -1,8 +1,9 @@
-import Image from "next/image";
 import { SiteShell } from "../components/layout/SiteShell";
 import { PageHero } from "../components/ui/PageHero";
+import { MediaSlot } from "../components/ui/MediaSlot";
 import { Reveal } from "../components/ui/Reveal";
 import { SITE } from "../constants/site";
+import { SITE_MEDIA } from "../constants/media";
 
 const VALUES = [
   { title: "Innovation", desc: "Cutting-edge technology and creative thinking." },
@@ -16,7 +17,7 @@ export default function AboutPage() {
       <PageHero
         title={`About ${SITE.name}`}
         subtitle="Diversified excellence · Unified vision"
-        image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80"
+        image={SITE_MEDIA.aboutHero}
       />
 
       <section className="section-padding">
@@ -37,12 +38,12 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal delay={80} className="relative aspect-square rounded-3xl overflow-hidden shadow-xl">
-            <Image
-              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1000&q=80"
-              alt="Team"
+            <MediaSlot
+              src={SITE_MEDIA.aboutTeam}
+              alt="Ekho Future team"
               fill
-              className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
+              placeholderLabel="Team photo"
             />
           </Reveal>
         </div>

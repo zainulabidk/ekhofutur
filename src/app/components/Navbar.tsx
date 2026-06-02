@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef, memo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { X, ArrowUpRight } from "lucide-react";
+import { MediaSlot } from "./ui/MediaSlot";
 import { LOGO_URL } from "../constants/data";
 import { MAIN_NAV, getNavServiceGroups } from "../constants/site";
 import { cn } from "@/lib/cn";
@@ -32,15 +33,17 @@ function ServicesMenuPanel({
                   onClick={onNavigate}
                   className="flex items-center gap-3 rounded-xl p-2 hover:bg-white/[0.06] transition-colors group"
                 >
-                  <span className="relative w-11 h-11 shrink-0 rounded-lg overflow-hidden bg-white/5 ring-1 ring-white/10">
-                    <Image
-                      src={item.image}
-                      alt=""
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      sizes="44px"
-                    />
-                  </span>
+          <span className="relative w-11 h-11 shrink-0 rounded-lg overflow-hidden bg-white/5 ring-1 ring-white/10">
+            <MediaSlot
+              src={item.image}
+              alt={item.name}
+              fill
+              sizes="44px"
+              imageClassName="group-hover:scale-105 transition-transform duration-300"
+              placeholderLabel=" "
+              className="media-placeholder-dark"
+            />
+          </span>
                   <span className="min-w-0 flex-1 flex items-center justify-between gap-2">
                     <span className="text-white/90 group-hover:text-yellow-400 text-xs font-semibold leading-snug line-clamp-2 transition-colors">
                       {item.name}

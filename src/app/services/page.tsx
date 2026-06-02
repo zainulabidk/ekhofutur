@@ -1,10 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
 import { SiteShell } from "../components/layout/SiteShell";
 import { PageHero } from "../components/ui/PageHero";
+import { MediaSlot } from "../components/ui/MediaSlot";
 import { Reveal } from "../components/ui/Reveal";
 import { ServiceVentureContent } from "../components/services/ServiceVentureContent";
 import { VENTURES } from "../constants/site";
+import { SITE_MEDIA } from "../constants/media";
 import { getVentureContent } from "../constants/ventureContent";
 
 const FEATURED_ORDER = [
@@ -32,7 +33,7 @@ export default function ServicesPage() {
         title="Our"
         highlight="Services"
         subtitle="Ventures across the Echo Futur group"
-        image="https://i.postimg.cc/mgmdWB53/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg"
+        image={SITE_MEDIA.servicesHero}
         height="md"
       />
 
@@ -55,12 +56,13 @@ export default function ServicesPage() {
                       key={i}
                       className="relative aspect-square rounded-2xl overflow-hidden shadow-md"
                     >
-                      <Image
+                      <MediaSlot
                         src={img}
                         alt={venture.title}
                         fill
-                        className="object-cover hover:scale-105 transition-transform duration-400"
                         sizes="(max-width: 1024px) 50vw, 220px"
+                        imageClassName="hover:scale-105 transition-transform duration-400"
+                        placeholderLabel={venture.title}
                       />
                     </div>
                   ))}
@@ -89,8 +91,18 @@ export default function ServicesPage() {
                 <Reveal
                   key={venture.id}
                   delay={idx * 40}
-                  className="bg-white p-6 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow"
+                  className="bg-white rounded-2xl border border-slate-100 hover:shadow-md transition-shadow overflow-hidden"
                 >
+                  <div className="relative aspect-[16/9] bg-slate-100">
+                    <MediaSlot
+                      src={venture.images[0]}
+                      alt={venture.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      placeholderLabel={venture.title}
+                    />
+                  </div>
+                  <div className="p-6">
                   <p className="eyebrow mb-2">{venture.category}</p>
                   <h3 className="text-xl font-black uppercase italic mb-2">
                     {venture.title}
@@ -101,6 +113,7 @@ export default function ServicesPage() {
                   <Link href={venture.href} className="btn-primary text-[9px] py-3 px-6">
                     Explore
                   </Link>
+                  </div>
                 </Reveal>
               ))}
             </div>

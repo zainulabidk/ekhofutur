@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { cn } from "@/lib/cn";
+import { MediaSlot } from "./MediaSlot";
 
 type PageHeroProps = {
   title: string;
@@ -23,7 +23,16 @@ export function PageHero({
         height === "lg" ? "h-[50vh] min-h-[360px]" : "h-[42vh] min-h-[300px]"
       )}
     >
-      <Image src={image} alt="" fill className="object-cover opacity-35" priority sizes="100vw" />
+      <MediaSlot
+        src={image}
+        alt={title}
+        fill
+        priority
+        sizes="100vw"
+        imageClassName="opacity-35"
+        placeholderLabel="Brand photo"
+        placeholderSubtext={title}
+      />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50" />
       <div className="relative z-10 text-center space-y-3 px-6">
         <h1 className="heading-display text-white">

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { MediaSlot } from "../ui/MediaSlot";
 import { ArrowRight } from "lucide-react";
 import { SiteShell } from "../layout/SiteShell";
 import { PageHero } from "../ui/PageHero";
@@ -86,12 +86,13 @@ export function VentureLanding({ venture }: VentureLandingProps) {
         <section className="section-padding-tight">
           <div className="container-site">
             <Reveal className="relative aspect-video rounded-3xl overflow-hidden group">
-              <Image
+              <MediaSlot
                 src={venture.videoPoster}
                 alt={`${venture.title} demo`}
                 fill
-                className="object-cover"
                 sizes="(max-width: 1280px) 100vw, 1200px"
+                placeholderLabel="Demo media"
+                placeholderSubtext={venture.title}
               />
               <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-6 gap-4">
                 <p className="text-white text-xl md:text-3xl font-black uppercase italic tracking-tight max-w-lg">

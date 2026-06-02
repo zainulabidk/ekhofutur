@@ -1,35 +1,32 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "./ui/Reveal";
+import { MediaSlot } from "./ui/MediaSlot";
 import { SITE } from "../constants/site";
-
-const AVATARS = [
-  "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200",
-  "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
-  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200",
-];
+import { SITE_MEDIA, VENTURE_AVATARS } from "../constants/media";
 
 export function WhatWeDo() {
   return (
     <section className="section-padding bg-white">
       <div className="container-site flex flex-col md:flex-row items-center gap-12 md:gap-16">
         <Reveal className="relative shadow-xl rounded-2xl overflow-hidden shrink-0 w-full md:max-w-md group">
-          <Image
-            src="https://i.postimg.cc/rw7qbsxt/business-people-team-up-together-work.jpg"
+          <MediaSlot
+            src={SITE_MEDIA.homeAbout}
             alt="Team collaboration"
             width={400}
             height={500}
-            className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-[filter] duration-500"
+            className="w-full h-auto"
+            imageClassName="w-full h-auto grayscale group-hover:grayscale-0 transition-[filter] duration-500"
+            placeholderLabel="Team photo"
           />
           <div className="flex items-center gap-3 absolute bottom-6 left-6 bg-white p-3 rounded-xl shadow-lg border border-black/5">
             <div className="flex -space-x-3 shrink-0">
-              {AVATARS.map((src, i) => (
+              {VENTURE_AVATARS.map((src, i) => (
                 <div
                   key={i}
-                  className="relative size-8 rounded-full border-2 border-white overflow-hidden"
+                  className="relative size-8 rounded-full border-2 border-white overflow-hidden bg-slate-100"
                 >
-                  <Image src={src} alt="" fill className="object-cover" sizes="32px" />
+                  <MediaSlot src={src} alt="" fill sizes="32px" placeholderLabel=" " />
                 </div>
               ))}
               <div className="flex items-center justify-center text-[9px] text-white size-8 rounded-full border-2 border-white bg-[#4682B4] font-black">

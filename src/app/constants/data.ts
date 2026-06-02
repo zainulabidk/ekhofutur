@@ -1,4 +1,6 @@
 export { INDUSTRY_TIMELINE } from "./site";
+import { heroImageForVenture } from "./media";
+import { getVentureImage } from "@/lib/venture-images";
 
 export const HERO_SLIDES = [
   {
@@ -6,51 +8,49 @@ export const HERO_SLIDES = [
     category: "Real Estate",
     title: "Building Dreams",
     description: "Expertly crafted architectural and urban developments",
-    image:
-      "https://i.postimg.cc/mgmdWB53/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg",
+    image: heroImageForVenture("builders", 0),
   },
   {
     id: 2,
-    category: "EV Charging Stations",
-    title: "Powering Tomorrow",
-    description: "Sustainable energy solutions for electric mobility",
-    image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1920&q=80",
+    category: "Sustainability",
+    title: "Pure Flow Water",
+    description: "Safe purification systems for home and business",
+    image: heroImageForVenture("pureflow", 0),
   },
   {
     id: 3,
     category: "Dental Excellence",
     title: "Smile with Confidence",
     description: "Advanced dental care and aesthetic treatments",
-    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1920&q=80",
+    image: heroImageForVenture("lubnas", 0),
   },
   {
     id: 4,
     category: "Outdoor Clothings",
     title: "Style Redefined",
     description: "Premium apparel for the modern adventurer",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&q=80",
+    image: heroImageForVenture("trend-setter", 0),
   },
   {
     id: 5,
     category: "Smart Kitchen",
     title: "Culinary Excellence",
     description: "Innovative tools for the contemporary home chef",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80",
+    image: heroImageForVenture("compliment", 0),
   },
   {
     id: 6,
     category: "AI & Technology",
     title: "ChatGPT Solutions",
     description: "Custom GPTs, automation, and AI training through Ekho Digix",
-    image:
-      "https://i.postimg.cc/0y4BJ9dX/Whats-App-Image-2026-03-10-at-3-12-21-PM.jpg",
+    image: heroImageForVenture("ekhodigix", 0),
   },
   {
     id: 7,
     category: "Lifestyle",
     title: "Wellness Sanctuary",
     description: "Curated space for relaxation and rejuvenation",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&q=80",
+    image: heroImageForVenture("wellness", 0),
   },
 ];
 
@@ -60,24 +60,21 @@ export const TESTIMONIALS = [
     name: "Sarah Ahmed",
     role: "Dental Studio Client",
     text: "Ekho Future transformed our office with their dental studio. Professional service, modern equipment, and a team that truly cares about patient comfort.",
-    image:
-      "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200",
+    image: getVentureImage("lubnas", 1)!,
   },
   {
     id: 2,
     name: "Michael Chen",
-    role: "EV Charging Customer",
-    text: "The EV charging stations are incredibly convenient and reliable. Fast charging, easy payment, and always well-maintained. Highly recommend!",
-    image:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
+    role: "Pure Flow Customer",
+    text: "Our Pure Flow system delivers clean water every day. Installation was smooth and maintenance support has been excellent.",
+    image: getVentureImage("pureflow", 1)!,
   },
   {
     id: 3,
     name: "Amira Hassan",
-    role: "Fashion Boutique Customer",
-    text: "Found the perfect dress for my sister's wedding at their boutique. The collection is stunning and the staff made shopping a delightful experience.",
-    image:
-      "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60",
+    role: "Trend Setter Customer",
+    text: "Found the perfect outdoor look for my trip. The collection is stunning and the staff made shopping a delightful experience.",
+    image: getVentureImage("trend-setter", 1)!,
   },
 ];
 

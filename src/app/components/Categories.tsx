@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { MediaSlot } from "./ui/MediaSlot";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "./ui/Reveal";
 import { getCategoryGroups } from "../constants/site";
@@ -40,12 +40,12 @@ export function Categories() {
                         key={imgIdx}
                         className="relative overflow-hidden rounded-xl"
                       >
-                        <Image
+                        <MediaSlot
                           src={src}
-                          alt=""
+                          alt={item.name}
                           fill
-                          className="object-cover"
                           sizes="(max-width: 768px) 50vw, 25vw"
+                          placeholderLabel={item.name}
                         />
                       </div>
                     ))}

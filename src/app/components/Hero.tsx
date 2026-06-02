@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect, useCallback, memo } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { MediaSlot } from "./ui/MediaSlot";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { HERO_SLIDES } from "../constants/data";
 import { cn } from "@/lib/cn";
@@ -36,13 +36,14 @@ function HeroComponent() {
           )}
           aria-hidden={i !== current}
         >
-          <Image
+          <MediaSlot
             src={s.image}
-            alt=""
+            alt={s.title}
             fill
-            className="object-cover"
             priority={i === 0}
             sizes="100vw"
+            placeholderLabel={s.category}
+            placeholderSubtext={s.title}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />

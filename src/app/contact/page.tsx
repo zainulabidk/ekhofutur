@@ -1,13 +1,21 @@
 import { Mail, Phone, MapPin } from "lucide-react";
 import { SiteShell } from "../components/layout/SiteShell";
+import { PageHero } from "../components/ui/PageHero";
 import { BrandContactsGrid } from "../components/contact/BrandContactsGrid";
 import { Reveal } from "../components/ui/Reveal";
 import { COMPANY_CONTACT } from "../constants/site";
+import { SITE_MEDIA } from "../constants/media";
 
 export default function ContactPage() {
   return (
     <SiteShell>
-      <section className="pt-28 md:pt-32 section-padding">
+      <PageHero
+        title="Contact"
+        subtitle="Echo Futur · All ventures"
+        image={SITE_MEDIA.contactHero}
+        height="md"
+      />
+      <section className="section-padding">
         <div className="container-site space-y-14 md:space-y-16">
           {/* Header + form */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
