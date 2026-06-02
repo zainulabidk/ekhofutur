@@ -5,13 +5,17 @@ import { BRAND_RESOURCES } from "@/app/constants/site";
 const BRAND_LABELS: Record<string, string> = {
   "old-school": "Old School",
   compliment: "Complikit",
-  "trend-setters": "Trend Setters",
+  "trend-setter": "Trend Setters",
   builders: "Builders & Realtors",
-  "pots-pans": "Pots & Pans",
+  "pots-and-pans": "Pots & Pans",
   "ekho-rascapes": "Ekho Rascapes",
+  ekhodigix: "Ekho Digix",
   skillbyte: "Ekho SkillByte",
   "ekho-future": "Ekho Future",
   pureflow: "Pure Flow",
+  lubnas: "Lubnas Dental",
+  "hopeful-steps": "Hopeful Steps",
+  wellness: "Home Stays & Wellness",
 };
 
 export function BrandContactsGrid() {

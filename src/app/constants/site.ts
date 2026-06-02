@@ -5,7 +5,7 @@ export const SITE = {
   legalName: "Ekho Future",
   tagline: "Diversified Excellence",
   description:
-    "A visionary conglomerate building the future across fashion, wellness, smart kitchen, real estate, and digital innovation.",
+    "A visionary conglomerate across real estate, fashion, wellness, smart kitchen, and ChatGPT-powered digital solutions through Ekho Digix.",
 } as const;
 
 export const MAIN_NAV = [
@@ -39,9 +39,28 @@ export type Venture = {
   category: string;
   tagline?: string;
   accent?: string;
+  /** YouTube embed URL or direct .mp4 — shown on venture landing pages */
+  videoUrl?: string;
+  videoPoster?: string;
 };
 
 export const VENTURES: Venture[] = [
+  {
+    id: "builders",
+    title: "Echo Futur Builders & Realtors",
+    category: "Real Estate",
+    description:
+      "Expertly crafted real estate solutions for modern urban and residential developments.",
+    images: [
+      "https://i.postimg.cc/mgmdWB53/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg",
+      "https://i.postimg.cc/C1TkW2Sn/Whats-App-Image-2026-03-10-at-2-39-02-PM-(1).jpg",
+      "https://i.postimg.cc/fR199P3P/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg",
+      "https://i.postimg.cc/J7KHq0D3/Whats-App-Image-2026-03-10-at-2-39-02-PM-(1).jpg",
+    ],
+    href: "/builders-realtors",
+    tagline: "Property development",
+    accent: "#1e3a5f",
+  },
   {
     id: "old-school",
     title: "Old School",
@@ -139,22 +158,6 @@ export const VENTURES: Venture[] = [
     accent: "#78350f",
   },
   {
-    id: "builders",
-    title: "Echo Futur Builders & Realtors",
-    category: "Real Estate",
-    description:
-      "Expertly crafted real estate solutions for modern urban and residential developments.",
-    images: [
-      "https://i.postimg.cc/mgmdWB53/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg",
-      "https://i.postimg.cc/C1TkW2Sn/Whats-App-Image-2026-03-10-at-2-39-02-PM-(1).jpg",
-      "https://i.postimg.cc/fR199P3P/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg",
-      "https://i.postimg.cc/J7KHq0D3/Whats-App-Image-2026-03-10-at-2-39-02-PM-(1).jpg",
-    ],
-    href: "/builders-realtors",
-    tagline: "Property development",
-    accent: "#1e3a5f",
-  },
-  {
     id: "ekho-rascapes",
     title: "Ekho Rascapes",
     category: "Landscape",
@@ -216,22 +219,26 @@ export const VENTURES: Venture[] = [
     href: "/ekho-digix",
     tagline: "Digital agency",
     accent: "#4682B4",
+    videoPoster:
+      "https://i.postimg.cc/Y96nVYcZ/Whats-App-Image-2026-03-10-at-3-12-22-PM.jpg",
   },
   {
     id: "skillbyte",
     title: "Ekho SkillByte Academy",
     category: "Ekho Digix",
     description:
-      "Industry-aligned digital skills training and professional coaching.",
+      "Industry-aligned digital skills training, ChatGPT workflows, and professional AI coaching.",
     images: [
-      "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80",
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80",
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80",
-      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
+      "https://i.postimg.cc/0y4BJ9dX/Whats-App-Image-2026-03-10-at-3-12-21-PM.jpg",
+      "https://i.postimg.cc/QM5091MM/Whats-App-Image-2026-03-10-at-3-12-22-PM.jpg",
+      "https://i.postimg.cc/SNvrgD22/Whats-App-Image-2026-03-10-at-3-12-22-PM.jpg",
+      "https://i.postimg.cc/Y96nVYcZ/Whats-App-Image-2026-03-10-at-3-12-22-PM.jpg",
     ],
     href: "/skillbyte",
-    tagline: "Tech education",
+    tagline: "ChatGPT & AI training",
     accent: "#4f46e5",
+    videoPoster:
+      "https://i.postimg.cc/0y4BJ9dX/Whats-App-Image-2026-03-10-at-3-12-21-PM.jpg",
   },
 ];
 
@@ -258,10 +265,10 @@ export type NavServiceGroup = {
 
 export function getNavServiceGroups(): NavServiceGroup[] {
   const order = [
+    "Real Estate",
     "Outdoor Clothings",
     "Life Care",
     "Smart Kitchen",
-    "Real Estate",
     "Landscape",
     "Hospitality",
     "Sustainability",

@@ -3,52 +3,54 @@ export { INDUSTRY_TIMELINE } from "./site";
 export const HERO_SLIDES = [
   {
     id: 1,
+    category: "Real Estate",
+    title: "Building Dreams",
+    description: "Expertly crafted architectural and urban developments",
+    image:
+      "https://i.postimg.cc/mgmdWB53/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg",
+  },
+  {
+    id: 2,
     category: "EV Charging Stations",
     title: "Powering Tomorrow",
     description: "Sustainable energy solutions for electric mobility",
     image: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=1920&q=80",
   },
   {
-    id: 2,
+    id: 3,
     category: "Dental Excellence",
     title: "Smile with Confidence",
     description: "Advanced dental care and aesthetic treatments",
     image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1920&q=80",
   },
   {
-    id: 3,
+    id: 4,
     category: "Outdoor Clothings",
     title: "Style Redefined",
     description: "Premium apparel for the modern adventurer",
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920&q=80",
   },
   {
-    id: 4,
+    id: 5,
     category: "Smart Kitchen",
     title: "Culinary Excellence",
     description: "Innovative tools for the contemporary home chef",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80",
   },
   {
-    id: 5,
-    category: "Technology",
-    title: "Innovation Hub",
-    description: "Digital transformation and advanced IT solutions",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80",
+    id: 6,
+    category: "AI & Technology",
+    title: "ChatGPT Solutions",
+    description: "Custom GPTs, automation, and AI training through Ekho Digix",
+    image:
+      "https://i.postimg.cc/0y4BJ9dX/Whats-App-Image-2026-03-10-at-3-12-21-PM.jpg",
   },
   {
-    id: 6,
+    id: 7,
     category: "Lifestyle",
     title: "Wellness Sanctuary",
     description: "Curated space for relaxation and rejuvenation",
     image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&q=80",
-  },
-  {
-    id: 7,
-    category: "Real Estate",
-    title: "Building Dreams",
-    description: "Expertly crafted architectural and urban developments",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80",
   },
 ];
 

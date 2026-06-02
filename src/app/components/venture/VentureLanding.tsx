@@ -5,8 +5,12 @@ import { SiteShell } from "../layout/SiteShell";
 import { PageHero } from "../ui/PageHero";
 import { ContactStrip } from "../ui/ContactStrip";
 import { Reveal } from "../ui/Reveal";
+import { ServiceVentureContent } from "../services/ServiceVentureContent";
+import { VentureMediaShowcase } from "./VentureMediaShowcase";
 import type { Venture } from "@/app/constants/site";
 import { getBrandById } from "@/app/constants/brandResources";
+import { getVentureContent } from "@/app/constants/ventureContent";
+import { getVentureMedia } from "@/lib/venture-media";
 
 type VentureLandingProps = {
   venture: Venture;
@@ -15,6 +19,8 @@ type VentureLandingProps = {
 export function VentureLanding({ venture }: VentureLandingProps) {
   const brand = getBrandById(venture.id);
   const accent = venture.accent ?? "#FFD700";
+  const content = getVentureContent(venture.id);
+  const media = getVentureMedia(venture.id);
 
   return (
     <SiteShell>
@@ -24,64 +30,87 @@ export function VentureLanding({ venture }: VentureLandingProps) {
         image={venture.images[0]}
       />
 
-      <section className="section-padding">
-        <div className="container-site grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <Reveal className="space-y-6">
-            <p
-              className="text-xs font-black uppercase tracking-[0.35em]"
-              style={{ color: accent }}
+      <section className="section-padding-tight border-b border-black/5 bg-surface">
+        <div className="container-site flex flex-wrap items-center justify-between gap-4">
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-black uppercase tracking-widest text-[10px] text-white transition-opacity hover:opacity-90"
+            style={{ backgroundColor: accent }}
+          >
+            Get in touch
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+          {brand?.email && (
+            <a
+              href={`mailto:${brand.email}`}
+              className="text-sm text-slate-500 font-bold hover:text-black transition-colors"
             >
-              {venture.category}
-            </p>
-            <h2 className="heading-section">Built for the future</h2>
-            <p className="text-slate-500 text-lg font-medium leading-relaxed">
-              {venture.description}
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-black uppercase tracking-widest text-[10px] text-white transition-opacity hover:opacity-90"
-                style={{ backgroundColor: accent }}
-              >
-                Get in touch
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              {brand?.googleDocUrl && (
-                <a
-                  href={brand.googleDocUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-3 rounded-full border-2 border-black font-black uppercase tracking-widest text-[10px] hover:bg-black hover:text-white transition-colors"
-                >
-                  Brand brief
-                </a>
-              )}
-            </div>
-            {brand?.email && (
-              <a
-                href={`mailto:${brand.email}`}
-                className="text-sm text-slate-500 font-bold hover:text-black transition-colors"
-              >
-                {brand.email}
-              </a>
-            )}
-          </Reveal>
-
-          <div className="grid grid-cols-2 gap-2 md:gap-3">
-            {venture.images.slice(0, 4).map((src, i) => (
-              <Reveal key={src + i} delay={i * 40} className="relative aspect-square rounded-2xl overflow-hidden">
-                <Image
-                  src={src}
-                  alt=""
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-400"
-                  sizes="(max-width: 1024px) 50vw, 280px"
-                />
-              </Reveal>
-            ))}
-          </div>
+              {brand.email}
+            </a>
+          )}
         </div>
       </section>
+
+      {content ? (
+        <section className="section-padding">
+          <div className="container-site max-w-4xl">
+            <Reveal>
+              <ServiceVentureContent
+                venture={venture}
+                content={content}
+                showExploreLink={false}
+              />
+            </Reveal>
+          </div>
+        </section>
+      ) : (
+        <section className="section-padding">
+          <div className="container-site max-w-3xl">
+            <Reveal className="space-y-4">
+              <p
+                className="text-xs font-black uppercase tracking-[0.35em]"
+                style={{ color: accent }}
+              >
+                {venture.category}
+              </p>
+              <h2 className="heading-section">About {venture.title}</h2>
+              <p className="text-slate-500 text-lg leading-relaxed">{venture.description}</p>
+            </Reveal>
+          </div>
+        </section>
+      )}
+
+      {media && <VentureMediaShowcase media={media} title={venture.title} accent={accent} />}
+
+      {venture.videoPoster && !venture.videoUrl && (
+        <section className="section-padding-tight">
+          <div className="container-site">
+            <Reveal className="relative aspect-video rounded-3xl overflow-hidden group">
+              <Image
+                src={venture.videoPoster}
+                alt={`${venture.title} demo`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1280px) 100vw, 1200px"
+              />
+              <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-6 gap-4">
+                <p className="text-white text-xl md:text-3xl font-black uppercase italic tracking-tight max-w-lg">
+                  {venture.id === "ekhodigix" || venture.id === "skillbyte"
+                    ? "Book a live ChatGPT demo or workshop"
+                    : "See our work in action"}
+                </p>
+                <Link
+                  href="/contact"
+                  className="btn-primary"
+                  style={{ backgroundColor: accent }}
+                >
+                  Request a session
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+      )}
 
       <section className="section-padding-tight bg-black text-white">
         <div className="container-site space-y-8">

@@ -13,12 +13,16 @@ import {
 } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { getVentureById } from "../constants/site";
+
+const venture = getVentureById("pots-and-pans")!;
+const imgs = venture.images;
 
 const COLLECTIONS = [
-  { name: "Iron-Core Series", material: "Enamelled Cast Iron", img: "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?w=800&q=80" },
-  { name: "Titanium Fusion", material: "Multi-Ply Non-Stick", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80" },
-  { name: "Chef Pro Set", material: "Full Stainless Steel", img: "https://images.unsplash.com/photo-1594830997433-a363d6b0416b?w=800&q=80" },
-  { name: "Heritage Wok", material: "Hand-Hammered Carbon", img: "https://images.unsplash.com/photo-1514328537559-630d82990468?w=800&q=80" }
+  { name: "Iron-Core Series", material: "Enamelled Cast Iron", img: imgs[0] },
+  { name: "Titanium Fusion", material: "Multi-Ply Non-Stick", img: imgs[1] },
+  { name: "Chef Pro Set", material: "Full Stainless Steel", img: imgs[2] },
+  { name: "Heritage Wok", material: "Hand-Hammered Carbon", img: imgs[3] },
 ];
 
 export default function PotsAndPanPage() {
@@ -30,7 +34,7 @@ export default function PotsAndPanPage() {
       <section className="relative h-screen flex items-center justify-center text-center px-6">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=1600&q=80" 
+            src={imgs[0]} 
             alt="Premium Cookware" 
             fill 
             className="object-cover opacity-20 grayscale brightness-75"
@@ -83,7 +87,7 @@ export default function PotsAndPanPage() {
                viewport={{ once: true }}
                className="relative aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl"
             >
-                <Image src="https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?w=800&q=80" alt="Iron Pouring" fill className="object-cover" />
+                <Image src={imgs[1]} alt="Iron Pouring" fill className="object-cover" />
                 <div className="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-black/80 to-transparent">
                     <p className="text-white text-2xl font-black italic">1450°C</p>
                     <p className="text-white/60 text-xs uppercase font-bold tracking-widest">Liquid Metal Casting</p>

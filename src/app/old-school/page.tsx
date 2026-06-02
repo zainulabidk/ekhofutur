@@ -5,22 +5,19 @@ import Image from "next/image";
 import { ArrowRight, ShoppingBag, Play } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { getVentureById } from "../constants/site";
+
+const venture = getVentureById("old-school")!;
+const imgs = venture.images;
 
 const COLLECTION = [
-  { name: "Classic Denim Jacket", price: "$129", image: "https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800&q=80" },
-  { name: "Vintage Oversized Tee", price: "$45", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80" },
-  { name: "Retro Corduroy Pants", price: "$89", image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80" },
-  { name: "90s Varsity Jacket", price: "$159", image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80" },
+  { name: "Classic Denim Jacket", price: "$129", image: imgs[0] },
+  { name: "Vintage Oversized Tee", price: "$45", image: imgs[1] },
+  { name: "Retro Corduroy Pants", price: "$89", image: imgs[2] },
+  { name: "90s Varsity Jacket", price: "$159", image: imgs[3] },
 ];
 
-const GALLERY = [
-  "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?w=800&q=80",
-  "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=800&q=80",
-  "https://images.unsplash.com/photo-1479064566235-aa6742f5a69e?w=800&q=80",
-  "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80",
-  "https://images.unsplash.com/photo-1552346154-21d32810aba3?w=800&q=80",
-  "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80",
-];
+const GALLERY = [...imgs, imgs[0], imgs[1]];
 
 export default function OldSchoolPage() {
   return (
@@ -31,7 +28,7 @@ export default function OldSchoolPage() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1600&q=80" 
+            src={imgs[0]} 
             alt="Old School Hero" 
             fill 
             className="object-cover opacity-40 grayscale"
@@ -111,7 +108,7 @@ export default function OldSchoolPage() {
           className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl skew-y-1 hover:skew-y-0 transition-transform duration-1000 group"
         >
           <Image 
-            src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80" 
+            src={imgs[1]} 
             alt="Vintage Craft" 
             fill 
             className="object-cover group-hover:scale-110 transition-transform duration-1000 grayscale hover:grayscale-0"

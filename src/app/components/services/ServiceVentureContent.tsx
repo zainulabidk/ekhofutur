@@ -5,11 +5,14 @@ import type { VentureContent } from "@/app/constants/ventureContent";
 type ServiceVentureContentProps = {
   venture: Venture;
   content: VentureContent;
+  /** Hide self-link when already on the venture page */
+  showExploreLink?: boolean;
 };
 
 export function ServiceVentureContent({
   venture,
   content,
+  showExploreLink = true,
 }: ServiceVentureContentProps) {
   const accent = venture.accent ?? "#4682B4";
 
@@ -169,9 +172,11 @@ export function ServiceVentureContent({
         </footer>
       )}
 
-      <Link href={venture.href} className="btn-primary inline-flex mt-2">
-        Explore {venture.title}
-      </Link>
+      {showExploreLink && (
+        <Link href={venture.href} className="btn-primary inline-flex mt-2">
+          Explore {venture.title}
+        </Link>
+      )}
     </article>
   );
 }

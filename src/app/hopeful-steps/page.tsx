@@ -14,6 +14,10 @@ import {
 } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { getVentureById } from "../constants/site";
+
+const venture = getVentureById("hopeful-steps")!;
+const imgs = venture.images;
 
 const SERVICES = [
   { title: "Speech Therapy", desc: "Helping individuals overcome communication barriers with playful learning techniques.", icon: <MessageCircle className="w-6 h-6" /> },
@@ -24,9 +28,9 @@ const SERVICES = [
 ];
 
 const SPECIALISTS = [
-  { name: "Sarah Alok", role: "Child Psychologist", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80" },
-  { name: "David Miller", role: "Speech Pathologist", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80" },
-  { name: "Priya Menon", role: "Behavioral Therapist", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" }
+  { name: "Sarah Alok", role: "Child Psychologist", img: imgs[0] },
+  { name: "David Miller", role: "Speech Pathologist", img: imgs[1] },
+  { name: "Priya Menon", role: "Behavioral Therapist", img: imgs[2] },
 ];
 
 export default function HopefulStepsPage() {
@@ -38,7 +42,7 @@ export default function HopefulStepsPage() {
       <section className="relative h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="https://images.unsplash.com/photo-1536640712247-c45474d61320?w=1600&q=80" 
+            src={imgs[0]} 
             alt="Supportive Environment" 
             fill 
             className="object-cover opacity-30"
@@ -117,7 +121,7 @@ export default function HopefulStepsPage() {
              className="relative aspect-square rounded-[4rem] overflow-hidden shadow-2xl order-1 lg:order-2"
            >
               <Image 
-                src="https://images.unsplash.com/photo-1502472545339-166299f24ba4?w=800&q=80" 
+                src={imgs[3]} 
                 alt="Child Therapy" 
                 fill 
                 className="object-cover"

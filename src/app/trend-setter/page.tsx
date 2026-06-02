@@ -6,20 +6,19 @@ import Link from "next/link";
 import { ArrowRight, ShoppingBag } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { getVentureById } from "../constants/site";
+
+const venture = getVentureById("trend-setter")!;
+const imgs = venture.images;
 
 const COLLECTIONS = [
-  { name: "Monochrome Vest", category: "Apparel", image: "https://images.unsplash.com/photo-1539109132335-34a91be0d59b?w=800&q=80" },
-  { name: "Bauhaus Coat", category: "Outerwear", image: "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=800&q=80" },
-  { name: "Minimalist Tote", category: "Accessories", image: "https://images.unsplash.com/photo-1584917469275-3adcb8b39eda?w=800&q=80" },
-  { name: "Linear Sneakers", category: "Footwear", image: "https://images.unsplash.com/photo-1560769129-d53b47975166?w=800&q=80" },
+  { name: "Monochrome Vest", category: "Apparel", image: imgs[0] },
+  { name: "Bauhaus Coat", category: "Outerwear", image: imgs[1] },
+  { name: "Minimalist Tote", category: "Accessories", image: imgs[2] },
+  { name: "Linear Sneakers", category: "Footwear", image: imgs[3] },
 ];
 
-const LOOKBOOK = [
-  "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80",
-  "https://images.unsplash.com/photo-1445205170230-053b83016050?w=800&q=80",
-  "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80",
-  "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=80",
-];
+const LOOKBOOK = imgs;
 
 export default function TrendSetterPage() {
   return (
@@ -30,7 +29,7 @@ export default function TrendSetterPage() {
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0 overflow-hidden">
           <Image 
-            src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?w=1600&q=90" 
+            src={imgs[0]} 
             alt="Trend Setter Hero" 
             fill 
             className="object-cover"
@@ -96,7 +95,7 @@ export default function TrendSetterPage() {
             className="relative aspect-square md:aspect-[4/3] bg-gray-50 overflow-hidden"
           >
              <Image 
-               src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80" 
+               src={imgs[2]} 
                alt="Minimalist Design" 
                fill 
                className="object-cover grayscale"

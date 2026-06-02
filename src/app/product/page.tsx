@@ -17,7 +17,7 @@ const PRODUCTS = [
   {
     name: "EV Charge Pro",
     category: "Technology",
-    img: "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80",
+    img: "https://i.postimg.cc/0y4BJ9dX/Whats-App-Image-2026-03-10-at-3-12-21-PM.jpg",
   },
   {
     name: "Smart Scapes",
@@ -32,7 +32,7 @@ export default function ProductPage() {
       <PageHero
         title="Our"
         highlight="Products"
-        image="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1920&q=80"
+        image="https://i.postimg.cc/mgmdWB53/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg"
         height="md"
       />
 

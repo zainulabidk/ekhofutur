@@ -9,6 +9,8 @@ import { getVentureContent } from "../constants/ventureContent";
 
 const FEATURED_ORDER = [
   "builders",
+  "ekhodigix",
+  "skillbyte",
   "trend-setter",
   "compliment",
   "pots-and-pans",
@@ -30,14 +32,15 @@ export default function ServicesPage() {
         title="Our"
         highlight="Services"
         subtitle="Ventures across the Echo Futur group"
-        image="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80"
+        image="https://i.postimg.cc/mgmdWB53/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg"
         height="md"
       />
 
       <section className="section-padding">
         <div className="container-site space-y-16 md:space-y-20">
           {featuredVentures.map((venture, idx) => {
-            const content = getVentureContent(venture.id)!;
+            const content = getVentureContent(venture.id);
+            if (!content) return null;
 
             return (
               <Reveal

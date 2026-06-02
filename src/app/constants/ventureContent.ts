@@ -327,6 +327,360 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
       tagline: "Echo Futur Home Stays & Wellness: Refresh. Recover. Return to You.",
     },
   },
+
+  "old-school": {
+    displayTitle: "Old School Outdoor Clothing Co.",
+    headline: "Vintage Outdoor Apparel with Timeless Character",
+    subheadline: "Classic cuts. Honest fabrics. Style that outlasts seasons.",
+    intro: [
+      "Old School is Echo Futur's tribute to heritage outdoor wear — pieces inspired by decades past, rebuilt for today's explorer. We curate vintage-influenced jackets, tees, and utility wear that feel broken-in from day one.",
+      "Every collection balances nostalgia with durability: rugged enough for the trail, refined enough for the city.",
+    ],
+    blocks: [
+      {
+        heading: "What We Stand For",
+        bullets: [
+          "Heritage Silhouettes: Denim, corduroy, varsity, and field jackets with authentic vintage proportions.",
+          "Curated Quality: We stock fewer styles and focus on construction, fit, and fabric integrity.",
+          "Outdoor Meets Everyday: Layers that move from weekend hikes to casual evenings without a wardrobe change.",
+          "Echo Futur Standard: Backed by the group's commitment to honest products and lasting value.",
+        ],
+      },
+      {
+        heading: "The Collection",
+        listGroups: [
+          {
+            title: "Outerwear",
+            items: [
+              "Classic denim jackets, retro windbreakers, and insulated varsity pieces.",
+            ],
+          },
+          {
+            title: "Essentials",
+            items: [
+              "Vintage-wash tees, corduroy trousers, and rugged overshirts.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Visit Old School",
+        paragraphs: [
+          "Explore the latest drop in-store or connect with our team for sizing and availability across Kerala.",
+        ],
+      },
+    ],
+    closing: {
+      tagline: "Old School: Wear the legacy.",
+    },
+  },
+
+  lubnas: {
+    displayTitle: "Lubnas Dental Studio",
+    headline: "Modern Dental Care with a Personal Touch",
+    subheadline: "Clean aesthetics. Gentle expertise. Smiles built to last.",
+    intro: [
+      "Lubnas Dental Studio delivers comprehensive oral care in a calm, contemporary setting. From routine checkups to advanced restorative work, our team combines precision technology with patient-first communication.",
+      "As part of Echo Futur's Life Care vertical, we believe dental health is foundational to confidence and overall wellness.",
+    ],
+    blocks: [
+      {
+        heading: "Services We Offer",
+        bullets: [
+          "Dental Cleaning & Preventive Care: Professional hygiene and early detection for lifelong oral health.",
+          "Root Canal & Restorative Treatment: Expert care to save natural teeth and relieve discomfort.",
+          "Teeth Whitening: Safe, effective brightening for a confident smile.",
+          "Orthodontics & Braces: Traditional and modern aligner options for all ages.",
+          "Dental Implants: Permanent, natural-looking tooth replacement.",
+          "Comprehensive Checkups: Routine exams to catch issues before they grow.",
+        ],
+      },
+      {
+        heading: "The Lubnas Experience",
+        quote: "Your comfort is as important as your clinical outcome.",
+        bullets: [
+          "Sterile, welcoming clinic environment designed to reduce anxiety.",
+          "Transparent treatment plans and clear communication at every visit.",
+          "Convenient scheduling and follow-up support for families and professionals.",
+        ],
+      },
+      {
+        heading: "Book Your Appointment",
+        paragraphs: [
+          "New patients welcome. Contact us for consultations, emergency visits, and cosmetic dentistry inquiries.",
+        ],
+      },
+    ],
+    closing: {
+      tagline: "Lubnas Dental Studio: Smile with confidence.",
+    },
+  },
+
+  "hopeful-steps": {
+    displayTitle: "Hopeful Steps",
+    headline: "Therapy & Wellness for Every Stage of Life",
+    subheadline: "Compassionate support for children, families, and individuals.",
+    intro: [
+      "Hopeful Steps provides speech therapy, behavioral support, counseling, and special education services in a warm, nurturing environment. We meet each person where they are — with patience, expertise, and encouragement.",
+      "Our mission is simple: help every client take the next step forward with confidence.",
+    ],
+    blocks: [
+      {
+        heading: "Our Core Services",
+        bullets: [
+          "Speech Therapy: Communication skills through engaging, age-appropriate techniques.",
+          "Child Development: Cognitive and social growth through guided play and structured activities.",
+          "Behavioral Therapy: Positive strategies for emotional regulation and healthy habits.",
+          "Counseling: A safe space for healing, clarity, and personal growth.",
+          "Special Education: Individualized learning paths that honor each child's strengths.",
+        ],
+      },
+      {
+        heading: "Who We Serve",
+        listGroups: [
+          {
+            title: "Children & Adolescents",
+            items: [
+              "Early intervention, school-readiness, and social-skills development.",
+            ],
+          },
+          {
+            title: "Families",
+            items: [
+              "Parent guidance, family counseling, and coordinated care plans.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Start Your Journey",
+        paragraphs: [
+          "Reach out to schedule an assessment or book a visit. Our specialists are here to listen and build a plan that fits your needs.",
+        ],
+      },
+    ],
+    closing: {
+      tagline: "Hopeful Steps: Every step matters.",
+    },
+  },
+
+  "ekho-rascapes": {
+    displayTitle: "Ekho Rascapes",
+    headline: "Landscape & Outdoor Design That Elevates Your Space",
+    subheadline: "Creative planning. Lasting greenery. Architecture in harmony with nature.",
+    intro: [
+      "Ekho Rascapes designs and delivers landscape solutions for homes, hospitality projects, and commercial sites. We blend horticulture, hardscaping, and architectural vision to create outdoor environments that feel intentional and alive.",
+      "From concept sketches to final planting, our team manages every detail with Echo Futur's quality standard.",
+    ],
+    blocks: [
+      {
+        heading: "What We Deliver",
+        bullets: [
+          "Residential Gardens: Courtyards, lawns, and terrace greens tailored to your lifestyle.",
+          "Commercial Landscapes: Inviting entrances, campus planting, and low-maintenance corporate exteriors.",
+          "Hardscaping & Features: Pathways, retaining walls, water elements, and outdoor lighting plans.",
+          "Maintenance Programs: Seasonal care to keep your investment thriving year-round.",
+        ],
+      },
+      {
+        heading: "The Rascapes Process",
+        numbered: [
+          {
+            title: "Consult & Survey",
+            description:
+              "We assess soil, climate, drainage, and how you use the space before proposing a design.",
+          },
+          {
+            title: "Design & Visualize",
+            description:
+              "Layouts, plant palettes, and material selections aligned with your budget and timeline.",
+          },
+          {
+            title: "Build & Plant",
+            description:
+              "Skilled execution with quality materials and attention to finishing details.",
+          },
+        ],
+      },
+      {
+        heading: "Transform Your Outdoors",
+        paragraphs: [
+          "Partner with Ekho Rascapes for projects that increase property value and daily enjoyment of your space.",
+        ],
+      },
+    ],
+    closing: {
+      tagline: "Ekho Rascapes: Where design meets the outdoors.",
+    },
+  },
+
+  pureflow: {
+    displayTitle: "Pure Flow",
+    headline: "Water Purification for Safe, Sustainable Living",
+    subheadline: "Clean water at home and at work — reliable systems, honest service.",
+    intro: [
+      "Pure Flow provides water purification solutions engineered for Indian water conditions. We help households and businesses access safe drinking water through efficient filtration, RO systems, and maintenance you can trust.",
+      "As Echo Futur's sustainability-focused brand, we prioritize health, conservation, and long-term system performance.",
+    ],
+    blocks: [
+      {
+        heading: "Solutions We Provide",
+        bullets: [
+          "Home RO & UV Systems: Compact units for kitchens and full-home filtration needs.",
+          "Commercial Purification: Higher-capacity systems for offices, clinics, and hospitality.",
+          "Filter Replacement & AMC: Scheduled service so your water quality never drops.",
+          "Water Testing Guidance: Recommendations based on local TDS and contamination profiles.",
+        ],
+      },
+      {
+        heading: "Why Pure Flow?",
+        quote: "Clean water should be simple — not a guessing game.",
+        bullets: [
+          "Genuine components and transparent pricing on every install.",
+          "Technicians trained on leading purification technologies.",
+          "Echo Futur accountability: one group, one standard of after-sales support.",
+        ],
+      },
+      {
+        heading: "Get Pure Water Today",
+        paragraphs: [
+          "Contact Pure Flow for site visits, quotations, and annual maintenance plans across Kerala.",
+        ],
+      },
+    ],
+    closing: {
+      tagline: "Pure Flow: Water you can trust.",
+    },
+  },
+
+  ekhodigix: {
+    displayTitle: "Ekho Digix",
+    headline: "ChatGPT & AI Solutions for Modern Business",
+    subheadline:
+      "Strategy, integration, and custom GPTs — built for teams that want results, not hype.",
+    intro: [
+      "Ekho Digix is the digital innovation arm of Echo Futur. We help businesses adopt ChatGPT and responsible AI — from workflow automation and customer support bots to branded Custom GPTs and internal knowledge assistants.",
+      "Whether you are a startup exploring your first AI pilot or an established brand scaling automation across departments, our team designs practical solutions that fit your operations and your budget.",
+    ],
+    blocks: [
+      {
+        heading: "ChatGPT Services We Deliver",
+        bullets: [
+          "Custom GPT Development: Branded assistants trained on your FAQs, catalogs, and SOPs.",
+          "Workflow Automation: Connect ChatGPT to CRM, WhatsApp, email, and spreadsheets for faster responses.",
+          "AI Content & Marketing: Campaign copy, product descriptions, and multilingual content with human review.",
+          "Business Intelligence: Summarize reports, meeting notes, and customer feedback into actionable insights.",
+          "Team Enablement: Hands-on workshops so your staff use ChatGPT safely and productively every day.",
+        ],
+      },
+      {
+        heading: "Why Partner With Ekho Digix?",
+        quote: "AI should save time on Monday morning — not sit in a slide deck.",
+        bullets: [
+          "Echo Futur Ecosystem: One partner for property, retail, wellness, and now AI — aligned brand and support.",
+          "Practical Rollouts: Phased pilots, clear KPIs, and training — not one-size-fits-all software dumps.",
+          "Security-First Mindset: Guidance on data handling, access control, and approved use policies for ChatGPT at work.",
+        ],
+      },
+      {
+        heading: "Industries We Support",
+        listGroups: [
+          {
+            title: "Real Estate & Construction",
+            items: [
+              "Lead qualification bots, project FAQs, and proposal drafting for Echo Futur Builders & Realtors clients.",
+            ],
+          },
+          {
+            title: "Retail, Kitchen & Lifestyle",
+            items: [
+              "Product Q&A, recipe assistants for Compliment, and catalog content for Old School and Trend Setter.",
+            ],
+          },
+          {
+            title: "Healthcare & Education",
+            items: [
+              "Appointment reminders, patient education drafts (reviewed by staff), and training content via Ekho SkillByte.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Start Your AI Journey",
+        paragraphs: [
+          "Book a discovery call to map where ChatGPT creates the highest return for your team. We will recommend a pilot scope, timeline, and training plan — then build with you.",
+        ],
+      },
+    ],
+    closing: {
+      tagline: "Ekho Digix: Future-ready AI, delivered with clarity.",
+    },
+  },
+
+  skillbyte: {
+    displayTitle: "Ekho SkillByte Academy",
+    headline: "Master ChatGPT & Digital Skills",
+    subheadline:
+      "Hands-on courses for professionals, students, and teams across Kerala and beyond.",
+    intro: [
+      "Ekho SkillByte Academy is Echo Futur's training vertical — focused on ChatGPT fluency, prompt engineering, and job-ready digital skills. Learn to use AI as a daily productivity tool, not a novelty.",
+      "Our instructors combine real business scenarios from the Echo Futur group with structured modules you can apply immediately at work or in your studies.",
+    ],
+    blocks: [
+      {
+        heading: "ChatGPT & AI Training Programs",
+        bullets: [
+          "ChatGPT Fundamentals: Account setup, safe usage, and core prompts for writing, research, and planning.",
+          "Prompt Engineering Workshop: Advanced techniques, role prompts, chain-of-thought, and output formatting.",
+          "AI for Business Teams: Sales scripts, customer replies, reporting, and SOP documentation with review workflows.",
+          "Custom GPT Builder Lab: Create, test, and publish internal GPTs for your department or brand.",
+          "Digital Marketing with AI: Social captions, ad copy, SEO outlines, and campaign calendars — ethically and efficiently.",
+        ],
+      },
+      {
+        heading: "Who Should Enroll?",
+        listGroups: [
+          {
+            title: "Professionals & Entrepreneurs",
+            items: [
+              "Owners and managers who want staff to adopt ChatGPT without security or quality risks.",
+            ],
+          },
+          {
+            title: "Students & Career Starters",
+            items: [
+              "Portfolio projects, interview prep, and productivity habits that stand out in a competitive market.",
+            ],
+          },
+          {
+            title: "Corporate Batches",
+            items: [
+              "On-site or virtual group training tailored to your industry — retail, healthcare, real estate, and more.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "The SkillByte Advantage",
+        quote: "Learn from practitioners who deploy AI inside Echo Futur every week.",
+        bullets: [
+          "Live Sessions: Interactive classes with Q&A — not pre-recorded lectures you never finish.",
+          "Echo Futur Case Studies: Examples from Compliment, Builders, Digix, and our lifestyle brands.",
+          "Certificate of Completion: Recognized training for your résumé and HR records.",
+          "Ongoing Support: Alumni access to resource updates as ChatGPT features evolve.",
+        ],
+      },
+      {
+        heading: "Enroll Today",
+        paragraphs: [
+          "New batches open regularly. Contact Ekho SkillByte for schedules, corporate pricing, and ChatGPT workshop dates near you.",
+        ],
+      },
+    ],
+    closing: {
+      tagline: "Ekho SkillByte: Learn AI. Lead your field.",
+    },
+  },
 };
 
 export function getVentureContent(id: string): VentureContent | undefined {

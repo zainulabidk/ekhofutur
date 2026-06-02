@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -36,6 +37,13 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Anchor targets clear fixed navbar */
+[id] {
+  scroll-margin-top: 5.5rem;
 }
 
 /* Lightweight scroll-in (GPU-friendly: opacity + transform only) */

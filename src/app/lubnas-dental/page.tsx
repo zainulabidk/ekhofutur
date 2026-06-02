@@ -16,6 +16,10 @@ import {
 } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { getVentureById } from "../constants/site";
+
+const venture = getVentureById("lubnas")!;
+const imgs = venture.images;
 
 const SERVICES = [
   { title: "Dental Cleaning", desc: "Professional plaque removal and polishing for a healthy, bright smile.", icon: <CheckCircle className="w-6 h-6" /> },
@@ -35,7 +39,7 @@ export default function DentalClinicPage() {
       <section className="relative h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600&q=80" 
+            src={imgs[0]} 
             alt="Dental Clinic" 
             fill 
             className="object-cover opacity-20"
@@ -105,7 +109,7 @@ export default function DentalClinicPage() {
              className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl"
            >
               <Image 
-                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80" 
+                src={imgs[1]} 
                 alt="Modern Clinic" 
                 fill 
                 className="object-cover"
@@ -186,7 +190,7 @@ export default function DentalClinicPage() {
             <div className="order-1 lg:order-2 flex justify-center">
                <div className="relative size-80 md:size-[500px] bg-white rounded-full overflow-hidden shadow-2xl border-[10px] border-white/10">
                   <Image 
-                    src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&q=80" 
+                    src={imgs[2]} 
                     alt="Doctor" 
                     fill 
                     className="object-cover"

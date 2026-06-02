@@ -16,18 +16,22 @@ import {
 } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { getVentureById } from "../constants/site";
+
+const venture = getVentureById("compliment")!;
+const imgs = venture.images;
 
 const FEATURES = [
-  { title: "AI Guided Cooking", desc: "Sensors that adjust temperature and timing automatically based on your recipe.", icon: <Cpu className="w-6 h-6" /> },
+  { title: "ChatGPT Recipe Assistant", desc: "AI-guided cooking tips and meal planning powered by smart kitchen integration.", icon: <Cpu className="w-6 h-6" /> },
   { title: "Smart-Sync Hub", desc: "Control your entire kitchen ecosystem from a single intuitive touch panel.", icon: <Settings className="w-6 h-6" /> },
   { title: "Remote Access", desc: "Preheat your oven or check your fridge inventory from anywhere with the app.", icon: <Smartphone className="w-6 h-6" /> },
   { title: "Energy Efficient", desc: "Eco-optimized hardware that reduces power consumption by 40% annually.", icon: <Zap className="w-6 h-6" /> }
 ];
 
 const PRODUCTS = [
-  { name: "Nebula Oven", desc: "Self-cleaning convection oven with steam-injection technology.", image: "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?w=800&q=80" },
-  { name: "Aero Induction", desc: "Rapid-heat surface with zone-free cooking precision.", image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" },
-  { name: "Glacier Fridge", desc: "Dynamic cooling with localized humidity control.", image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80" },
+  { name: "Nebula Oven", desc: "Self-cleaning convection oven with steam-injection technology.", image: imgs[0] },
+  { name: "Aero Induction", desc: "Rapid-heat surface with zone-free cooking precision.", image: imgs[1] },
+  { name: "Glacier Fridge", desc: "Dynamic cooling with localized humidity control.", image: imgs[2] },
 ];
 
 export default function ComplimentPage() {
@@ -39,7 +43,7 @@ export default function ComplimentPage() {
       <section className="relative h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image 
-            src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1600&q=80" 
+            src={imgs[0]} 
             alt="Smart Kitchen" 
             fill 
             className="object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-1000"
