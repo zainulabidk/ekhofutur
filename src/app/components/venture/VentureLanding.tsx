@@ -97,7 +97,7 @@ export function VentureLanding({ venture }: VentureLandingProps) {
               <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-6 gap-4">
                 <p className="text-white text-xl md:text-3xl font-black uppercase italic tracking-tight max-w-lg">
                   {venture.id === "ekhodigix" || venture.id === "skillbyte"
-                    ? "Book a live ChatGPT demo or workshop"
+                    ? "Book a live AI demo or workshop"
                     : "See our work in action"}
                 </p>
                 <Link

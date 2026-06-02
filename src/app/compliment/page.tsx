@@ -22,7 +22,7 @@ const venture = getVentureById("compliment")!;
 const imgs = venture.images;
 
 const FEATURES = [
-  { title: "ChatGPT Recipe Assistant", desc: "AI-guided cooking tips and meal planning powered by smart kitchen integration.", icon: <Cpu className="w-6 h-6" /> },
+  { title: "AI Recipe Assistant", desc: "AI-guided cooking tips and meal planning powered by smart kitchen integration.", icon: <Cpu className="w-6 h-6" /> },
   { title: "Smart-Sync Hub", desc: "Control your entire kitchen ecosystem from a single intuitive touch panel.", icon: <Settings className="w-6 h-6" /> },
   { title: "Remote Access", desc: "Preheat your oven or check your fridge inventory from anywhere with the app.", icon: <Smartphone className="w-6 h-6" /> },
   { title: "Energy Efficient", desc: "Eco-optimized hardware that reduces power consumption by 40% annually.", icon: <Zap className="w-6 h-6" /> }

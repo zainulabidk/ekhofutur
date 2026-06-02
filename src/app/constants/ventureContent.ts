@@ -554,131 +554,131 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
   },
 
   ekhodigix: {
-    displayTitle: "Ekho Digix",
-    headline: "ChatGPT & AI Solutions for Modern Business",
+    displayTitle: "Ekho Digix Development",
+    headline: "Web & Software Development That Scales With You",
     subheadline:
-      "Strategy, integration, and custom GPTs — built for teams that want results, not hype.",
+      "Custom websites, apps, and digital products — engineered for performance, security, and growth.",
     intro: [
-      "Ekho Digix is the digital innovation arm of Echo Futur. We help businesses adopt ChatGPT and responsible AI — from workflow automation and customer support bots to branded Custom GPTs and internal knowledge assistants.",
-      "Whether you are a startup exploring your first AI pilot or an established brand scaling automation across departments, our team designs practical solutions that fit your operations and your budget.",
+      "Ekho Digix Development is the technology arm of Echo Futur. We design and build websites, web applications, e-commerce stores, and business tools that help brands look professional and operate efficiently online.",
+      "From MVPs for startups to full platforms for established companies, our team handles strategy, UI/UX, development, deployment, and ongoing support — aligned with the quality standards of the Echo Futur group.",
     ],
     blocks: [
       {
-        heading: "ChatGPT Services We Deliver",
+        heading: "Development Services",
         bullets: [
-          "Custom GPT Development: Branded assistants trained on your FAQs, catalogs, and SOPs.",
-          "Workflow Automation: Connect ChatGPT to CRM, WhatsApp, email, and spreadsheets for faster responses.",
-          "AI Content & Marketing: Campaign copy, product descriptions, and multilingual content with human review.",
-          "Business Intelligence: Summarize reports, meeting notes, and customer feedback into actionable insights.",
-          "Team Enablement: Hands-on workshops so your staff use ChatGPT safely and productively every day.",
+          "Business Websites: Fast, mobile-first sites for ventures, clinics, real estate, and retail brands.",
+          "Web Applications: Dashboards, booking systems, CRM integrations, and custom internal tools.",
+          "E-Commerce & Catalogs: Online stores and product showcases for Compliment, Old School, Trend Setter, and more.",
+          "AI-Ready Integrations: Smart forms, chat assistants, and automation hooks where your business needs them.",
+          "Maintenance & Support: Hosting guidance, updates, security patches, and feature enhancements.",
         ],
       },
       {
-        heading: "Why Partner With Ekho Digix?",
-        quote: "AI should save time on Monday morning — not sit in a slide deck.",
+        heading: "Why Ekho Digix Development?",
+        quote: "Your digital presence should work as hard as your team does.",
         bullets: [
-          "Echo Futur Ecosystem: One partner for property, retail, wellness, and now AI — aligned brand and support.",
-          "Practical Rollouts: Phased pilots, clear KPIs, and training — not one-size-fits-all software dumps.",
-          "Security-First Mindset: Guidance on data handling, access control, and approved use policies for ChatGPT at work.",
+          "Echo Futur Ecosystem: We understand your brands — Builders, Lubnas Dental, Digix, SkillByte, and the full portfolio.",
+          "End-to-End Delivery: Discovery, design, build, launch, and handover with clear timelines.",
+          "Modern Stack: Current frameworks and best practices for speed, SEO, and long-term maintainability.",
         ],
       },
       {
-        heading: "Industries We Support",
+        heading: "What We Build For",
         listGroups: [
           {
-            title: "Real Estate & Construction",
+            title: "Corporate & Ventures",
             items: [
-              "Lead qualification bots, project FAQs, and proposal drafting for Echo Futur Builders & Realtors clients.",
+              "Multi-brand websites, landing pages, and service portals for Echo Futur companies.",
             ],
           },
           {
-            title: "Retail, Kitchen & Lifestyle",
+            title: "Real Estate & Services",
             items: [
-              "Product Q&A, recipe assistants for Compliment, and catalog content for Old School and Trend Setter.",
+              "Property listings, inquiry forms, and project galleries for Builders & Realtors.",
             ],
           },
           {
-            title: "Healthcare & Education",
+            title: "Training & Marketing",
             items: [
-              "Appointment reminders, patient education drafts (reviewed by staff), and training content via Ekho SkillByte.",
+              "Course pages and enrollment flows for SkillByte Advanced AI Digital Marketing programs.",
             ],
           },
         ],
       },
       {
-        heading: "Start Your AI Journey",
+        heading: "Start Your Project",
         paragraphs: [
-          "Book a discovery call to map where ChatGPT creates the highest return for your team. We will recommend a pilot scope, timeline, and training plan — then build with you.",
+          "Share your goals and we will propose scope, timeline, and investment. Whether you need a new site or a full product build, Ekho Digix Development is your build partner.",
         ],
       },
     ],
     closing: {
-      tagline: "Ekho Digix: Future-ready AI, delivered with clarity.",
+      tagline: "Ekho Digix Development: Build digital. Build future.",
     },
   },
 
   skillbyte: {
-    displayTitle: "Ekho SkillByte Academy",
-    headline: "Master ChatGPT & Digital Skills",
+    displayTitle: "SkillByte Advanced AI Digital Marketing",
+    headline: "Advanced AI Digital Marketing Course",
     subheadline:
-      "Hands-on courses for professionals, students, and teams across Kerala and beyond.",
+      "Master AI-powered marketing — from strategy and content to ads, SEO, and analytics.",
     intro: [
-      "Ekho SkillByte Academy is Echo Futur's training vertical — focused on ChatGPT fluency, prompt engineering, and job-ready digital skills. Learn to use AI as a daily productivity tool, not a novelty.",
-      "Our instructors combine real business scenarios from the Echo Futur group with structured modules you can apply immediately at work or in your studies.",
+      "SkillByte Advanced AI Digital Marketing is Echo Futur's flagship training program for marketers, entrepreneurs, and students who want real-world skills — not theory-only classrooms.",
+      "Learn how to use AI responsibly to plan campaigns, create content, run ads, optimize SEO, and measure results across the channels that matter today.",
     ],
     blocks: [
       {
-        heading: "ChatGPT & AI Training Programs",
+        heading: "Course Modules",
         bullets: [
-          "ChatGPT Fundamentals: Account setup, safe usage, and core prompts for writing, research, and planning.",
-          "Prompt Engineering Workshop: Advanced techniques, role prompts, chain-of-thought, and output formatting.",
-          "AI for Business Teams: Sales scripts, customer replies, reporting, and SOP documentation with review workflows.",
-          "Custom GPT Builder Lab: Create, test, and publish internal GPTs for your department or brand.",
-          "Digital Marketing with AI: Social captions, ad copy, SEO outlines, and campaign calendars — ethically and efficiently.",
+          "AI Marketing Foundations: Tools, ethics, brand voice, and safe workflows for daily use.",
+          "Content & Creative: Captions, blogs, ad copy, email sequences, and multilingual campaigns with human review.",
+          "Paid Ads & Performance: Meta, Google, and WhatsApp campaign planning with AI-assisted optimization.",
+          "SEO & Analytics: Keyword research, on-page SEO, reporting dashboards, and data-driven decisions.",
+          "Automation & Assistants: Build internal marketing assistants and repeatable content systems for your brand.",
         ],
       },
       {
         heading: "Who Should Enroll?",
         listGroups: [
           {
-            title: "Professionals & Entrepreneurs",
+            title: "Marketers & Agency Staff",
             items: [
-              "Owners and managers who want staff to adopt ChatGPT without security or quality risks.",
+              "Upgrade your stack with advanced AI workflows for clients and in-house brands.",
             ],
           },
           {
-            title: "Students & Career Starters",
+            title: "Business Owners",
             items: [
-              "Portfolio projects, interview prep, and productivity habits that stand out in a competitive market.",
+              "Run your own digital marketing with confidence — or lead your team with clear standards.",
             ],
           },
           {
-            title: "Corporate Batches",
+            title: "Students & Career Changers",
             items: [
-              "On-site or virtual group training tailored to your industry — retail, healthcare, real estate, and more.",
+              "Portfolio-ready projects, certificates, and practical skills employers expect in 2026 and beyond.",
             ],
           },
         ],
       },
       {
         heading: "The SkillByte Advantage",
-        quote: "Learn from practitioners who deploy AI inside Echo Futur every week.",
+        quote: "Marketing moves fast. This course keeps you ahead.",
         bullets: [
-          "Live Sessions: Interactive classes with Q&A — not pre-recorded lectures you never finish.",
-          "Echo Futur Case Studies: Examples from Compliment, Builders, Digix, and our lifestyle brands.",
-          "Certificate of Completion: Recognized training for your résumé and HR records.",
-          "Ongoing Support: Alumni access to resource updates as ChatGPT features evolve.",
+          "Live, Instructor-Led Sessions: Interactive classes with Q&A and real briefs from Echo Futur brands.",
+          "Hands-On Projects: Campaigns and content pieces you can show employers or clients.",
+          "Certificate of Completion: Recognized training for your résumé and professional profile.",
+          "Alumni Updates: Ongoing tips as AI marketing tools and platforms evolve.",
         ],
       },
       {
-        heading: "Enroll Today",
+        heading: "Enroll in the Next Batch",
         paragraphs: [
-          "New batches open regularly. Contact Ekho SkillByte for schedules, corporate pricing, and ChatGPT workshop dates near you.",
+          "New batches open regularly across Kerala and online. Contact SkillByte for schedules, corporate team pricing, and Advanced AI Digital Marketing workshop dates.",
         ],
       },
     ],
     closing: {
-      tagline: "Ekho SkillByte: Learn AI. Lead your field.",
+      tagline: "SkillByte: Advanced AI marketing. Real results.",
     },
   },
 };

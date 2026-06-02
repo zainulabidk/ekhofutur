@@ -5,7 +5,7 @@ export const SITE = {
   legalName: "Ekho Future",
   tagline: "Diversified Excellence",
   description:
-    "A visionary conglomerate across real estate, fashion, wellness, smart kitchen, and ChatGPT-powered digital solutions through Ekho Digix.",
+    "A visionary conglomerate across real estate, fashion, wellness, smart kitchen, software development, and advanced digital marketing education.",
 } as const;
 
 export const MAIN_NAV = [
@@ -21,7 +21,8 @@ export const FOOTER_VENTURE_LINKS = [
   { name: "Trend Setter", href: "/trend-setter" },
   { name: "Lubnas Dental", href: "/lubnas-dental" },
   { name: "Compliment", href: "/compliment" },
-  { name: "Ekho Digix", href: "/ekho-digix" },
+  { name: "Digix Development", href: "/ekho-digix" },
+  { name: "SkillByte Marketing", href: "/skillbyte" },
 ] as const;
 
 export const FOOTER_LEGAL_LINKS = [
@@ -206,10 +207,10 @@ export const VENTURES: Venture[] = [
   },
   {
     id: "ekhodigix",
-    title: "Ekho Digix",
-    category: "Ekho Digix",
+    title: "Ekho Digix Development",
+    category: "Development",
     description:
-      "Digital solutions and innovative technology services for modern businesses.",
+      "Web, mobile, and software development — custom apps, websites, and digital products for modern businesses.",
     images: [
       "https://i.postimg.cc/0y4BJ9dX/Whats-App-Image-2026-03-10-at-3-12-21-PM.jpg",
       "https://i.postimg.cc/Y96nVYcZ/Whats-App-Image-2026-03-10-at-3-12-22-PM.jpg",
@@ -217,17 +218,17 @@ export const VENTURES: Venture[] = [
       "https://i.postimg.cc/SNvrgD22/Whats-App-Image-2026-03-10-at-3-12-22-PM.jpg",
     ],
     href: "/ekho-digix",
-    tagline: "Digital agency",
+    tagline: "Software & web development",
     accent: "#4682B4",
     videoPoster:
       "https://i.postimg.cc/Y96nVYcZ/Whats-App-Image-2026-03-10-at-3-12-22-PM.jpg",
   },
   {
     id: "skillbyte",
-    title: "Ekho SkillByte Academy",
-    category: "Ekho Digix",
+    title: "SkillByte Advanced AI Digital Marketing",
+    category: "Digital Marketing",
     description:
-      "Industry-aligned digital skills training, ChatGPT workflows, and professional AI coaching.",
+      "Advanced AI digital marketing course — strategy, content, ads, SEO, and automation for professionals and teams.",
     images: [
       "https://i.postimg.cc/0y4BJ9dX/Whats-App-Image-2026-03-10-at-3-12-21-PM.jpg",
       "https://i.postimg.cc/QM5091MM/Whats-App-Image-2026-03-10-at-3-12-22-PM.jpg",
@@ -235,7 +236,7 @@ export const VENTURES: Venture[] = [
       "https://i.postimg.cc/Y96nVYcZ/Whats-App-Image-2026-03-10-at-3-12-22-PM.jpg",
     ],
     href: "/skillbyte",
-    tagline: "ChatGPT & AI training",
+    tagline: "Advanced AI marketing course",
     accent: "#4f46e5",
     videoPoster:
       "https://i.postimg.cc/0y4BJ9dX/Whats-App-Image-2026-03-10-at-3-12-21-PM.jpg",
@@ -272,7 +273,8 @@ export function getNavServiceGroups(): NavServiceGroup[] {
     "Landscape",
     "Hospitality",
     "Sustainability",
-    "Ekho Digix",
+    "Development",
+    "Digital Marketing",
   ];
 
   const grouped = new Map<string, NavServiceItem[]>();

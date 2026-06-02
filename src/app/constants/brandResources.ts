@@ -55,13 +55,13 @@ export const BRAND_RESOURCES: BrandResource[] = [
   },
   {
     id: "ekhodigix",
-    name: "Ekho Digix",
+    name: "Ekho Digix Development",
     email: "Ekhofutur@gmail.com",
     sitePath: "/ekho-digix",
   },
   {
     id: "skillbyte",
-    name: "Ekho SkillByte",
+    name: "SkillByte Advanced AI Digital Marketing",
     email: "ekhoskillbyte@gmail.com",
     sitePath: "/skillbyte",
   },
