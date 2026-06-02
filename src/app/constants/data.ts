@@ -40,20 +40,13 @@ export const HERO_SLIDES = [
   },
   {
     id: 6,
-    category: "Development",
-    title: "Digix Development",
-    description: "Web, app, and software development built for your business goals",
+    category: "AI & Technology",
+    title: "Development",
+    description: "Web and app development through Ekho Digix",
     image: heroImageForVenture("ekhodigix", 0),
   },
   {
     id: 7,
-    category: "Digital Marketing",
-    title: "SkillByte Marketing",
-    description: "Advanced AI digital marketing course for modern brands and careers",
-    image: heroImageForVenture("skillbyte", 0),
-  },
-  {
-    id: 8,
     category: "Lifestyle",
     title: "Wellness Sanctuary",
     description: "Curated space for relaxation and rejuvenation",

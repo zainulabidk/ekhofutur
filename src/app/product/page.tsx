@@ -19,15 +19,9 @@ const PRODUCTS = [
     imgIndex: 1,
   },
   {
-    name: "Digix Development",
-    category: "Development",
+    name: "Ekho Digix",
+    category: "Technology",
     ventureId: "ekhodigix",
-    imgIndex: 0,
-  },
-  {
-    name: "SkillByte AI Marketing",
-    category: "Digital Marketing",
-    ventureId: "skillbyte",
     imgIndex: 0,
   },
   {

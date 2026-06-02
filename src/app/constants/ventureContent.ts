@@ -554,53 +554,53 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
   },
 
   ekhodigix: {
-    displayTitle: "Ekho Digix Development",
-    headline: "Web & Software Development That Scales With You",
+    displayTitle: "Ekho Digix",
+    headline: "Development for Modern Business",
     subheadline:
-      "Custom websites, apps, and digital products — engineered for performance, security, and growth.",
+      "Websites, apps, and custom software — scoped, built, and supported by Echo Futur.",
     intro: [
-      "Ekho Digix Development is the technology arm of Echo Futur. We design and build websites, web applications, e-commerce stores, and business tools that help brands look professional and operate efficiently online.",
-      "From MVPs for startups to full platforms for established companies, our team handles strategy, UI/UX, development, deployment, and ongoing support — aligned with the quality standards of the Echo Futur group.",
+      "Ekho Digix is the development arm of Echo Futur. We build responsive websites, mobile-friendly applications, and internal tools for our group brands and for external clients who need a reliable technical partner.",
+      "From landing pages and venture sites to e-commerce and business dashboards, our team handles design, development, testing, and post-launch support.",
     ],
     blocks: [
       {
         heading: "Development Services",
         bullets: [
-          "Business Websites: Fast, mobile-first sites for ventures, clinics, real estate, and retail brands.",
-          "Web Applications: Dashboards, booking systems, CRM integrations, and custom internal tools.",
-          "E-Commerce & Catalogs: Online stores and product showcases for Compliment, Old School, Trend Setter, and more.",
-          "AI-Ready Integrations: Smart forms, chat assistants, and automation hooks where your business needs them.",
-          "Maintenance & Support: Hosting guidance, updates, security patches, and feature enhancements.",
+          "Website Development: Corporate sites, portfolios, and multi-page ventures optimized for speed and SEO.",
+          "App Development: Progressive web apps and mobile-ready experiences for customers and staff.",
+          "Custom Software: Admin panels, booking flows, and integrations tailored to your workflow.",
+          "UI / UX: Layouts and interfaces aligned with your brand across Echo Futur ventures.",
+          "Maintenance: Updates, fixes, and feature additions after go-live.",
         ],
       },
       {
-        heading: "Why Ekho Digix Development?",
-        quote: "Your digital presence should work as hard as your team does.",
+        heading: "Why Ekho Digix?",
+        quote: "We ship working products — not presentations about products.",
         bullets: [
-          "Echo Futur Ecosystem: We understand your brands — Builders, Lubnas Dental, Digix, SkillByte, and the full portfolio.",
-          "End-to-End Delivery: Discovery, design, build, launch, and handover with clear timelines.",
-          "Modern Stack: Current frameworks and best practices for speed, SEO, and long-term maintainability.",
+          "Echo Futur Portfolio: We build and maintain sites for Builders, Compliment, SkillByte, and more.",
+          "Clear Process: Discovery, milestones, and demos so you always know progress.",
+          "Modern Stack: Fast, secure, maintainable code your team can grow with.",
         ],
       },
       {
-        heading: "What We Build For",
+        heading: "Ideal For",
         listGroups: [
           {
-            title: "Corporate & Ventures",
+            title: "New Ventures",
             items: [
-              "Multi-brand websites, landing pages, and service portals for Echo Futur companies.",
+              "Launch a professional web presence before your first customer walk-in.",
             ],
           },
           {
-            title: "Real Estate & Services",
+            title: "Growing Businesses",
             items: [
-              "Property listings, inquiry forms, and project galleries for Builders & Realtors.",
+              "Redesign outdated sites, add e-commerce, or connect forms and WhatsApp leads.",
             ],
           },
           {
-            title: "Training & Marketing",
+            title: "Echo Futur Partners",
             items: [
-              "Course pages and enrollment flows for SkillByte Advanced AI Digital Marketing programs.",
+              "One development team that already understands the group and your customers.",
             ],
           },
         ],
@@ -608,77 +608,77 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
       {
         heading: "Start Your Project",
         paragraphs: [
-          "Share your goals and we will propose scope, timeline, and investment. Whether you need a new site or a full product build, Ekho Digix Development is your build partner.",
+          "Share your brief — we will reply with scope, timeline, and investment options for your website or application.",
         ],
       },
     ],
     closing: {
-      tagline: "Ekho Digix Development: Build digital. Build future.",
+      tagline: "Ekho Digix: Build digital products that work.",
     },
   },
 
   skillbyte: {
-    displayTitle: "SkillByte Advanced AI Digital Marketing",
+    displayTitle: "Ekho SkillByte Academy",
     headline: "Advanced AI Digital Marketing Course",
     subheadline:
-      "Master AI-powered marketing — from strategy and content to ads, SEO, and analytics.",
+      "Live training in SEO, social media, paid ads, and AI-powered content — for Kerala and beyond.",
     intro: [
-      "SkillByte Advanced AI Digital Marketing is Echo Futur's flagship training program for marketers, entrepreneurs, and students who want real-world skills — not theory-only classrooms.",
-      "Learn how to use AI responsibly to plan campaigns, create content, run ads, optimize SEO, and measure results across the channels that matter today.",
+      "Ekho SkillByte Academy is Echo Futur's education brand. Our flagship program is the Advanced AI Digital Marketing course — a practical, module-based path for marketers, entrepreneurs, and students who want job-ready skills.",
+      "Classes are live and project-based, using real examples from Echo Futur businesses so you learn what works in the market, not only in theory.",
     ],
     blocks: [
       {
-        heading: "Course Modules",
+        heading: "What You Will Learn",
         bullets: [
-          "AI Marketing Foundations: Tools, ethics, brand voice, and safe workflows for daily use.",
-          "Content & Creative: Captions, blogs, ad copy, email sequences, and multilingual campaigns with human review.",
-          "Paid Ads & Performance: Meta, Google, and WhatsApp campaign planning with AI-assisted optimization.",
-          "SEO & Analytics: Keyword research, on-page SEO, reporting dashboards, and data-driven decisions.",
-          "Automation & Assistants: Build internal marketing assistants and repeatable content systems for your brand.",
+          "AI-Assisted Content: Blogs, ads, captions, and emails with efficient workflows and quality control.",
+          "Social Media Marketing: Strategy, content calendars, and growth tactics for major platforms.",
+          "SEO Fundamentals: Keywords, on-page optimization, and content that ranks.",
+          "Paid Advertising: Meta and Google ads setup, budgets, and reading performance data.",
+          "Analytics & Reporting: Track results and improve campaigns week by week.",
         ],
       },
       {
         heading: "Who Should Enroll?",
         listGroups: [
           {
-            title: "Marketers & Agency Staff",
+            title: "Marketing Professionals",
             items: [
-              "Upgrade your stack with advanced AI workflows for clients and in-house brands.",
+              "Upgrade your skill set with AI and modern digital channels.",
             ],
           },
           {
             title: "Business Owners",
             items: [
-              "Run your own digital marketing with confidence — or lead your team with clear standards.",
+              "Run your own campaigns or lead your in-house team with confidence.",
             ],
           },
           {
-            title: "Students & Career Changers",
+            title: "Students & Freelancers",
             items: [
-              "Portfolio-ready projects, certificates, and practical skills employers expect in 2026 and beyond.",
+              "Build a portfolio and offer digital marketing services after certification.",
             ],
           },
         ],
       },
       {
         heading: "The SkillByte Advantage",
-        quote: "Marketing moves fast. This course keeps you ahead.",
+        quote: "Marketing taught by people who market Echo Futur brands every day.",
         bullets: [
-          "Live, Instructor-Led Sessions: Interactive classes with Q&A and real briefs from Echo Futur brands.",
-          "Hands-On Projects: Campaigns and content pieces you can show employers or clients.",
-          "Certificate of Completion: Recognized training for your résumé and professional profile.",
-          "Alumni Updates: Ongoing tips as AI marketing tools and platforms evolve.",
+          "Live Classes: Ask questions, get feedback, and complete real assignments.",
+          "Certificate: Completion recognition for your CV and LinkedIn profile.",
+          "Corporate Batches: Custom dates and modules for company teams.",
+          "Alumni Support: Stay updated as tools and platforms change.",
         ],
       },
       {
-        heading: "Enroll in the Next Batch",
+        heading: "Enroll Today",
         paragraphs: [
-          "New batches open regularly across Kerala and online. Contact SkillByte for schedules, corporate team pricing, and Advanced AI Digital Marketing workshop dates.",
+          "Contact Ekho SkillByte for the next Advanced AI Digital Marketing batch, fees, and corporate training options.",
         ],
       },
     ],
     closing: {
-      tagline: "SkillByte: Advanced AI marketing. Real results.",
+      tagline: "Ekho SkillByte: Market smarter. Grow faster.",
     },
   },
 };
