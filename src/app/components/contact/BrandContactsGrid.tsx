@@ -7,6 +7,8 @@ const BRAND_LABELS: Record<string, string> = {
   compliment: "Complikit",
   "trend-setter": "Trend Setters",
   builders: "Builders & Realtors",
+  "builders-solar": "Ekho Builders Solar",
+  "builders-lift": "Ekho Builders Lift",
   "pots-and-pans": "Pots & Pans",
   "ekho-rascapes": "Ekho Rascapes",
   ekhodigix: "Ekho Digix",

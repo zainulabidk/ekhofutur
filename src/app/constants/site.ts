@@ -46,25 +46,41 @@ export type Venture = {
 
 export const VENTURES: Venture[] = [
   {
-    id: "builders",
-    title: "Echo Futur Builders & Realtors",
-    category: "Real Estate",
+    id: "compliment",
+    title: "Compliment",
+    category: "Smart Kitchen",
     description:
-      "Expertly crafted real estate solutions for modern urban and residential developments.",
+      "Enhancing spaces and products with thoughtful design and attention to detail.",
     images: [
-      "https://i.postimg.cc/mgmdWB53/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg",
-      "https://i.postimg.cc/C1TkW2Sn/Whats-App-Image-2026-03-10-at-2-39-02-PM-(1).jpg",
-      "https://i.postimg.cc/fR199P3P/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg",
-      "https://i.postimg.cc/J7KHq0D3/Whats-App-Image-2026-03-10-at-2-39-02-PM-(1).jpg",
+      "https://i.postimg.cc/brYX6Nj2/IMG-3812.avif",
+      "https://i.postimg.cc/J4yYRBKh/IMG-3814.avif",
+      "https://i.postimg.cc/CLf73pLq/IMG-3815.avif",
+      "https://i.postimg.cc/xdj8SMyH/IMG-2042.avif",
     ],
-    href: "/builders-realtors",
-    tagline: "Property development",
-    accent: "#1e3a5f",
+    href: "/compliment",
+    tagline: "Smart kitchen appliances",
+    accent: "#ea580c",
+  },
+  {
+    id: "pots-and-pans",
+    title: "Pots & Pans",
+    category: "Smart Kitchen",
+    description:
+      "Quality cookware for modern kitchens, blending style and functionality.",
+    images: [
+      "https://i.postimg.cc/xdj8SMyH/IMG-2042.avif",
+      "https://i.postimg.cc/xCw9qzHc/IMG-2050.avif",
+      "https://i.postimg.cc/P5ShYcYh/IMG-2052-(1).avif",
+      "https://i.postimg.cc/4dtrLF7z/IMG-2056.avif",
+    ],
+    href: "/pots-and-pan",
+    tagline: "Premium cookware",
+    accent: "#78350f",
   },
   {
     id: "old-school",
     title: "Old School",
-    category: "Outdoor Clothings",
+    category: "Outdoor Clothing",
     description:
       "Bringing back the classic touch with vintage designs and traditional workflows.",
     images: [
@@ -80,7 +96,7 @@ export const VENTURES: Venture[] = [
   {
     id: "trend-setter",
     title: "Trend Setter",
-    category: "Outdoor Clothings",
+    category: "Outdoor Clothing",
     description:
       "Innovative and ahead of the curve, we create designs that set trends in the industry.",
     images: [
@@ -126,43 +142,59 @@ export const VENTURES: Venture[] = [
     accent: "#10b981",
   },
   {
-    id: "compliment",
-    title: "Compliment",
-    category: "Smart Kitchen",
+    id: "builders",
+    title: "Echo Futur Builders & Realtors",
+    category: "Ekho Builders",
     description:
-      "Enhancing spaces and products with thoughtful design and attention to detail.",
+      "Expertly crafted real estate solutions for modern urban and residential developments.",
     images: [
-      "https://i.postimg.cc/brYX6Nj2/IMG-3812.avif",
-      "https://i.postimg.cc/J4yYRBKh/IMG-3814.avif",
-      "https://i.postimg.cc/CLf73pLq/IMG-3815.avif",
-      "https://i.postimg.cc/xdj8SMyH/IMG-2042.avif",
+      "https://i.postimg.cc/mgmdWB53/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg",
+      "https://i.postimg.cc/C1TkW2Sn/Whats-App-Image-2026-03-10-at-2-39-02-PM-(1).jpg",
+      "https://i.postimg.cc/fR199P3P/Whats-App-Image-2026-03-10-at-2-39-01-PM.jpg",
+      "https://i.postimg.cc/J7KHq0D3/Whats-App-Image-2026-03-10-at-2-39-02-PM-(1).jpg",
     ],
-    href: "/compliment",
-    tagline: "Smart kitchen appliances",
-    accent: "#ea580c",
+    href: "/builders-realtors",
+    tagline: "Property development",
+    accent: "#1e3a5f",
   },
   {
-    id: "pots-and-pans",
-    title: "Pots & Pans",
-    category: "Smart Kitchen",
+    id: "builders-solar",
+    title: "Ekho Builders Solar",
+    category: "Ekho Builders",
     description:
-      "Quality cookware for modern kitchens, blending style and functionality.",
+      "End-to-end solar energy systems for homes and businesses — site survey, installation, net metering support, and maintenance across Kerala.",
     images: [
-      "https://i.postimg.cc/xdj8SMyH/IMG-2042.avif",
-      "https://i.postimg.cc/xCw9qzHc/IMG-2050.avif",
-      "https://i.postimg.cc/P5ShYcYh/IMG-2052-(1).avif",
-      "https://i.postimg.cc/4dtrLF7z/IMG-2056.avif",
+      "/ventures/builders-solar/hero.jpg",
+      "/ventures/builders-solar/installation.jpg",
+      "/ventures/builders-solar/rooftop.jpg",
+      "/ventures/builders-solar/panels.jpg",
     ],
-    href: "/pots-and-pan",
-    tagline: "Premium cookware",
-    accent: "#78350f",
+    href: "/builders-solar",
+    tagline: "Solar energy",
+    accent: "#f59e0b",
+  },
+  {
+    id: "builders-lift",
+    title: "Ekho Builders Lift",
+    category: "Ekho Builders",
+    description:
+      "Passenger and service lift installation, modernization, and AMC maintenance for residential, commercial, and hospitality buildings.",
+    images: [
+      "/ventures/builders-lift/hero.jpg",
+      "/ventures/builders-lift/cabin.jpg",
+      "/ventures/builders-lift/building.jpg",
+      "/ventures/builders-lift/maintenance.jpg",
+    ],
+    href: "/builders-lift",
+    tagline: "Lift solutions",
+    accent: "#64748b",
   },
   {
     id: "ekho-rascapes",
     title: "Ekho Rascapes",
-    category: "Landscape",
+    category: "Tourism and Hospitality",
     description:
-      "Creative landscape and architectural solutions that elevate outdoor spaces.",
+      "Curated tourism experiences and hospitality services across Kerala.",
     images: [
       "https://i.postimg.cc/kXWypPgB/20260110-113349.avif",
       "https://i.postimg.cc/SKn2HcG4/20260110-113458.avif",
@@ -170,13 +202,13 @@ export const VENTURES: Venture[] = [
       "https://i.postimg.cc/kXWypPgB/20260110-113349.avif",
     ],
     href: "/ekho-rascapes",
-    tagline: "Landscape design",
+    tagline: "Tourism & hospitality",
     accent: "#166534",
   },
   {
     id: "wellness",
     title: "Home Stays & Wellness",
-    category: "Hospitality",
+    category: "Tourism and Hospitality",
     description:
       "Comfortable home stays and wellness centers for relaxation and rejuvenation.",
     images: [
@@ -192,7 +224,7 @@ export const VENTURES: Venture[] = [
   {
     id: "pureflow",
     title: "Pure Flow",
-    category: "Sustainability",
+    category: "Pure Flow",
     description: "Water purification solutions for safe, sustainable living.",
     images: [
       "https://i.postimg.cc/HnQg6V3n/Whats-App-Image-2026-03-10-at-3-12-52-PM.jpg",
@@ -265,13 +297,12 @@ export type NavServiceGroup = {
 
 export function getNavServiceGroups(): NavServiceGroup[] {
   const order = [
-    "Real Estate",
-    "Outdoor Clothings",
-    "Life Care",
     "Smart Kitchen",
-    "Landscape",
-    "Hospitality",
-    "Sustainability",
+    "Outdoor Clothing",
+    "Life Care",
+    "Ekho Builders",
+    "Tourism and Hospitality",
+    "Pure Flow",
     "Ekho Digix",
   ];
 

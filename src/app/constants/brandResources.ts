@@ -42,6 +42,18 @@ export const BRAND_RESOURCES: BrandResource[] = [
     sitePath: "/builders-realtors",
   },
   {
+    id: "builders-solar",
+    name: "Ekho Builders Solar",
+    email: "Ekhofutur@gmail.com",
+    sitePath: "/builders-solar",
+  },
+  {
+    id: "builders-lift",
+    name: "Ekho Builders Lift",
+    email: "Ekhofutur@gmail.com",
+    sitePath: "/builders-lift",
+  },
+  {
     id: "pots-and-pans",
     name: "Xclusive Pots & Pans",
     email: "xclusivepotsandpans@gmail.com",

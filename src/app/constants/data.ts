@@ -12,7 +12,7 @@ export const HERO_SLIDES = [
   },
   {
     id: 2,
-    category: "Sustainability",
+    category: "Pure Flow",
     title: "Pure Flow Water",
     description: "Safe purification systems for home and business",
     image: heroImageForVenture("pureflow", 0),
@@ -26,7 +26,7 @@ export const HERO_SLIDES = [
   },
   {
     id: 4,
-    category: "Outdoor Clothings",
+    category: "Outdoor Clothing",
     title: "Style Redefined",
     description: "Premium apparel for the modern adventurer",
     image: heroImageForVenture("trend-setter", 0),

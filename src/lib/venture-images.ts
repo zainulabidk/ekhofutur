@@ -13,5 +13,6 @@ export function getVentureImages(ventureId: string): string[] {
 }
 
 export function isUsableImage(src?: string | null): src is string {
-  return Boolean(src?.trim().startsWith("http"));
+  const value = src?.trim();
+  return Boolean(value?.startsWith("http") || value?.startsWith("/"));
 }

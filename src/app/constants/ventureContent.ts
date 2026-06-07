@@ -110,6 +110,223 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
     },
   },
 
+  "builders-solar": {
+    displayTitle: "Ekho Builders Solar",
+    headline: "Power Your Property with Clean Solar Energy",
+    subheadline:
+      "Residential and commercial solar solutions — designed, installed, and maintained by Ekho Builders.",
+    intro: [
+      "Ekho Builders Solar delivers end-to-end solar energy systems for homes, apartments, clinics, offices, and commercial buildings across Kerala. From the first site survey to final commissioning, we help you cut electricity costs, reduce grid dependence, and invest in power that pays back over time.",
+      "As part of the Echo Futur Builders group, we combine construction-grade planning with trusted components and professional installation — so your solar system is built to perform for years, not just look good on day one.",
+    ],
+    blocks: [
+      {
+        heading: "Solar Solutions We Provide",
+        listGroups: [
+          {
+            title: "Residential",
+            items: [
+              "Rooftop solar for villas, independent homes, and apartment complexes.",
+              "Grid-tied, on-grid, and hybrid systems sized to your daily consumption.",
+              "Battery-ready setups for backup during outages where required.",
+              "Net metering guidance and documentation support for DISCOM approvals.",
+            ],
+          },
+          {
+            title: "Commercial & Institutional",
+            items: [
+              "High-capacity systems for offices, showrooms, clinics, and warehouses.",
+              "Solar for hospitality projects — homestays, restaurants, and wellness centres.",
+              "Performance monitoring, cleaning schedules, and annual maintenance contracts.",
+              "Integration with new construction projects handled by Echo Futur Builders.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Our Installation Process",
+        numbered: [
+          {
+            title: "Site Survey & Load Assessment",
+            description:
+              "We evaluate roof structure, shading, orientation, and your current electricity usage to recommend the right system capacity.",
+          },
+          {
+            title: "Design & Quotation",
+            description:
+              "A clear proposal covering panel layout, inverter selection, estimated generation, savings, and timeline — with no hidden costs.",
+          },
+          {
+            title: "Install & Commission",
+            description:
+              "Certified technicians handle mounting, wiring, safety checks, and grid connection. We test everything before handover.",
+          },
+          {
+            title: "Support & Maintenance",
+            description:
+              "Post-install monitoring, cleaning, and servicing so your system keeps delivering maximum output season after season.",
+          },
+        ],
+      },
+      {
+        heading: "Why Choose Ekho Builders Solar?",
+        quote: "Clean energy should be reliable, transparent, and built to last.",
+        bullets: [
+          "Echo Futur Builders integration — solar planned alongside construction and property development.",
+          "Quality panels, inverters, and mounting hardware from trusted brands.",
+          "Honest sizing — we recommend what you need, not oversized systems you won't use.",
+          "Local team across Kerala for surveys, installation, and after-sales support.",
+          "Long-term AMC options for cleaning, inspection, and performance checks.",
+        ],
+      },
+      {
+        heading: "Ideal For",
+        table: [
+          {
+            category: "Homeowners",
+            promise: "Lower monthly bills and long-term savings on a system sized for your family.",
+          },
+          {
+            category: "Developers",
+            promise: "Solar-ready rooftops and coordinated installs for new flats and commercial builds.",
+          },
+          {
+            category: "Businesses",
+            promise: "Reduce operating costs and show a clear sustainability commitment to customers.",
+          },
+          {
+            category: "Hospitality",
+            promise: "Reliable power for homestays and wellness properties with lower running costs.",
+          },
+        ],
+      },
+      {
+        heading: "Start Your Solar Project",
+        paragraphs: [
+          "Whether you are retrofitting an existing building or planning solar from the blueprint stage, Ekho Builders Solar is your partner for clean, dependable power.",
+          "Contact us for a free site assessment, detailed quotation, and maintenance plan tailored to your property.",
+        ],
+      },
+    ],
+    closing: {
+      quote: "The sun is free. Your installation shouldn't be a gamble.",
+      tagline: "Ekho Builders Solar: Clean energy, built to last.",
+    },
+  },
+
+  "builders-lift": {
+    displayTitle: "Ekho Builders Lift",
+    headline: "Reliable Elevator & Lift Solutions",
+    subheadline:
+      "Installation, modernization, and maintenance for residential, commercial, and hospitality buildings.",
+    intro: [
+      "Ekho Builders Lift provides passenger lifts, service elevators, and modernization solutions for residential towers, commercial complexes, clinics, and hospitality projects. We combine safety-first engineering with responsive maintenance so every ride is smooth, secure, and dependable.",
+      "Backed by Echo Futur Builders, our lift division follows the same standards of quality, transparency, and end-to-end project management that define every structure we build — from foundation to the final floor.",
+    ],
+    blocks: [
+      {
+        heading: "Lift Services We Offer",
+        listGroups: [
+          {
+            title: "New Installations",
+            items: [
+              "Passenger lifts for apartments, villas, and low- to mid-rise commercial buildings.",
+              "Service and goods lifts for hospitals, hotels, warehouses, and retail spaces.",
+              "Custom cab interiors, capacity planning, and shaft coordination with architects.",
+              "Full project management from pit preparation to final safety certification.",
+            ],
+          },
+          {
+            title: "Modernization & Upgrades",
+            items: [
+              "Controller and drive upgrades for older lifts that are slow or unreliable.",
+              "Cab refurbishment — panels, lighting, flooring, and handrails.",
+              "Safety compliance updates to meet current standards and regulations.",
+              "Energy-efficient motor and door system replacements.",
+            ],
+          },
+          {
+            title: "Maintenance & Breakdown Support",
+            items: [
+              "Scheduled preventive maintenance to reduce downtime and extend equipment life.",
+              "24/7 emergency breakdown response for stuck passengers and critical failures.",
+              "Annual safety inspections and compliance documentation.",
+              "Spare parts sourcing and transparent AMC pricing.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "The Ekho Builders Lift Process",
+        numbered: [
+          {
+            title: "Consult & Assess",
+            description:
+              "We review building type, traffic flow, shaft dimensions, and budget to recommend the right lift configuration.",
+          },
+          {
+            title: "Design & Specify",
+            description:
+              "Detailed specs for capacity, speed, stops, cab finish, and safety features — aligned with your architect and builder.",
+          },
+          {
+            title: "Install & Test",
+            description:
+              "Professional installation, alignment, load testing, and safety checks before the lift goes into service.",
+          },
+          {
+            title: "Maintain & Support",
+            description:
+              "Ongoing servicing, emergency support, and upgrade options as your building and needs evolve.",
+          },
+        ],
+      },
+      {
+        heading: "Built on the Echo Futur Standard",
+        quote: "A lift is not a luxury — it is a promise of safety on every floor.",
+        bullets: [
+          "Integrated with Echo Futur construction projects for seamless shaft and pit coordination.",
+          "Trusted components and certified installation practices.",
+          "Clear quotations with no surprise add-ons after work begins.",
+          "Experienced technicians for installation, repair, and modernization.",
+          "AMC plans designed for residential associations, commercial owners, and hospitality operators.",
+        ],
+      },
+      {
+        heading: "Who We Serve",
+        table: [
+          {
+            category: "Residential",
+            promise: "Safe, quiet lifts for apartment blocks and premium villas.",
+          },
+          {
+            category: "Commercial",
+            promise: "High-traffic elevators for offices, retail, and business hubs.",
+          },
+          {
+            category: "Healthcare",
+            promise: "Reliable vertical transport for clinics and medical facilities.",
+          },
+          {
+            category: "Hospitality",
+            promise: "Guest-ready lifts for homestays, hotels, and wellness centres.",
+          },
+        ],
+      },
+      {
+        heading: "Upgrade or Install With Confidence",
+        paragraphs: [
+          "Whether you are building new, replacing an ageing lift, or looking for a dependable maintenance partner, Ekho Builders Lift delivers solutions you can trust.",
+          "Reach out for a site visit, technical assessment, and quotation — we will recommend the right lift for your building and budget.",
+        ],
+      },
+    ],
+    closing: {
+      quote: "Every floor should feel safe. Every ride should feel smooth.",
+      tagline: "Ekho Builders Lift: Safe rides, every floor.",
+    },
+  },
+
   "trend-setter": {
     displayTitle: "Trend Setter",
     headline: "Redefining the Modern Masculine Aesthetic",
@@ -466,51 +683,51 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
 
   "ekho-rascapes": {
     displayTitle: "Ekho Rascapes",
-    headline: "Landscape & Outdoor Design That Elevates Your Space",
-    subheadline: "Creative planning. Lasting greenery. Architecture in harmony with nature.",
+    headline: "Tourism & Hospitality Experiences That Refresh the Soul",
+    subheadline: "Curated travel, stays, and guest experiences across Kerala.",
     intro: [
-      "Ekho Rascapes designs and delivers landscape solutions for homes, hospitality projects, and commercial sites. We blend horticulture, hardscaping, and architectural vision to create outdoor environments that feel intentional and alive.",
-      "From concept sketches to final planting, our team manages every detail with Echo Futur's quality standard.",
+      "Ekho Rascapes is Echo Futur's tourism and hospitality arm — crafting journeys, stays, and guest experiences that go beyond sightseeing. We design meaningful travel that rejuvenates the mind and body.",
+      "From curated itineraries to hospitality partnerships, our team brings Echo Futur's quality standard to every guest touchpoint.",
     ],
     blocks: [
       {
-        heading: "What We Deliver",
+        heading: "What We Offer",
         bullets: [
-          "Residential Gardens: Courtyards, lawns, and terrace greens tailored to your lifestyle.",
-          "Commercial Landscapes: Inviting entrances, campus planting, and low-maintenance corporate exteriors.",
-          "Hardscaping & Features: Pathways, retaining walls, water elements, and outdoor lighting plans.",
-          "Maintenance Programs: Seasonal care to keep your investment thriving year-round.",
+          "Curated Tourism: Slow, meaningful itineraries focused on refreshment and discovery.",
+          "Hospitality Experiences: Guest-ready environments for homestays, retreats, and wellness stays.",
+          "Destination Planning: Local partnerships, activity curation, and on-ground coordination.",
+          "Brand Hospitality: Support for restaurants, homestays, and tourism ventures within the Echo Futur group.",
         ],
       },
       {
-        heading: "The Rascapes Process",
+        heading: "The Rascapes Approach",
         numbered: [
           {
-            title: "Consult & Survey",
+            title: "Discover & Plan",
             description:
-              "We assess soil, climate, drainage, and how you use the space before proposing a design.",
+              "We learn your goals — relaxation, adventure, or cultural immersion — before shaping the experience.",
           },
           {
-            title: "Design & Visualize",
+            title: "Curate & Connect",
             description:
-              "Layouts, plant palettes, and material selections aligned with your budget and timeline.",
+              "Handpicked stays, routes, and local partners aligned with comfort and authenticity.",
           },
           {
-            title: "Build & Plant",
+            title: "Deliver & Support",
             description:
-              "Skilled execution with quality materials and attention to finishing details.",
+              "End-to-end coordination so every guest enjoys a seamless, memorable journey.",
           },
         ],
       },
       {
-        heading: "Transform Your Outdoors",
+        heading: "Travel That Renews You",
         paragraphs: [
-          "Partner with Ekho Rascapes for projects that increase property value and daily enjoyment of your space.",
+          "Partner with Ekho Rascapes for tourism and hospitality experiences that leave guests energized, inspired, and eager to return.",
         ],
       },
     ],
     closing: {
-      tagline: "Ekho Rascapes: Where design meets the outdoors.",
+      tagline: "Ekho Rascapes: Tourism and hospitality, thoughtfully done.",
     },
   },
 

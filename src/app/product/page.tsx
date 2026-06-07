@@ -8,7 +8,7 @@ import { getVentureById } from "../constants/site";
 const PRODUCTS = [
   {
     name: "Pure Flow Water",
-    category: "Sustainability",
+    category: "Pure Flow",
     ventureId: "pureflow",
     imgIndex: 0,
   },
@@ -26,7 +26,7 @@ const PRODUCTS = [
   },
   {
     name: "Ekho Rascapes",
-    category: "Landscape",
+    category: "Tourism and Hospitality",
     ventureId: "ekho-rascapes",
     imgIndex: 0,
   },

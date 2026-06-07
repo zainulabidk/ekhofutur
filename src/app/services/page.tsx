@@ -11,6 +11,8 @@ import { ArrowRight } from "lucide-react";
 
 const FEATURED_ORDER = [
   "builders",
+  "builders-solar",
+  "builders-lift",
   "ekhodigix",
   "skillbyte",
   "trend-setter",
