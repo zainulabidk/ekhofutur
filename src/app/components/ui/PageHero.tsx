@@ -20,7 +20,7 @@ export function PageHero({
     <section
       className={cn(
         "relative flex items-center justify-center overflow-hidden bg-black pt-[var(--site-nav-height)]",
-        height === "lg" ? "h-[50vh] min-h-[360px]" : "h-[42vh] min-h-[300px]"
+        height === "lg" ? "h-[45vh] min-h-[280px] sm:min-h-[360px]" : "h-[38vh] min-h-[240px] sm:min-h-[300px]"
       )}
     >
       <MediaSlot
@@ -34,8 +34,8 @@ export function PageHero({
         placeholderSubtext={title}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50" />
-      <div className="relative z-10 text-center space-y-3 px-6">
-        <h1 className="heading-display text-white">
+      <div className="relative z-10 text-center space-y-3 px-4 sm:px-6 max-w-full">
+        <h1 className="heading-display text-white break-words">
           {title}
           {highlight && (
             <>

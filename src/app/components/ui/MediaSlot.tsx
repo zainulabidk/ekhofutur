@@ -64,6 +64,7 @@ export function MediaSlot({
         className={cn("object-cover", imageClassName)}
         sizes={sizes ?? "100vw"}
         priority={priority}
+        loading={priority ? undefined : "lazy"}
       />
     );
   }
@@ -77,6 +78,7 @@ export function MediaSlot({
       className={cn("object-cover", imageClassName, className)}
       sizes={sizes}
       priority={priority}
+      loading={priority ? undefined : "lazy"}
     />
   );
 }

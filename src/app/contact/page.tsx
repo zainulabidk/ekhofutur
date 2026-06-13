@@ -78,40 +78,36 @@ export default function ContactPage() {
             </div>
 
             <Reveal delay={80}>
-              <form className="bg-black p-8 md:p-10 rounded-3xl shadow-xl space-y-6 lg:sticky lg:top-28">
+              <form className="bg-black p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl shadow-xl form-stack lg:sticky lg:top-28">
                 <div>
-                  <label className="text-white/40 text-[10px] font-black uppercase tracking-widest ml-2">
-                    Your Name
-                  </label>
+                  <label className="form-label text-white/40 ml-1 sm:ml-2">Your Name</label>
                   <input
-                    className="w-full mt-2 bg-white/5 border border-white/10 rounded-full py-3 px-6 text-white outline-none focus:border-yellow-400 transition-colors text-sm"
+                    className="form-field form-field-dark mt-2 rounded-full"
                     type="text"
                     placeholder="Your name"
+                    autoComplete="name"
                   />
                 </div>
                 <div>
-                  <label className="text-white/40 text-[10px] font-black uppercase tracking-widest ml-2">
-                    Your Email
-                  </label>
+                  <label className="form-label text-white/40 ml-1 sm:ml-2">Your Email</label>
                   <input
-                    className="w-full mt-2 bg-white/5 border border-white/10 rounded-full py-3 px-6 text-white outline-none focus:border-yellow-400 transition-colors text-sm"
+                    className="form-field form-field-dark mt-2 rounded-full"
                     type="email"
                     placeholder="you@email.com"
+                    autoComplete="email"
                   />
                 </div>
                 <div>
-                  <label className="text-white/40 text-[10px] font-black uppercase tracking-widest ml-2">
-                    Message
-                  </label>
+                  <label className="form-label text-white/40 ml-1 sm:ml-2">Message</label>
                   <textarea
                     rows={4}
-                    className="w-full mt-2 bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-white outline-none focus:border-yellow-400 transition-colors text-sm resize-none"
+                    className="form-field form-field-dark mt-2 resize-none"
                     placeholder="How can we help?"
                   />
                 </div>
                 <button
                   type="button"
-                  className="w-full bg-yellow-400 text-black py-4 rounded-full font-black uppercase tracking-widest text-xs hover:bg-yellow-300 transition-colors"
+                  className="w-full bg-yellow-400 text-black py-4 rounded-full font-black uppercase tracking-widest text-xs hover:bg-yellow-300 transition-colors min-h-[48px]"
                 >
                   Send Message
                 </button>

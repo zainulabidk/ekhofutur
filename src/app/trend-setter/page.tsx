@@ -65,7 +65,7 @@ export default function TrendSetterPage() {
       </section>
 
       {/* About Section */}
-      <section className="px-6 md:px-24 py-40 max-w-7xl mx-auto">
+      <section className="px-6 md:px-24 py-16 md:py-28 lg:py-40 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -143,7 +143,7 @@ export default function TrendSetterPage() {
       </section>
 
       {/* Lookbook */}
-      <section className="py-20 md:py-40">
+      <section className="py-20 md:py-16 md:py-28 lg:py-40">
         <div className="px-6 md:px-24 mb-20 flex justify-between items-end">
              <div className="space-y-4">
                <h2 className="text-4xl md:text-6xl font-black uppercase italic">Lookbook</h2>
@@ -173,7 +173,7 @@ export default function TrendSetterPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-6 md:px-24 py-40 border-t border-gray-100 text-center">
+      <section className="px-6 md:px-24 py-16 md:py-28 lg:py-40 border-t border-gray-100 text-center">
         <div className="max-w-4xl mx-auto space-y-12">
             <h2 className="text-5xl md:text-8xl font-black italic uppercase leading-none tracking-tighter">
                 Lead The <br /> Movement.

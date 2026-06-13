@@ -89,15 +89,16 @@ export function Footer() {
             <p className="text-white/40 font-bold italic text-lg leading-relaxed">
               Get updates on our ventures, offers, and industry insights.
             </p>
-            <div className="flex items-center gap-2 p-2 rounded-full bg-white/5 border border-white/10 group focus-within:border-yellow-400 transition-colors">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 p-2 rounded-2xl sm:rounded-full bg-white/5 border border-white/10 group focus-within:border-yellow-400 transition-colors max-w-full">
               <input
-                className="bg-transparent placeholder-white/20 text-white outline-none w-full py-2 px-6 font-bold text-sm"
+                className="form-field form-field-dark bg-transparent border-0 rounded-xl sm:rounded-full py-3 px-4 sm:px-6 min-h-[44px]"
                 placeholder="Enter your email"
                 type="email"
+                autoComplete="email"
               />
               <button
                 type="button"
-                className="bg-yellow-400 text-black px-8 py-3 rounded-full font-black uppercase text-[10px] tracking-widest hover:bg-yellow-300 transition-transform hover:scale-105 shadow-xl"
+                className="bg-yellow-400 text-black px-6 sm:px-8 py-3 rounded-xl sm:rounded-full font-black uppercase text-[10px] tracking-widest hover:bg-yellow-300 transition-transform hover:scale-105 shadow-xl shrink-0 min-h-[44px]"
               >
                 Subscribe
               </button>

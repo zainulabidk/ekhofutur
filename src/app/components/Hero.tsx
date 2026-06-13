@@ -7,53 +7,76 @@ import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 import { HERO_SLIDES } from "../constants/data";
 import { cn } from "@/lib/cn";
 
+const SLIDE_COUNT = HERO_SLIDES.length;
+const AUTOPLAY_MS = 7000;
+
 function HeroComponent() {
   const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
 
-  const nextSlide = useCallback(() => {
-    setCurrent((prev) => (prev + 1) % HERO_SLIDES.length);
+  const goTo = useCallback((index: number) => {
+    setCurrent(((index % SLIDE_COUNT) + SLIDE_COUNT) % SLIDE_COUNT);
   }, []);
 
+  const nextSlide = useCallback(() => {
+    goTo(current + 1);
+  }, [current, goTo]);
+
   const prevSlide = useCallback(() => {
-    setCurrent((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+    goTo(current - 1);
+  }, [current, goTo]);
+
+  useEffect(() => {
+    const onVisibility = () => setPaused(document.hidden);
+    document.addEventListener("visibilitychange", onVisibility, { passive: true });
+    return () => document.removeEventListener("visibilitychange", onVisibility);
   }, []);
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 7000);
-    return () => clearInterval(timer);
-  }, [nextSlide]);
+    if (paused) return;
+    const timer = window.setInterval(() => {
+      setCurrent((prev) => (prev + 1) % SLIDE_COUNT);
+    }, AUTOPLAY_MS);
+    return () => window.clearInterval(timer);
+  }, [paused]);
 
   const slide = HERO_SLIDES[current];
+  const prevIndex = (current - 1 + SLIDE_COUNT) % SLIDE_COUNT;
+  const visibleIndices = new Set([current, prevIndex]);
 
   return (
     <section
-      className="home-hero-viewport relative w-full overflow-hidden bg-black snap-start snap-always shrink-0"
+      className="home-hero-viewport relative w-full overflow-hidden bg-black snap-start shrink-0"
       aria-label="Hero"
+      aria-roledescription="carousel"
     >
-      {HERO_SLIDES.map((s, i) => (
-        <div
-          key={s.id}
-          className={cn(
-            "hero-slide",
-            i === current ? "hero-slide-active" : "hero-slide-inactive"
-          )}
-          aria-hidden={i !== current}
-        >
-          <MediaSlot
-            src={s.image}
-            alt={s.title}
-            fill
-            priority={i === 0}
-            sizes="100vw"
-            placeholderLabel={s.category}
-            placeholderSubtext={s.title}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/75" />
-        </div>
-      ))}
+      {HERO_SLIDES.map((s, i) => {
+        if (!visibleIndices.has(i)) return null;
 
-      {/* Content fits below fixed navbar within one viewport */}
+        return (
+          <div
+            key={s.id}
+            className={cn(
+              "hero-slide",
+              i === current ? "hero-slide-active" : "hero-slide-inactive"
+            )}
+            aria-hidden={i !== current}
+          >
+            <MediaSlot
+              src={s.image}
+              alt={s.title}
+              fill
+              priority={i === 0}
+              sizes="100vw"
+              placeholderLabel={s.category}
+              placeholderSubtext={s.title}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/75" />
+          </div>
+        );
+      })}
+
       <div className="absolute inset-0 z-20 flex flex-col pt-[var(--site-nav-height)]">
         <div className="flex-1 flex items-center min-h-0 px-6 md:px-16">
           <div className="w-full max-w-4xl">
@@ -63,9 +86,7 @@ function HeroComponent() {
               </p>
               <h1
                 className="text-white font-bold mb-2 md:mb-4 leading-[1.05] tracking-tight uppercase"
-                style={{
-                  fontSize: "clamp(1.75rem, 6vw, 4.5rem)",
-                }}
+                style={{ fontSize: "clamp(1.75rem, 6vw, 4.5rem)" }}
               >
                 {slide.title}
               </h1>
@@ -81,18 +102,24 @@ function HeroComponent() {
             </div>
           </div>
 
-          <div className="hidden md:flex absolute right-8 lg:right-12 top-1/2 -translate-y-1/2 text-white tabular-nums pointer-events-none">
-            <span className="text-4xl lg:text-5xl font-bold">
+          <div
+            className="absolute right-6 md:right-8 lg:right-12 top-1/2 -translate-y-1/2 text-white tabular-nums pointer-events-none"
+            aria-live="polite"
+          >
+            <span className="text-3xl md:text-4xl lg:text-5xl font-bold">
               {String(current + 1).padStart(2, "0")}
             </span>
-            <span className="text-lg lg:text-xl font-light opacity-60 ml-1 self-end mb-1">
-              /{String(HERO_SLIDES.length).padStart(2, "0")}
+            <span className="text-base md:text-lg lg:text-xl font-light opacity-60 ml-1 self-end mb-1">
+              /{String(SLIDE_COUNT).padStart(2, "0")}
             </span>
           </div>
         </div>
 
         <div className="shrink-0 pb-5 md:pb-8 px-6 flex flex-col items-center gap-4 md:gap-5">
-          <div className="flex items-center gap-4 md:gap-6">
+          <nav
+            className="flex items-center gap-4 md:gap-6"
+            aria-label="Hero slide pagination"
+          >
             <button
               type="button"
               onClick={prevSlide}
@@ -101,16 +128,18 @@ function HeroComponent() {
             >
               <ChevronLeft className="w-8 h-8 md:w-10 md:h-10" strokeWidth={1.5} />
             </button>
-            <div className="flex gap-2">
-              {HERO_SLIDES.map((_, i) => (
+            <div className="flex gap-2" role="tablist">
+              {HERO_SLIDES.map((s, i) => (
                 <button
-                  key={i}
+                  key={s.id}
                   type="button"
-                  aria-label={`Go to slide ${i + 1}`}
-                  onClick={() => setCurrent(i)}
+                  role="tab"
+                  aria-selected={i === current}
+                  aria-label={`Slide ${i + 1}: ${s.title}`}
+                  onClick={() => goTo(i)}
                   className={cn(
-                    "h-1 rounded-full transition-all duration-300",
-                    i === current ? "w-8 bg-yellow-400" : "w-3 bg-white/35 hover:bg-white/60"
+                    "pagination-dot",
+                    i === current ? "pagination-dot-active" : "pagination-dot-inactive"
                   )}
                 />
               ))}
@@ -123,14 +152,17 @@ function HeroComponent() {
             >
               <ChevronRight className="w-8 h-8 md:w-10 md:h-10" strokeWidth={1.5} />
             </button>
-          </div>
+          </nav>
 
           <a
             href="#main-content"
-            className="flex flex-col items-center gap-1 text-white/50 hover:text-yellow-400 transition-colors group"
+            className="flex flex-col items-center gap-1 text-white/50 hover:text-yellow-400 transition-colors group scroll-smooth"
           >
             <span className="text-[9px] font-black uppercase tracking-[0.35em]">Scroll</span>
-            <ChevronDown className="w-5 h-5 animate-bounce group-hover:text-yellow-400" strokeWidth={1.5} />
+            <ChevronDown
+              className="w-5 h-5 animate-bounce group-hover:text-yellow-400"
+              strokeWidth={1.5}
+            />
           </a>
         </div>
       </div>

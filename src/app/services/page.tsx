@@ -3,7 +3,7 @@ import { SiteShell } from "../components/layout/SiteShell";
 import { PageHero } from "../components/ui/PageHero";
 import { MediaSlot } from "../components/ui/MediaSlot";
 import { Reveal } from "../components/ui/Reveal";
-import { ServiceVentureContent } from "../components/services/ServiceVentureContent";
+import { VentureDetailsPager } from "../components/services/VentureDetailsPager";
 import { VENTURES, getNavServiceGroups } from "../constants/site";
 import { SITE_MEDIA } from "../constants/media";
 import { getVentureContent } from "../constants/ventureContent";
@@ -24,6 +24,13 @@ const FEATURED_ORDER = [
 const featuredVentures = FEATURED_ORDER.map((id) =>
   VENTURES.find((v) => v.id === id)
 ).filter((v): v is (typeof VENTURES)[number] => Boolean(v));
+
+const featuredWithContent = featuredVentures
+  .map((venture) => {
+    const content = getVentureContent(venture.id);
+    return content ? { venture, content } : null;
+  })
+  .filter((item): item is NonNullable<typeof item> => Boolean(item));
 
 const otherVentures = VENTURES.filter(
   (v) => !FEATURED_ORDER.includes(v.id as (typeof FEATURED_ORDER)[number])
@@ -107,38 +114,7 @@ export default function ServicesPage() {
             <p className="text-slate-500 font-medium mt-2">In-depth information for each service.</p>
           </Reveal>
 
-          {featuredVentures.map((venture, idx) => {
-            const content = getVentureContent(venture.id);
-            if (!content) return null;
-
-            return (
-              <Reveal
-                key={venture.id}
-                delay={idx * 40}
-                className="grid grid-cols-1 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-8 lg:gap-12 items-start border-b border-slate-100 pb-16 md:pb-20 last:border-0 last:pb-0 scroll-mt-[calc(var(--site-nav-height)+1rem)]"
-              >
-                <div className="lg:sticky lg:top-[calc(var(--site-nav-height)+1rem)] grid grid-cols-2 gap-2 md:gap-3 self-start">
-                  {venture.images.slice(0, 4).map((img, i) => (
-                    <div
-                      key={i}
-                      className="relative aspect-square rounded-2xl overflow-hidden shadow-md"
-                    >
-                      <MediaSlot
-                        src={img}
-                        alt={venture.title}
-                        fill
-                        sizes="(max-width: 1024px) 50vw, 220px"
-                        imageClassName="hover:scale-105 transition-transform duration-400"
-                        placeholderLabel={venture.title}
-                      />
-                    </div>
-                  ))}
-                </div>
-
-                <ServiceVentureContent venture={venture} content={content} />
-              </Reveal>
-            );
-          })}
+          <VentureDetailsPager items={featuredWithContent} />
         </div>
       </section>
 

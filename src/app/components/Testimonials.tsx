@@ -79,23 +79,25 @@ export function ContactForm() {
           </Reveal>
 
           <Reveal delay={80}>
-            <form className="bg-white/5 p-8 md:p-10 rounded-3xl border border-white/10 space-y-6">
+            <form className="bg-white/5 p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl border border-white/10 form-stack">
               <input
                 type="text"
                 placeholder="Full name"
-                className="w-full bg-transparent border-b border-white/15 py-4 text-white text-sm font-medium outline-none focus:border-yellow-400 placeholder:text-white/25 transition-colors"
+                autoComplete="name"
+                className="form-field form-field-dark bg-transparent border-x-0 border-t-0 rounded-none border-b border-white/15 px-0"
               />
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full bg-transparent border-b border-white/15 py-4 text-white text-sm font-medium outline-none focus:border-yellow-400 placeholder:text-white/25 transition-colors"
+                autoComplete="email"
+                className="form-field form-field-dark bg-transparent border-x-0 border-t-0 rounded-none border-b border-white/15 px-0"
               />
               <textarea
                 rows={3}
                 placeholder="How can we help?"
-                className="w-full bg-transparent border-b border-white/15 py-4 text-white text-sm font-medium outline-none focus:border-yellow-400 placeholder:text-white/25 resize-none transition-colors"
+                className="form-field form-field-dark bg-transparent border-x-0 border-t-0 rounded-none border-b border-white/15 px-0 resize-none"
               />
-              <button type="button" className="btn-accent w-full justify-center py-4">
+              <button type="button" className="btn-accent w-full justify-center py-4 min-h-[48px]">
                 Send proposal
               </button>
             </form>

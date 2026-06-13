@@ -192,7 +192,7 @@ export default function OldSchoolPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-6 md:px-24 py-40 bg-[#D4A373] text-black">
+      <section className="px-6 md:px-24 py-16 md:py-28 lg:py-40 bg-[#D4A373] text-black">
         <div className="max-w-4xl mx-auto text-center space-y-12">
             <h2 className="text-6xl md:text-9xl font-black uppercase italic leading-none tracking-tighter">
                 Wear The <br /> Legacy.

@@ -33,16 +33,6 @@ html {
   scroll-padding-top: var(--site-nav-height);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  .snap-y {
-    scroll-snap-type: none;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -50,6 +40,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
 }
 
 /* Anchor targets clear fixed navbar */
@@ -82,12 +73,26 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .snap-y {
+    scroll-snap-type: none;
+  }
+
   .reveal,
   .reveal:not(.reveal-visible) {
     opacity: 1;
     transform: none;
     transition: none;
     will-change: auto;
+  }
+
+  .hero-slide,
+  .hero-text-in {
+    transition: none;
+    animation: none;
   }
 }
 
@@ -105,7 +110,7 @@ body {
 }
 
 .heading-display {
-  @apply text-4xl md:text-7xl font-black uppercase italic tracking-tighter leading-none;
+  @apply text-3xl sm:text-4xl md:text-7xl font-black uppercase italic tracking-tighter leading-none;
 }
 
 .heading-section {
@@ -122,27 +127,85 @@ body {
 
 .section-padding {
   @apply py-14 md:py-20 px-6 md:px-12 lg:px-20;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }
 
 .section-padding-tight {
   @apply py-10 md:py-14 px-6 md:px-12 lg:px-20;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 480px;
+}
+
+.section-venture {
+  @apply py-16 md:py-28 lg:py-40 px-6 md:px-12 lg:px-24;
 }
 
 .container-site {
   @apply max-w-7xl mx-auto w-full;
 }
 
-/* Hero slide crossfade */
+/* Form fields — 16px text prevents iOS zoom; full width on all devices */
+.form-label {
+  @apply block text-[10px] font-black uppercase tracking-widest;
+}
+
+.form-field {
+  @apply w-full min-w-0 max-w-full px-4 py-3.5 sm:px-6 sm:py-4 rounded-2xl border outline-none transition-colors text-base font-medium;
+}
+
+.form-field-light {
+  @apply bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus:border-yellow-400;
+}
+
+.form-field-dark {
+  @apply bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-yellow-400;
+}
+
+.form-field-accent-blue {
+  @apply bg-white border-slate-200 text-slate-900 placeholder:text-slate-400 focus:border-blue-600;
+}
+
+.form-field-accent-emerald {
+  @apply bg-white border-emerald-100 text-slate-900 placeholder:text-slate-400 focus:border-emerald-500;
+}
+
+.form-stack {
+  @apply grid grid-cols-1 gap-4 sm:gap-6;
+}
+
+.form-stack-2 {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6;
+}
+
+/* Hero slide crossfade — GPU layer, no layout thrash */
 .hero-slide {
-  @apply absolute inset-0 transition-opacity duration-700 ease-out;
+  @apply absolute inset-0 transition-opacity duration-500 ease-out;
+  will-change: opacity;
+  contain: layout style paint;
 }
 
 .hero-slide-active {
   @apply opacity-100 z-10;
+  will-change: auto;
 }
 
 .hero-slide-inactive {
   @apply opacity-0 z-0 pointer-events-none;
+  will-change: auto;
+}
+
+/* Pagination controls */
+.pagination-dot {
+  @apply h-1 rounded-full transition-all duration-300;
+}
+
+.pagination-dot-active {
+  @apply w-8 bg-yellow-400;
+}
+
+.pagination-dot-inactive {
+  @apply w-3 bg-white/35 hover:bg-white/60;
 }
 
 .hero-text-in {

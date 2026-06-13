@@ -11,6 +11,11 @@ const poppins = Poppins({
   display: "swap",
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: `${SITE.name} | ${SITE.tagline}`,
   description: SITE.description,

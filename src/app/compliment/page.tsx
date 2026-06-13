@@ -87,7 +87,7 @@ export default function ComplimentPage() {
       </section>
 
       {/* Stats/Highlight Bar */}
-      <section className="px-6 md:px-24 py-16 bg-[#111] border-y border-white/5 grid grid-cols-2 md:grid-cols-4 gap-12">
+      <section className="px-6 md:px-12 lg:px-24 py-12 md:py-16 bg-[#111] border-y border-white/5 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
             {[
                 { label: "Precision", val: "0.1°C", icon: <ThermometerSnowflake className="w-5 h-5" /> },
                 { label: "Efficiency", val: "98%", icon: <Zap className="w-5 h-5" /> },
@@ -103,7 +103,7 @@ export default function ComplimentPage() {
       </section>
 
       {/* Tech Features */}
-      <section className="px-6 md:px-24 py-40">
+      <section className="px-6 md:px-24 py-16 md:py-28 lg:py-40">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 order-2 lg:order-1">
                 {FEATURES.map((feat, i) => (
@@ -145,13 +145,13 @@ export default function ComplimentPage() {
       </section>
 
       {/* Product Showroom */}
-      <section className="px-6 md:px-24 py-40 bg-[#050505] rounded-[5rem] mx-6 md:mx-24 mb-40 border border-white/5">
+      <section className="px-6 md:px-12 lg:px-24 py-16 md:py-28 lg:py-40 bg-[#050505] rounded-3xl md:rounded-[4rem] lg:rounded-[5rem] mx-0 sm:mx-4 md:mx-12 lg:mx-24 mb-16 md:mb-28 lg:mb-40 border border-white/5">
          <div className="text-center space-y-4 mb-24">
             <h2 className="text-4xl md:text-7xl font-black uppercase italic text-white tracking-tighter">The <span className="text-orange-500">2026</span> Lineup</h2>
             <p className="text-gray-500 uppercase tracking-[0.5em] font-black text-xs">Exclusivity in every atom</p>
          </div>
 
-         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {PRODUCTS.map((prod, i) => (
                 <motion.div 
                     key={i}
@@ -178,13 +178,13 @@ export default function ComplimentPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-6 md:px-24 py-40 text-center">
+      <section className="px-6 md:px-24 py-16 md:py-28 lg:py-40 text-center">
          <div className="max-w-5xl mx-auto space-y-12">
             <h2 className="text-6xl md:text-[10rem] font-black uppercase italic leading-none text-white tracking-tighter">
                 Cook <br /> <span className="text-orange-500">Differently.</span>
             </h2>
             <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-                <button className="bg-orange-500 text-white px-20 py-8 rounded-full font-black uppercase tracking-widest text-[14px] hover:shadow-[0_0_50px_rgba(249,115,22,0.4)] transition-all">
+                <button type="button" className="bg-orange-500 text-white w-full sm:w-auto px-8 sm:px-12 md:px-20 py-5 md:py-8 rounded-full font-black uppercase tracking-widest text-xs sm:text-sm hover:shadow-[0_0_50px_rgba(249,115,22,0.4)] transition-all min-h-[48px]">
                     Upgrade Your Home
                 </button>
                 <Link href="/contact" className="text-white font-black uppercase tracking-widest text-[14px] flex items-center gap-4 group">

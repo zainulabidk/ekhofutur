@@ -118,7 +118,7 @@ export default function HopefulStepsPage() {
              initial={{ opacity: 0, scale: 0.9 }}
              whileInView={{ opacity: 1, scale: 1 }}
              viewport={{ once: true }}
-             className="relative aspect-square rounded-[4rem] overflow-hidden shadow-2xl order-1 lg:order-2"
+             className="relative aspect-square rounded-3xl md:rounded-[4rem] overflow-hidden shadow-2xl order-1 lg:order-2"
            >
               <Image 
                 src={imgs[3]} 
@@ -131,7 +131,7 @@ export default function HopefulStepsPage() {
       </section>
 
       {/* Services Section */}
-      <section className="px-6 md:px-24 py-32 bg-[#F8FBF9] rounded-[5rem] mx-6 md:mx-24 overflow-hidden relative border border-emerald-50/50">
+      <section className="px-6 md:px-12 lg:px-24 py-16 md:py-24 lg:py-32 bg-[#F8FBF9] rounded-3xl md:rounded-[4rem] lg:rounded-[5rem] mx-0 sm:mx-4 md:mx-12 lg:mx-24 overflow-hidden relative border border-emerald-50/50">
         <div className="text-center space-y-4 mb-20 relative z-10">
              <h2 className="text-4xl md:text-6xl font-black text-slate-900">Healing <span className="text-emerald-500">Hands</span></h2>
              <p className="text-slate-400 font-medium italic">Tailored care for unique personalities</p>
@@ -164,7 +164,7 @@ export default function HopefulStepsPage() {
             <div className="w-16 h-1 bg-yellow-400" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
             {SPECIALISTS.map((doc, idx) => (
                 <motion.div
                     key={doc.name}
@@ -187,7 +187,7 @@ export default function HopefulStepsPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="px-6 md:px-24 py-32 bg-emerald-500 rounded-[5rem] mx-6 md:mx-24 my-20 text-white relative flex flex-col items-center">
+      <section className="px-6 md:px-12 lg:px-24 py-16 md:py-24 lg:py-32 bg-emerald-500 rounded-3xl md:rounded-[4rem] lg:rounded-[5rem] mx-0 sm:mx-4 md:mx-12 lg:mx-24 my-12 md:my-20 text-white relative flex flex-col items-center">
          <div className="max-w-4xl text-center space-y-12">
             <div className="size-20 rounded-full bg-white/20 flex items-center justify-center mx-auto">
                 <MessageCircle className="w-10 h-10" />
@@ -203,35 +203,35 @@ export default function HopefulStepsPage() {
       </section>
 
       {/* Appointment Form Section */}
-      <section className="px-6 md:px-24 py-32 max-w-7xl mx-auto">
-         <div className="bg-white rounded-[4rem] shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 border border-emerald-50">
-            <div className="p-12 md:p-20 space-y-10">
-                <h2 className="text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tighter">Start Your <br /> Journey <span className="text-emerald-500">Gently.</span></h2>
-                <div className="space-y-6">
-                    <div className="flex items-center gap-6">
-                        <div className="size-12 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600"><Phone className="w-6 h-6" /></div>
-                        <p className="font-bold text-slate-600">+91 7902650101</p>
+      <section className="px-6 md:px-12 lg:px-24 py-16 md:py-24 lg:py-32 max-w-7xl mx-auto">
+         <div className="bg-white rounded-3xl md:rounded-[4rem] shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 border border-emerald-50">
+            <div className="p-6 sm:p-10 md:p-16 lg:p-20 space-y-6 md:space-y-10">
+                <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-slate-900 leading-tight tracking-tighter">Start Your <br /> Journey <span className="text-emerald-500">Gently.</span></h2>
+                <div className="space-y-4 md:space-y-6">
+                    <div className="flex items-center gap-4 md:gap-6">
+                        <div className="size-10 md:size-12 shrink-0 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600"><Phone className="w-5 h-5 md:w-6 md:h-6" /></div>
+                        <p className="font-bold text-slate-600 text-sm md:text-base">+91 7902650101</p>
                     </div>
-                    <div className="flex items-center gap-6">
-                        <div className="size-12 rounded-full bg-yellow-50 flex items-center justify-center text-yellow-600"><MapPin className="w-6 h-6" /></div>
-                        <p className="font-bold text-slate-600">Industrial Hub, Kerala, India</p>
+                    <div className="flex items-center gap-4 md:gap-6">
+                        <div className="size-10 md:size-12 shrink-0 rounded-full bg-yellow-50 flex items-center justify-center text-yellow-600"><MapPin className="w-5 h-5 md:w-6 md:h-6" /></div>
+                        <p className="font-bold text-slate-600 text-sm md:text-base">Industrial Hub, Kerala, India</p>
                     </div>
                 </div>
             </div>
-            <div className="p-12 md:p-20 bg-emerald-50/30 flex flex-col justify-center">
-                <form className="grid grid-cols-1 gap-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <input type="text" placeholder="Your Name" className="w-full px-8 py-5 rounded-[2rem] bg-white border border-emerald-100 outline-none focus:border-emerald-500 transition-all font-medium" />
-                        <input type="tel" placeholder="Phone Number" className="w-full px-8 py-5 rounded-[2rem] bg-white border border-emerald-100 outline-none focus:border-emerald-500 transition-all font-medium" />
+            <div className="p-6 sm:p-10 md:p-16 lg:p-20 bg-emerald-50/30 flex flex-col justify-center">
+                <form className="form-stack">
+                    <div className="form-stack-2">
+                        <input type="text" placeholder="Your Name" autoComplete="name" className="form-field form-field-accent-emerald rounded-3xl" />
+                        <input type="tel" placeholder="Phone Number" autoComplete="tel" className="form-field form-field-accent-emerald rounded-3xl" />
                     </div>
-                    <input type="email" placeholder="Email Address" className="w-full px-8 py-5 rounded-[2rem] bg-white border border-emerald-100 outline-none focus:border-emerald-500 transition-all font-medium" />
-                    <select className="w-full px-8 py-5 rounded-[2rem] bg-white border border-emerald-100 outline-none focus:border-emerald-500 transition-all font-medium appearance-none">
+                    <input type="email" placeholder="Email Address" autoComplete="email" className="form-field form-field-accent-emerald rounded-3xl" />
+                    <select className="form-field form-field-accent-emerald rounded-3xl appearance-none">
                         <option>Choose Therapy Type</option>
                         <option>Speech Therapy</option>
                         <option>Child Development</option>
                         <option>Behavioral Therapy</option>
                     </select>
-                    <button className="w-full bg-emerald-500 text-white font-black uppercase tracking-widest py-6 rounded-[2rem] hover:bg-emerald-600 transition-all shadow-xl shadow-emerald-100">
+                    <button type="button" className="w-full bg-emerald-500 text-white font-black uppercase tracking-widest py-4 md:py-6 rounded-3xl hover:bg-emerald-600 transition-all shadow-xl shadow-emerald-100 min-h-[48px]">
                         Book Appointment
                     </button>
                 </form>

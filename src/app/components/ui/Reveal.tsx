@@ -18,6 +18,7 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
     if (!el) return;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setVisible(true);
       return;
     }
 
@@ -28,7 +29,7 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
           observer.disconnect();
         }
       },
-      { rootMargin: "0px 0px -6% 0px", threshold: 0.1 }
+      { rootMargin: "0px 0px -4% 0px", threshold: 0.05 }
     );
 
     observer.observe(el);

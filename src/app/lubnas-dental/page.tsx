@@ -165,7 +165,7 @@ export default function DentalClinicPage() {
       </section>
 
       {/* Doctor Section */}
-      <section className="px-6 md:px-24 py-32 bg-blue-600 rounded-[4rem] mx-6 md:mx-24 my-20 text-white overflow-hidden relative">
+      <section className="px-6 md:px-12 lg:px-24 py-16 md:py-24 lg:py-32 bg-blue-600 rounded-3xl md:rounded-[4rem] mx-0 sm:mx-4 md:mx-12 lg:mx-24 my-12 md:my-20 text-white overflow-hidden relative">
          <div className="absolute top-0 right-0 size-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
             <div className="space-y-10 order-2 lg:order-1">
@@ -201,43 +201,43 @@ export default function DentalClinicPage() {
       </section>
 
       {/* Appointment Form Section */}
-      <section className="px-6 md:px-24 py-32 max-w-7xl mx-auto">
-         <div className="bg-slate-50 rounded-[4rem] overflow-hidden grid grid-cols-1 lg:grid-cols-2 border border-slate-100">
-            <div className="p-12 md:p-20 space-y-8 bg-blue-600 text-white">
-                <h2 className="text-4xl md:text-6xl font-black leading-tight">Secure Your <br /> Visit Today.</h2>
-                <p className="text-blue-100 font-medium text-lg">Leave your details and our smile coordinator will call you back within 3 hours.</p>
-                <div className="space-y-6 pt-10">
-                    <div className="flex items-center gap-6">
-                        <div className="size-12 rounded-2xl bg-white/10 flex items-center justify-center text-white"><MapPin className="w-6 h-6" /></div>
-                        <p className="font-bold">123 Health Ave, Medical City, India</p>
+      <section className="px-6 md:px-12 lg:px-24 py-16 md:py-24 lg:py-32 max-w-7xl mx-auto">
+         <div className="bg-slate-50 rounded-3xl md:rounded-[4rem] overflow-hidden grid grid-cols-1 lg:grid-cols-2 border border-slate-100">
+            <div className="p-6 sm:p-10 md:p-16 lg:p-20 space-y-6 md:space-y-8 bg-blue-600 text-white">
+                <h2 className="text-3xl sm:text-4xl md:text-6xl font-black leading-tight">Secure Your <br /> Visit Today.</h2>
+                <p className="text-blue-100 font-medium text-base md:text-lg">Leave your details and our smile coordinator will call you back within 3 hours.</p>
+                <div className="space-y-4 md:space-y-6 pt-6 md:pt-10">
+                    <div className="flex items-center gap-4 md:gap-6">
+                        <div className="size-10 md:size-12 shrink-0 rounded-2xl bg-white/10 flex items-center justify-center text-white"><MapPin className="w-5 h-5 md:w-6 md:h-6" /></div>
+                        <p className="font-bold text-sm md:text-base">123 Health Ave, Medical City, India</p>
                     </div>
-                    <div className="flex items-center gap-6">
-                        <div className="size-12 rounded-2xl bg-white/10 flex items-center justify-center text-white"><Phone className="w-6 h-6" /></div>
-                        <p className="font-bold">+91 7902650101</p>
+                    <div className="flex items-center gap-4 md:gap-6">
+                        <div className="size-10 md:size-12 shrink-0 rounded-2xl bg-white/10 flex items-center justify-center text-white"><Phone className="w-5 h-5 md:w-6 md:h-6" /></div>
+                        <p className="font-bold text-sm md:text-base">+91 7902650101</p>
                     </div>
                 </div>
             </div>
-            <div className="p-12 md:p-20 flex flex-col justify-center">
-                <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="p-6 sm:p-10 md:p-16 lg:p-20 flex flex-col justify-center">
+                <form className="form-stack-2">
                     <div className="space-y-2">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Full Name</label>
-                        <input type="text" placeholder="John Doe" className="w-full px-6 py-4 rounded-2xl bg-white border border-slate-200 outline-none focus:border-blue-600 transition-all font-medium" />
+                        <label className="form-label text-slate-400">Full Name</label>
+                        <input type="text" placeholder="John Doe" autoComplete="name" className="form-field form-field-accent-blue" />
                     </div>
                     <div className="space-y-2">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Phone</label>
-                        <input type="tel" placeholder="+91 7902650101" className="w-full px-6 py-4 rounded-2xl bg-white border border-slate-200 outline-none focus:border-blue-600 transition-all font-medium" />
+                        <label className="form-label text-slate-400">Phone</label>
+                        <input type="tel" placeholder="+91 7902650101" autoComplete="tel" className="form-field form-field-accent-blue" />
                     </div>
-                    <div className="md:col-span-2 space-y-2">
-                        <label className="text-[10px] font-black uppercase tracking-widest text-slate-400">Treatment</label>
-                        <select className="w-full px-6 py-4 rounded-2xl bg-white border border-slate-200 outline-none focus:border-blue-600 transition-all font-medium appearance-none">
+                    <div className="sm:col-span-2 space-y-2">
+                        <label className="form-label text-slate-400">Treatment</label>
+                        <select className="form-field form-field-accent-blue appearance-none">
                             <option>Orthodontic Braces</option>
                             <option>Teeth Whitening</option>
                             <option>Dental Implant</option>
                             <option>Root Canal</option>
                         </select>
                     </div>
-                    <div className="md:col-span-2 pt-4">
-                        <button className="w-full bg-blue-600 text-white font-black uppercase tracking-widest py-5 rounded-2xl hover:bg-slate-900 transition-all shadow-xl shadow-blue-200">
+                    <div className="sm:col-span-2 pt-2 md:pt-4">
+                        <button type="button" className="w-full bg-blue-600 text-white font-black uppercase tracking-widest py-4 md:py-5 rounded-2xl hover:bg-slate-900 transition-all shadow-xl shadow-blue-200 min-h-[48px]">
                             Confirm Appointment
                         </button>
                     </div>

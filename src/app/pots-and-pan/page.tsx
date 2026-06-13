@@ -79,16 +79,16 @@ export default function PotsAndPanPage() {
       </section>
 
       {/* Craftsmanship Section */}
-      <section className="px-6 md:px-24 py-40">
+      <section className="px-6 md:px-24 py-16 md:py-28 lg:py-40">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <motion.div 
                initial={{ opacity: 0, scale: 0.95 }}
                whileInView={{ opacity: 1, scale: 1 }}
                viewport={{ once: true }}
-               className="relative aspect-[4/5] rounded-[4rem] overflow-hidden shadow-2xl"
+               className="relative aspect-[4/5] rounded-3xl md:rounded-[4rem] overflow-hidden shadow-2xl"
             >
                 <Image src={imgs[1]} alt="Iron Pouring" fill className="object-cover" />
-                <div className="absolute inset-x-0 bottom-0 p-12 bg-gradient-to-t from-black/80 to-transparent">
+                <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 md:p-12 bg-gradient-to-t from-black/80 to-transparent">
                     <p className="text-white text-2xl font-black italic">1450°C</p>
                     <p className="text-white/60 text-xs uppercase font-bold tracking-widest">Liquid Metal Casting</p>
                 </div>
@@ -124,7 +124,7 @@ export default function PotsAndPanPage() {
       </section>
 
       {/* Featured Grid */}
-      <section className="px-6 md:px-24 py-40 bg-slate-100 rounded-[5rem] mx-6 md:mx-24 mb-40 border border-slate-200">
+      <section className="px-6 md:px-12 lg:px-24 py-16 md:py-28 lg:py-40 bg-slate-100 rounded-3xl md:rounded-[4rem] lg:rounded-[5rem] mx-0 sm:mx-4 md:mx-12 lg:mx-24 mb-16 md:mb-28 lg:mb-40 border border-slate-200">
          <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-24">
             <h2 className="text-5xl md:text-8xl font-black uppercase italic tracking-tighter text-slate-900">Forged <br /> For <span className="text-[#8B4513]">Chefs.</span></h2>
             <button className="text-[#8B4513] flex items-center gap-3 font-black uppercase tracking-widest text-xs group">
@@ -155,7 +155,7 @@ export default function PotsAndPanPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-6 md:px-24 py-40 text-center">
+      <section className="px-6 md:px-24 py-16 md:py-28 lg:py-40 text-center">
          <div className="max-w-4xl mx-auto space-y-16">
             <h2 className="text-6xl md:text-9xl font-black uppercase italic leading-none tracking-tighter text-slate-900">
                 Taste The <br /> <span className="text-[#8B4513]">Precision.</span>
