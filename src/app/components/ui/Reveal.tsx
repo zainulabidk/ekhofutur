@@ -7,13 +7,20 @@ type RevealProps = {
   children: ReactNode;
   className?: string;
   delay?: number;
+  /** Skip animation — use for dynamic content (pagination, tabs) */
+  instant?: boolean;
 };
 
-export function Reveal({ children, className, delay = 0 }: RevealProps) {
+export function Reveal({ children, className, delay = 0, instant = false }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(instant);
 
   useEffect(() => {
+    if (instant) {
+      setVisible(true);
+      return;
+    }
+
     const el = ref.current;
     if (!el) return;
 
@@ -29,12 +36,12 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
           observer.disconnect();
         }
       },
-      { rootMargin: "0px 0px -4% 0px", threshold: 0.05 }
+      { rootMargin: "0px 0px -2% 0px", threshold: 0.01 }
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [instant]);
 
   return (
     <div
