@@ -8,9 +8,9 @@
   --accent-hover: #f5cc00;
   --muted: #64748b;
   --surface: #f9fafb;
-  --footer-from: #000000;
-  --footer-via: #1f2a44;
-  --footer-to: #4682b4;
+  --footer-from: #0a0a0a;
+  --footer-via: #0a0a0a;
+  --footer-to: #0a0a0a;
   --radius-card: 1.25rem;
   --radius-section: 2rem;
   --font-sans: var(--font-poppins), system-ui, sans-serif;
