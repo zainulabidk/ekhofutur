@@ -15,12 +15,12 @@ export function Footer() {
     <footer className="px-6 md:px-12 lg:px-20 w-full text-sm text-white pt-14 md:pt-16 font-poppins bg-gradient-to-r from-[var(--footer-from)] via-[var(--footer-via)] to-[var(--footer-to)] overflow-hidden">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 pb-12">
         <div className="sm:col-span-2 lg:col-span-1 space-y-8">
-          <Link href="/" className="inline-flex items-center shrink-0 h-10 md:h-11">
+          <Link href="/" className="inline-flex items-center shrink-0 h-16 md:h-20">
             <Image
               src={LOGO_URL}
               alt="Ekho Future"
-              width={130}
-              height={40}
+              width={220}
+              height={80}
               className="object-contain brightness-110 h-full w-auto"
             />
           </Link>
