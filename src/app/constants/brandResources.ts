@@ -31,25 +31,25 @@ export const BRAND_RESOURCES: BrandResource[] = [
   },
   {
     id: "trend-setter",
-    name: "Trend Setters",
+    name: "Trendsetter",
     email: "trendsetters0101@gmail.com",
     sitePath: "/trend-setter",
   },
   {
     id: "builders",
-    name: "Builders & Realtors",
+    name: "Ekho Builders & Realtors",
     email: "Ekhofutur@gmail.com",
     sitePath: "/builders-realtors",
   },
   {
     id: "builders-solar",
-    name: "Ekho Builders Solar",
+    name: "Ekho Nova",
     email: "Ekhofutur@gmail.com",
     sitePath: "/builders-solar",
   },
   {
     id: "builders-lift",
-    name: "Ekho Builders Lift",
+    name: "Ekho Elevators",
     email: "Ekhofutur@gmail.com",
     sitePath: "/builders-lift",
   },
@@ -61,7 +61,7 @@ export const BRAND_RESOURCES: BrandResource[] = [
   },
   {
     id: "ekho-rascapes",
-    name: "Ekho Rascapes",
+    name: "Ekhora Scapes",
     email: "ekhorascapes@gmail.com",
     sitePath: "/ekho-rascapes",
   },
@@ -73,7 +73,7 @@ export const BRAND_RESOURCES: BrandResource[] = [
   },
   {
     id: "skillbyte",
-    name: "Ekho SkillByte",
+    name: "EkhoSkillByte Academy",
     email: "ekhoskillbyte@gmail.com",
     sitePath: "/skillbyte",
   },

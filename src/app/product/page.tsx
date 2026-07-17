@@ -25,7 +25,7 @@ const PRODUCTS = [
     imgIndex: 0,
   },
   {
-    name: "Ekho Rascapes",
+    name: "Ekhora Scapes",
     category: "Tourism and Hospitality",
     ventureId: "ekho-rascapes",
     imgIndex: 0,

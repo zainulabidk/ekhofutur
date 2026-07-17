@@ -75,7 +75,7 @@ export default function SkillbytePage() {
         <div className="absolute inset-0 z-0">
           <Image
             src={imgs[0]}
-            alt="Ekho SkillByte Academy"
+            alt="EkhoSkillByte Academy"
             fill
             className="object-cover opacity-25"
             priority

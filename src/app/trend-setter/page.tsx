@@ -30,7 +30,7 @@ export default function TrendSetterPage() {
         <div className="absolute inset-0 overflow-hidden">
           <Image 
             src={imgs[0]} 
-            alt="Trend Setter Hero" 
+            alt="Trendsetter Hero" 
             fill 
             className="object-cover"
             priority
@@ -78,7 +78,7 @@ export default function TrendSetterPage() {
                 <span className="font-black italic uppercase">Precision.</span>
             </h2>
             <p className="text-gray-500 text-lg md:text-xl font-light leading-relaxed max-w-md">
-                Trend Setter operates at the intersection of modern architecture and wearable art. Every piece is a study in geometry, fabric integrity, and monochrome balance.
+                Trendsetter operates at the intersection of modern architecture and wearable art. Every piece is a study in geometry, fabric integrity, and monochrome balance.
             </p>
             <div className="flex items-center gap-6">
                  <div className="size-16 rounded-full border border-black/10 flex items-center justify-center">

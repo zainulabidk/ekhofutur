@@ -58,9 +58,19 @@ export default function HopefulStepsPage() {
              transition={{ duration: 0.8 }}
              className="space-y-6"
            >
-             <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-600 px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest">
-                <Heart className="w-4 h-4" />
-                A Circle of Trust
+             <div className="flex flex-wrap items-center gap-3">
+               <div className="inline-flex items-center gap-2 bg-emerald-50 text-emerald-600 px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest">
+                  <Heart className="w-4 h-4" />
+                  A Circle of Trust
+               </div>
+               <a
+                 href="https://www.instagram.com/hopefulsteps_dxb"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="inline-flex items-center gap-2 bg-white text-slate-600 border border-emerald-100 px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest hover:border-emerald-400 hover:text-emerald-600 transition-colors"
+               >
+                 @hopefulsteps_dxb
+               </a>
              </div>
              <h1 className="text-5xl md:text-8xl font-black text-slate-900 leading-tight">
                 Hopeful <br /> <span className="text-emerald-500 italic">Steps.</span>

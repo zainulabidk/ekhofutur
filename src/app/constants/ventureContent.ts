@@ -39,13 +39,13 @@ export type VentureContent = {
 
 export const VENTURE_CONTENT: Record<string, VentureContent> = {
   builders: {
-    displayTitle: "Echo Futur Builders & Realtors",
+    displayTitle: "Ekho Builders & Realtors",
     headline: "Constructing Excellence",
     subheadline:
       "No Compromise in Quality. Guaranteed Value in Every Square Foot.",
     intro: [
-      "At Echo Futur Builders & Realtors, we don't just build structures; we build trust. Whether it's a dream home or a critical healthcare facility, our philosophy is simple: Uncompromising Quality.",
-      "As the infrastructure arm of the Echo Futur group, we combine architectural innovation with a unique Price Match Guarantee, ensuring you never have to choose between your budget and your vision.",
+      "At Ekho Builders & Realtors, we don't just build structures; we build trust. Whether it's a dream home or a critical healthcare facility, our philosophy is simple: Uncompromising Quality.",
+      "As the infrastructure arm of the Ekho Future group, we combine architectural innovation with a unique Price Match Guarantee, ensuring you never have to choose between your budget and your vision.",
     ],
     blocks: [
       {
@@ -77,7 +77,7 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
         ],
       },
       {
-        heading: "The Echo Futur Construction Standard",
+        heading: "The Ekho Builders Construction Standard",
         numbered: [
           {
             title: "No Compromise in Quality",
@@ -101,23 +101,23 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
         quote:
           "Your vision is our blueprint. Our quality is your peace of mind.",
         paragraphs: [
-          "Whether you are looking to invest in a residential flat, launch a new restaurant, or develop a state-of-the-art hospital, Echo Futur Builders & Realtors is your partner in progress.",
+          "Whether you are looking to invest in a residential flat, launch a new restaurant, or develop a state-of-the-art hospital, Ekho Builders & Realtors is your partner in progress.",
         ],
       },
     ],
     closing: {
-      tagline: "Echo Futur Builders & Realtors: Quality you can stand on.",
+      tagline: "Ekho Builders & Realtors: Quality you can stand on.",
     },
   },
 
   "builders-solar": {
-    displayTitle: "Ekho Builders Solar",
+    displayTitle: "Ekho Nova",
     headline: "Power Your Property with Clean Solar Energy",
     subheadline:
       "Residential and commercial solar solutions — designed, installed, and maintained by Ekho Builders.",
     intro: [
-      "Ekho Builders Solar delivers end-to-end solar energy systems for homes, apartments, clinics, offices, and commercial buildings across Kerala. From the first site survey to final commissioning, we help you cut electricity costs, reduce grid dependence, and invest in power that pays back over time.",
-      "As part of the Echo Futur Builders group, we combine construction-grade planning with trusted components and professional installation — so your solar system is built to perform for years, not just look good on day one.",
+      "Ekho Nova delivers end-to-end solar energy systems for homes, apartments, clinics, offices, and commercial buildings across Kerala. From the first site survey to final commissioning, we help you cut electricity costs, reduce grid dependence, and invest in power that pays back over time.",
+      "As part of the Ekho Builders group, we combine construction-grade planning with trusted components and professional installation — so your solar system is built to perform for years, not just look good on day one.",
     ],
     blocks: [
       {
@@ -138,7 +138,7 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
               "High-capacity systems for offices, showrooms, clinics, and warehouses.",
               "Solar for hospitality projects — homestays, restaurants, and wellness centres.",
               "Performance monitoring, cleaning schedules, and annual maintenance contracts.",
-              "Integration with new construction projects handled by Echo Futur Builders.",
+              "Integration with new construction projects handled by Ekho Builders.",
             ],
           },
         ],
@@ -169,10 +169,10 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
         ],
       },
       {
-        heading: "Why Choose Ekho Builders Solar?",
+        heading: "Why Choose Ekho Nova?",
         quote: "Clean energy should be reliable, transparent, and built to last.",
         bullets: [
-          "Echo Futur Builders integration — solar planned alongside construction and property development.",
+          "Ekho Builders integration — solar planned alongside construction and property development.",
           "Quality panels, inverters, and mounting hardware from trusted brands.",
           "Honest sizing — we recommend what you need, not oversized systems you won't use.",
           "Local team across Kerala for surveys, installation, and after-sales support.",
@@ -203,25 +203,25 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
       {
         heading: "Start Your Solar Project",
         paragraphs: [
-          "Whether you are retrofitting an existing building or planning solar from the blueprint stage, Ekho Builders Solar is your partner for clean, dependable power.",
+          "Whether you are retrofitting an existing building or planning solar from the blueprint stage, Ekho Nova is your partner for clean, dependable power.",
           "Contact us for a free site assessment, detailed quotation, and maintenance plan tailored to your property.",
         ],
       },
     ],
     closing: {
       quote: "The sun is free. Your installation shouldn't be a gamble.",
-      tagline: "Ekho Builders Solar: Clean energy, built to last.",
+      tagline: "Ekho Nova: Clean energy, built to last.",
     },
   },
 
   "builders-lift": {
-    displayTitle: "Ekho Builders Lift",
+    displayTitle: "Ekho Elevators",
     headline: "Reliable Elevator & Lift Solutions",
     subheadline:
       "Installation, modernization, and maintenance for residential, commercial, and hospitality buildings.",
     intro: [
-      "Ekho Builders Lift provides passenger lifts, service elevators, and modernization solutions for residential towers, commercial complexes, clinics, and hospitality projects. We combine safety-first engineering with responsive maintenance so every ride is smooth, secure, and dependable.",
-      "Backed by Echo Futur Builders, our lift division follows the same standards of quality, transparency, and end-to-end project management that define every structure we build — from foundation to the final floor.",
+      "Ekho Elevators provides passenger lifts, service elevators, and modernization solutions for residential towers, commercial complexes, clinics, and hospitality projects. We combine safety-first engineering with responsive maintenance so every ride is smooth, secure, and dependable.",
+      "Backed by Ekho Builders, our lift division follows the same standards of quality, transparency, and end-to-end project management that define every structure we build — from foundation to the final floor.",
     ],
     blocks: [
       {
@@ -257,7 +257,7 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
         ],
       },
       {
-        heading: "The Ekho Builders Lift Process",
+        heading: "The Ekho Elevators Process",
         numbered: [
           {
             title: "Consult & Assess",
@@ -282,10 +282,10 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
         ],
       },
       {
-        heading: "Built on the Echo Futur Standard",
+        heading: "Built on the Ekho Future Standard",
         quote: "A lift is not a luxury — it is a promise of safety on every floor.",
         bullets: [
-          "Integrated with Echo Futur construction projects for seamless shaft and pit coordination.",
+          "Integrated with Ekho Builders construction projects for seamless shaft and pit coordination.",
           "Trusted components and certified installation practices.",
           "Clear quotations with no surprise add-ons after work begins.",
           "Experienced technicians for installation, repair, and modernization.",
@@ -316,31 +316,31 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
       {
         heading: "Upgrade or Install With Confidence",
         paragraphs: [
-          "Whether you are building new, replacing an ageing lift, or looking for a dependable maintenance partner, Ekho Builders Lift delivers solutions you can trust.",
+          "Whether you are building new, replacing an ageing lift, or looking for a dependable maintenance partner, Ekho Elevators delivers solutions you can trust.",
           "Reach out for a site visit, technical assessment, and quotation — we will recommend the right lift for your building and budget.",
         ],
       },
     ],
     closing: {
       quote: "Every floor should feel safe. Every ride should feel smooth.",
-      tagline: "Ekho Builders Lift: Safe rides, every floor.",
+      tagline: "Ekho Elevators: Safe rides, every floor.",
     },
   },
 
   "trend-setter": {
-    displayTitle: "Trend Setter",
+    displayTitle: "Trendsetter",
     headline: "Redefining the Modern Masculine Aesthetic",
     subheadline:
       "Premium Outdoor Apparel for the Man Who Leads, Never Follows.",
     intro: [
-      "Style isn't just about what you wear; it's about the statement you make. Trend Setter is the premier menswear destination within the Echo Futur group, dedicated to the man who demands a fusion of high-street fashion and outdoor performance. We don't just follow the latest styles—we define them.",
+      "Style isn't just about what you wear; it's about the statement you make. Trendsetter is the premier menswear destination within the Ekho Future group, dedicated to the man who demands a fusion of high-street fashion and outdoor performance. We don't just follow the latest styles—we define them.",
     ],
     blocks: [
       {
-        heading: "The Trend Setter Vision",
+        heading: "The Trendsetter Vision",
         quote: "Where the pavement ends, the style begins.",
         paragraphs: [
-          "We believe that \"outdoor\" doesn't have to mean \"bulky.\" Trend Setter curates a collection of premium clothing that transitions seamlessly from a high-stakes meeting to a mountain-side retreat. Our pieces are selected for the man who values sharp silhouettes, technical fabrics, and an undeniable presence.",
+          "We believe that \"outdoor\" doesn't have to mean \"bulky.\" Trendsetter curates a collection of premium clothing that transitions seamlessly from a high-stakes meeting to a mountain-side retreat. Our pieces are selected for the man who values sharp silhouettes, technical fabrics, and an undeniable presence.",
         ],
       },
       {
@@ -357,9 +357,9 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
         ],
       },
       {
-        heading: "Why Trend Setter?",
+        heading: "Why Trendsetter?",
         bullets: [
-          "Curation Over Collection: We don't stock everything; we only stock the best. Every garment is handpicked for its \"Trend Setter\" status.",
+          "Curation Over Collection: We don't stock everything; we only stock the best. Every garment is handpicked for its \"Trendsetter\" status.",
           "The Modern Fit: Our clothing is designed for the modern physique—sharp, clean lines that flatter while allowing for total freedom of movement.",
           "Echo Futur Innovation: Leveraging the visionary spirit of Echo Futur, we bring you the latest textile technology and global fashion trends before they hit the mainstream.",
         ],
@@ -372,7 +372,7 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
       },
     ],
     closing: {
-      tagline: "Trend Setter: For those who set the pace.",
+      tagline: "Trendsetter: For those who set the pace.",
     },
   },
 
@@ -381,7 +381,7 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
     headline: "The Heart of Your Smart Kitchen",
     subheadline: "Authorized Dealer for India's Most Trusted Kitchen Brands.",
     intro: [
-      "A great meal starts with the right tools. At Compliment, we bridge the gap between traditional cooking and modern efficiency. As a specialized vertical of the Echo Futur group, we are proud to be the authorized destination for world-class kitchen technology.",
+      "A great meal starts with the right tools. At Compliment, we bridge the gap between traditional cooking and modern efficiency. As a specialized vertical of the Ekho Future group, we are proud to be the authorized destination for world-class kitchen technology.",
       "We don't just sell appliances; we provide the \"compliments\" your kitchen needs to run smarter, faster, and better.",
     ],
     blocks: [
@@ -436,7 +436,7 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
     headline: "The Art of the Kitchen",
     subheadline: "Elevate Every Ingredient. Master Every Meal.",
     intro: [
-      "From the first sizzle in the pan to the golden crust of a perfect bake, Pots and Pan provides the tools that turn cooking into a craft. As a proud member of the Echo Futur group, we combine cutting-edge material science with ergonomic design to bring professional-grade performance to your kitchen.",
+      "From the first sizzle in the pan to the golden crust of a perfect bake, Pots and Pan provides the tools that turn cooking into a craft. As a proud member of the Ekho Future group, we combine cutting-edge material science with ergonomic design to bring professional-grade performance to your kitchen.",
     ],
     blocks: [
       {
@@ -550,7 +550,7 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
     headline: "Vintage Outdoor Apparel with Timeless Character",
     subheadline: "Classic cuts. Honest fabrics. Style that outlasts seasons.",
     intro: [
-      "Old School is Echo Futur's tribute to heritage outdoor wear — pieces inspired by decades past, rebuilt for today's explorer. We curate vintage-influenced jackets, tees, and utility wear that feel broken-in from day one.",
+      "Old School is Ekho Future's tribute to heritage outdoor wear — pieces inspired by decades past, rebuilt for today's explorer. We curate vintage-influenced jackets, tees, and utility wear that feel broken-in from day one.",
       "Every collection balances nostalgia with durability: rugged enough for the trail, refined enough for the city.",
     ],
     blocks: [
@@ -598,7 +598,7 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
     subheadline: "Clean aesthetics. Gentle expertise. Smiles built to last.",
     intro: [
       "Lubnas Dental Studio delivers comprehensive oral care in a calm, contemporary setting. From routine checkups to advanced restorative work, our team combines precision technology with patient-first communication.",
-      "As part of Echo Futur's Life Care vertical, we believe dental health is foundational to confidence and overall wellness.",
+      "As part of Ekho Future's Life Care vertical, we believe dental health is foundational to confidence and overall wellness.",
     ],
     blocks: [
       {
@@ -682,12 +682,12 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
   },
 
   "ekho-rascapes": {
-    displayTitle: "Ekho Rascapes",
+    displayTitle: "Ekhora Scapes",
     headline: "Tourism & Hospitality Experiences That Refresh the Soul",
     subheadline: "Curated travel, stays, and guest experiences across Kerala.",
     intro: [
-      "Ekho Rascapes is Echo Futur's tourism and hospitality arm — crafting journeys, stays, and guest experiences that go beyond sightseeing. We design meaningful travel that rejuvenates the mind and body.",
-      "From curated itineraries to hospitality partnerships, our team brings Echo Futur's quality standard to every guest touchpoint.",
+      "Ekhora Scapes is Ekho Future's tourism and hospitality arm — crafting journeys, stays, and guest experiences that go beyond sightseeing. We design meaningful travel that rejuvenates the mind and body.",
+      "From curated itineraries to hospitality partnerships, our team brings Ekho Future's quality standard to every guest touchpoint.",
     ],
     blocks: [
       {
@@ -696,11 +696,11 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
           "Curated Tourism: Slow, meaningful itineraries focused on refreshment and discovery.",
           "Hospitality Experiences: Guest-ready environments for homestays, retreats, and wellness stays.",
           "Destination Planning: Local partnerships, activity curation, and on-ground coordination.",
-          "Brand Hospitality: Support for restaurants, homestays, and tourism ventures within the Echo Futur group.",
+          "Brand Hospitality: Support for restaurants, homestays, and tourism ventures within the Ekho Future group.",
         ],
       },
       {
-        heading: "The Rascapes Approach",
+        heading: "The Ekhora Scapes Approach",
         numbered: [
           {
             title: "Discover & Plan",
@@ -722,12 +722,12 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
       {
         heading: "Travel That Renews You",
         paragraphs: [
-          "Partner with Ekho Rascapes for tourism and hospitality experiences that leave guests energized, inspired, and eager to return.",
+          "Partner with Ekhora Scapes for tourism and hospitality experiences that leave guests energized, inspired, and eager to return.",
         ],
       },
     ],
     closing: {
-      tagline: "Ekho Rascapes: Tourism and hospitality, thoughtfully done.",
+      tagline: "Ekhora Scapes: Tourism and hospitality, thoughtfully done.",
     },
   },
 
@@ -737,7 +737,7 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
     subheadline: "Clean water at home and at work — reliable systems, honest service.",
     intro: [
       "Pure Flow provides water purification solutions engineered for Indian water conditions. We help households and businesses access safe drinking water through efficient filtration, RO systems, and maintenance you can trust.",
-      "As Echo Futur's sustainability-focused brand, we prioritize health, conservation, and long-term system performance.",
+      "As Ekho Future's sustainability-focused brand, we prioritize health, conservation, and long-term system performance.",
     ],
     blocks: [
       {
@@ -794,7 +794,7 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
         heading: "Why Ekho Digix?",
         quote: "We ship working products — not presentations about products.",
         bullets: [
-          "Echo Futur Portfolio: We build and maintain sites for Builders, Compliment, SkillByte, and more.",
+          "Ekho Future Portfolio: We build and maintain sites for Builders, Compliment, SkillByte, and more.",
           "Clear Process: Discovery, milestones, and demos so you always know progress.",
           "Modern Stack: Fast, secure, maintainable code your team can grow with.",
         ],
@@ -835,13 +835,13 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
   },
 
   skillbyte: {
-    displayTitle: "Ekho SkillByte Academy",
+    displayTitle: "EkhoSkillByte Academy",
     headline: "Advanced AI Digital Marketing Course",
     subheadline:
       "Live training in SEO, social media, paid ads, and AI-powered content — for Kerala and beyond.",
     intro: [
-      "Ekho SkillByte Academy is Echo Futur's education brand. Our flagship program is the Advanced AI Digital Marketing course — a practical, module-based path for marketers, entrepreneurs, and students who want job-ready skills.",
-      "Classes are live and project-based, using real examples from Echo Futur businesses so you learn what works in the market, not only in theory.",
+      "EkhoSkillByte Academy is Ekho Future's education brand. Our flagship program is the Advanced AI Digital Marketing course — a practical, module-based path for marketers, entrepreneurs, and students who want job-ready skills.",
+      "Classes are live and project-based, using real examples from Ekho Future businesses so you learn what works in the market, not only in theory.",
     ],
     blocks: [
       {
@@ -890,12 +890,12 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
       {
         heading: "Enroll Today",
         paragraphs: [
-          "Contact Ekho SkillByte for the next Advanced AI Digital Marketing batch, fees, and corporate training options.",
+          "Contact EkhoSkillByte for the next Advanced AI Digital Marketing batch, fees, and corporate training options.",
         ],
       },
     ],
     closing: {
-      tagline: "Ekho SkillByte: Market smarter. Grow faster.",
+      tagline: "EkhoSkillByte: Market smarter. Grow faster.",
     },
   },
 };

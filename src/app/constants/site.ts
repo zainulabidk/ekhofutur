@@ -18,7 +18,7 @@ export const MAIN_NAV = [
 
 export const FOOTER_VENTURE_LINKS = [
   { name: "Old School", href: "/old-school" },
-  { name: "Trend Setter", href: "/trend-setter" },
+  { name: "Trendsetter", href: "/trend-setter" },
   { name: "Lubnas Dental", href: "/lubnas-dental" },
   { name: "Compliment", href: "/compliment" },
   { name: "Ekho Digix", href: "/ekho-digix" },
@@ -95,7 +95,7 @@ export const VENTURES: Venture[] = [
   },
   {
     id: "trend-setter",
-    title: "Trend Setter",
+    title: "Trendsetter",
     category: "Outdoor Clothing",
     description:
       "Innovative and ahead of the curve, we create designs that set trends in the industry.",
@@ -132,10 +132,10 @@ export const VENTURES: Venture[] = [
     description:
       "Compassionate therapy and wellness services for families and individuals.",
     images: [
-      "https://i.postimg.cc/d0vJpRgV/Whats-App-Image-2026-03-10-at-2-22-33-PM.jpg",
-      "https://i.postimg.cc/v8jbbwpy/Whats-App-Image-2026-03-10-at-2-22-33-PM.jpg",
-      "https://i.postimg.cc/QdbwvTd6/IMG-2059.avif",
-      "https://i.postimg.cc/br2Xsd4g/Whats-App-Image-2026-03-10-at-2-22-33-PM.jpg",
+      "/ventures/hopeful-steps/hero.jpg",
+      "/ventures/hopeful-steps/therapy.jpg",
+      "/ventures/hopeful-steps/children.jpg",
+      "/ventures/hopeful-steps/play.jpg",
     ],
     href: "/hopeful-steps",
     tagline: "Therapy & wellness",
@@ -143,7 +143,7 @@ export const VENTURES: Venture[] = [
   },
   {
     id: "builders",
-    title: "Echo Futur Builders & Realtors",
+    title: "Ekho Builders & Realtors",
     category: "Ekho Builders",
     description:
       "Expertly crafted real estate solutions for modern urban and residential developments.",
@@ -159,7 +159,7 @@ export const VENTURES: Venture[] = [
   },
   {
     id: "builders-solar",
-    title: "Ekho Builders Solar",
+    title: "Ekho Nova",
     category: "Ekho Builders",
     description:
       "End-to-end solar energy systems for homes and businesses — site survey, installation, net metering support, and maintenance across Kerala.",
@@ -175,7 +175,7 @@ export const VENTURES: Venture[] = [
   },
   {
     id: "builders-lift",
-    title: "Ekho Builders Lift",
+    title: "Ekho Elevators",
     category: "Ekho Builders",
     description:
       "Passenger and service lift installation, modernization, and AMC maintenance for residential, commercial, and hospitality buildings.",
@@ -191,7 +191,7 @@ export const VENTURES: Venture[] = [
   },
   {
     id: "ekho-rascapes",
-    title: "Ekho Rascapes",
+    title: "Ekhora Scapes",
     category: "Tourism and Hospitality",
     description:
       "Curated tourism experiences and hospitality services across Kerala.",
@@ -256,7 +256,7 @@ export const VENTURES: Venture[] = [
   },
   {
     id: "skillbyte",
-    title: "Ekho SkillByte Academy",
+    title: "EkhoSkillByte Academy",
     category: "Ekho Digix",
     description:
       "Advanced AI digital marketing courses and hands-on professional coaching.",
