@@ -635,49 +635,60 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
 
   "hopeful-steps": {
     displayTitle: "Hopeful Steps",
-    headline: "Therapy & Wellness for Every Stage of Life",
-    subheadline: "Compassionate support for children, families, and individuals.",
+    headline: "Therapy Programme for Every Child",
+    subheadline:
+      "Pediatric speech, occupational, physio, sensory, feeding, and group therapy in Oud Metha, Dubai.",
     intro: [
-      "Hopeful Steps provides speech therapy, behavioral support, counseling, and special education services in a warm, nurturing environment. We meet each person where they are — with patience, expertise, and encouragement.",
-      "Our mission is simple: help every client take the next step forward with confidence.",
+      "Hopeful Steps is a pediatric therapy programme dedicated to helping children with special needs reach their fullest potential. Based at Al Nasr Palace, Oud Metha, Dubai, our team delivers play-based, evidence-led care that feels warm, safe, and joyful.",
+      "Every therapy plan starts with a detailed assessment. We then craft individualized goals across communication, motor skills, sensory regulation, feeding, and social development — with parent partnership at the centre of progress.",
     ],
     blocks: [
       {
-        heading: "Our Core Services",
+        heading: "Programs & Specializations",
         bullets: [
-          "Speech Therapy: Communication skills through engaging, age-appropriate techniques.",
-          "Child Development: Cognitive and social growth through guided play and structured activities.",
-          "Behavioral Therapy: Positive strategies for emotional regulation and healthy habits.",
-          "Counseling: A safe space for healing, clarity, and personal growth.",
-          "Special Education: Individualized learning paths that honor each child's strengths.",
+          "Speech & Language Therapy: Communication, articulation, and language development.",
+          "Occupational Therapy: Daily living skills, confidence, and independence.",
+          "Physiotherapy: Movement, balance, strength, and coordination.",
+          "Sensory Integration Therapy: Helping children regulate emotions and sensory responses.",
+          "Feeding Therapy: Oral motor skills, food aversions, and picky eating support.",
+          "Group Therapy: Peer-based learning and social skills development.",
+          "Early Intervention: Critical support for developmental delays.",
         ],
       },
       {
-        heading: "Who We Serve",
+        heading: "Our Approach",
         listGroups: [
           {
-            title: "Children & Adolescents",
+            title: "Holistic & Multidisciplinary",
             items: [
-              "Early intervention, school-readiness, and social-skills development.",
+              "Speech, OT, physio, and behavioral specialists collaborate on one coherent plan.",
             ],
           },
           {
-            title: "Families",
+            title: "Play-Based & Child-Centered",
             items: [
-              "Parent guidance, family counseling, and coordinated care plans.",
+              "Sessions use movement, sensory play, and fun activities so progress feels natural.",
+            ],
+          },
+          {
+            title: "Family Partnership",
+            items: [
+              "Parents receive home strategies and ongoing guidance so growth continues beyond the clinic.",
             ],
           },
         ],
       },
       {
-        heading: "Start Your Journey",
+        heading: "Visit Hopeful Steps",
         paragraphs: [
-          "Reach out to schedule an assessment or book a visit. Our specialists are here to listen and build a plan that fits your needs.",
+          "Al Nasr Palace — Shop No. 2, near Metro Station, Oud Metha, Dubai, UAE.",
+          "Call +971 55 394 1711 or email info@hopefulstepsdxb.com to book an assessment.",
+          "Follow @hopefulsteps_dxb for progress stories, tips, and clinic updates.",
         ],
       },
     ],
     closing: {
-      tagline: "Hopeful Steps: Every step matters.",
+      tagline: "Hopeful Steps: Where every child's journey matters.",
     },
   },
 

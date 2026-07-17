@@ -97,7 +97,7 @@ export const BRAND_RESOURCES: BrandResource[] = [
   {
     id: "hopeful-steps",
     name: "Hopeful Steps",
-    email: "Ekhofutur@gmail.com",
+    email: "info@hopefulstepsdxb.com",
     sitePath: "/hopeful-steps",
   },
   {
