@@ -1,8 +1,9 @@
 import { Quote } from "lucide-react";
 import { MediaSlot } from "./ui/MediaSlot";
 import { TESTIMONIALS } from "../constants/data";
-import { COMPANY_CONTACT } from "../constants/site";
+import { COMPANY_CONTACT, whatsappUrl } from "../constants/site";
 import { Reveal } from "./ui/Reveal";
+import { WhatsAppLeadForm } from "./ui/WhatsAppLeadForm";
 
 export function Testimonials() {
   return (
@@ -70,37 +71,51 @@ export function ContactForm() {
               Ready to build across any Ekho Future venture.
             </p>
             <a
-              href={`mailto:${COMPANY_CONTACT.primaryEmail}`}
+              href={whatsappUrl("Hi Ekho Future — I'd like to start a project.")}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-3 text-white/60 font-black tracking-widest uppercase text-xs hover:text-white transition-colors"
             >
               <span className="w-2 h-2 bg-yellow-400 rounded-full" />
-              {COMPANY_CONTACT.primaryEmail}
+              WhatsApp · {COMPANY_CONTACT.phoneDisplay}
             </a>
           </Reveal>
 
           <Reveal delay={80}>
-            <form className="bg-white/5 p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl border border-white/10 form-stack">
-              <input
-                type="text"
-                placeholder="Full name"
-                autoComplete="name"
-                className="form-field form-field-dark bg-transparent border-x-0 border-t-0 rounded-none border-b border-white/15 px-0"
-              />
-              <input
-                type="email"
-                placeholder="Email"
-                autoComplete="email"
-                className="form-field form-field-dark bg-transparent border-x-0 border-t-0 rounded-none border-b border-white/15 px-0"
-              />
-              <textarea
-                rows={3}
-                placeholder="How can we help?"
-                className="form-field form-field-dark bg-transparent border-x-0 border-t-0 rounded-none border-b border-white/15 px-0 resize-none"
-              />
-              <button type="button" className="btn-accent w-full justify-center py-4 min-h-[48px]">
-                Send proposal
-              </button>
-            </form>
+            <WhatsAppLeadForm
+              topic="project inquiry"
+              className="bg-white/5 p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl border border-white/10 form-stack"
+              submitLabel="Send on WhatsApp"
+              submitClassName="btn-accent w-full justify-center py-4 min-h-[48px]"
+              fields={[
+                {
+                  name: "name",
+                  placeholder: "Full name",
+                  autoComplete: "name",
+                  className:
+                    "form-field form-field-dark bg-transparent border-x-0 border-t-0 rounded-none border-b border-white/15 px-0",
+                  wrapperClassName: "",
+                },
+                {
+                  name: "email",
+                  type: "email",
+                  placeholder: "Email",
+                  autoComplete: "email",
+                  className:
+                    "form-field form-field-dark bg-transparent border-x-0 border-t-0 rounded-none border-b border-white/15 px-0",
+                  wrapperClassName: "",
+                },
+                {
+                  name: "message",
+                  type: "textarea",
+                  placeholder: "How can we help?",
+                  rows: 3,
+                  className:
+                    "form-field form-field-dark bg-transparent border-x-0 border-t-0 rounded-none border-b border-white/15 px-0 resize-none",
+                  wrapperClassName: "",
+                },
+              ]}
+            />
           </Reveal>
         </div>
       </div>

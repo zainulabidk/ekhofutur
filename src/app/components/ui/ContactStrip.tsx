@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { Mail, Phone, MapPin } from "lucide-react";
-import { COMPANY_CONTACT } from "@/app/constants/site";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { COMPANY_CONTACT, whatsappUrl } from "@/app/constants/site";
 
 type ContactStripProps = {
   variant?: "light" | "dark";
@@ -13,6 +12,13 @@ export function ContactStrip({ variant = "dark", className }: ContactStripProps)
   const isDark = variant === "dark";
 
   const items = [
+    {
+      icon: MessageCircle,
+      label: "WhatsApp",
+      value: "Chat with us",
+      href: whatsappUrl("Hi Ekho Future!"),
+      external: true,
+    },
     {
       icon: Phone,
       label: "Call",
@@ -37,8 +43,8 @@ export function ContactStrip({ variant = "dark", className }: ContactStripProps)
       className={
         className ??
         (isDark
-          ? "grid grid-cols-1 md:grid-cols-3 gap-8"
-          : "grid grid-cols-1 md:grid-cols-3 gap-6")
+          ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6")
       }
     >
       {items.map((item) => (
@@ -63,8 +69,11 @@ export function ContactStrip({ variant = "dark", className }: ContactStripProps)
               {item.label}
             </p>
             {item.href ? (
-              <Link
+              <a
                 href={item.href}
+                {...("external" in item && item.external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
                 className={
                   isDark
                     ? "font-bold text-white hover:text-yellow-400 transition-colors"
@@ -72,7 +81,7 @@ export function ContactStrip({ variant = "dark", className }: ContactStripProps)
                 }
               >
                 {item.value}
-              </Link>
+              </a>
             ) : (
               <p
                 className={

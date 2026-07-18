@@ -1,4 +1,4 @@
-export { COMPANY_CONTACT, BRAND_RESOURCES, getBrandById } from "./brandResources";
+export { COMPANY_CONTACT, BRAND_RESOURCES, getBrandById, whatsappUrl } from "./brandResources";
 
 export const SITE = {
   name: "Ekho Future",

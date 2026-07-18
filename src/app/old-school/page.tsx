@@ -2,13 +2,15 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, ShoppingBag, Play } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { getVentureById } from "../constants/site";
+import { getVentureById, whatsappUrl } from "../constants/site";
 
 const venture = getVentureById("old-school")!;
 const imgs = venture.images;
+const WA = whatsappUrl("Hi! I'm interested in Old School Outdoor Clothing.");
 
 const COLLECTION = [
   { name: "Classic Denim Jacket", price: "$129", image: imgs[0] },
@@ -57,16 +59,24 @@ export default function OldSchoolPage() {
             transition={{ delay: 0.5, duration: 1 }}
             className="flex flex-col md:flex-row items-center justify-center gap-6 pt-10"
           >
-            <button className="bg-[#D4A373] text-black px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white transition-all duration-500 flex items-center gap-3 group">
+            <a
+              href={WA}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#D4A373] text-black px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white transition-all duration-500 flex items-center gap-3 group"
+            >
                 Shop Collection 
                 <ShoppingBag className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-            </button>
-            <button className="border border-white/20 text-white px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all duration-500 flex items-center gap-3 group">
+            </a>
+            <Link
+              href="/contact"
+              className="border border-white/20 text-white px-12 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all duration-500 flex items-center gap-3 group"
+            >
                 Watch Film
                 <div className="size-6 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-black/10 transition-colors">
                     <Play className="w-3 h-3 fill-current" />
                 </div>
-            </button>
+            </Link>
           </motion.div>
         </div>
 
@@ -124,9 +134,14 @@ export default function OldSchoolPage() {
              <h2 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter text-[#E6D5B8]">Core <br /> Collection</h2>
              <p className="text-[#D4A373] uppercase tracking-[0.4em] text-sm font-bold">Fall / Winter 2026</p>
           </div>
-          <button className="text-[#E6D5B8] flex items-center gap-4 group uppercase text-xs tracking-widest font-black">
+          <a
+            href={WA}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#E6D5B8] flex items-center gap-4 group uppercase text-xs tracking-widest font-black"
+          >
                 View All Items <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform text-[#D4A373]" />
-          </button>
+          </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -198,9 +213,14 @@ export default function OldSchoolPage() {
                 Wear The <br /> Legacy.
             </h2>
             <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-                <button className="bg-black text-white px-16 py-6 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-transform flex items-center gap-4">
+                <a
+                  href={WA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black text-white px-16 py-6 rounded-full font-black uppercase tracking-widest text-sm hover:scale-105 transition-transform flex items-center gap-4"
+                >
                     Visit Store <ArrowRight className="w-6 h-6" />
-                </button>
+                </a>
                 <div className="text-left">
                     <p className="font-black italic uppercase text-lg leading-tight">Ekho Futur presents</p>
                     <p className="font-medium opacity-70 tracking-widest text-xs uppercase">Old School Vintage Line</p>

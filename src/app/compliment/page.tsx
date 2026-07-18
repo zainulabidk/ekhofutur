@@ -16,10 +16,11 @@ import {
 } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { getVentureById } from "../constants/site";
+import { getVentureById, whatsappUrl } from "../constants/site";
 
 const venture = getVentureById("compliment")!;
 const imgs = venture.images;
+const WA = whatsappUrl("Hi! I'm interested in Compliment smart kitchen appliances.");
 
 const FEATURES = [
   { title: "AI Recipe Assistant", desc: "AI-guided cooking tips and meal planning powered by smart kitchen integration.", icon: <Cpu className="w-6 h-6" /> },
@@ -133,12 +134,20 @@ export default function ComplimentPage() {
                     Compliment is not just a brand; it&apos;s a lifestyle upgrade. We integrate high-conversion engineering with culinary passion to create appliances that think as fast as you cook.
                 </p>
                 <div className="flex gap-4">
-                    <button className="bg-orange-500 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest text-xs hover:scale-105 transition-transform">
+                    <a
+                      href={WA}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-orange-500 text-white px-10 py-5 rounded-full font-black uppercase tracking-widest text-xs hover:scale-105 transition-transform"
+                    >
                         Launch Showroom
-                    </button>
-                    <button className="bg-white/5 text-white border border-white/10 px-10 py-5 rounded-full font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all">
+                    </a>
+                    <Link
+                      href="/contact"
+                      className="bg-white/5 text-white border border-white/10 px-10 py-5 rounded-full font-black uppercase tracking-widest text-xs hover:bg-white hover:text-black transition-all"
+                    >
                         Tech Specs
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -184,9 +193,14 @@ export default function ComplimentPage() {
                 Cook <br /> <span className="text-orange-500">Differently.</span>
             </h2>
             <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-                <button type="button" className="bg-orange-500 text-white w-full sm:w-auto px-8 sm:px-12 md:px-20 py-5 md:py-8 rounded-full font-black uppercase tracking-widest text-xs sm:text-sm hover:shadow-[0_0_50px_rgba(249,115,22,0.4)] transition-all min-h-[48px]">
+                <a
+                  href={WA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-orange-500 text-white w-full sm:w-auto px-8 sm:px-12 md:px-20 py-5 md:py-8 rounded-full font-black uppercase tracking-widest text-xs sm:text-sm hover:shadow-[0_0_50px_rgba(249,115,22,0.4)] transition-all min-h-[48px] inline-flex items-center justify-center"
+                >
                     Upgrade Your Home
-                </button>
+                </a>
                 <Link href="/contact" className="text-white font-black uppercase tracking-widest text-[14px] flex items-center gap-4 group">
                     Request Quote <ArrowRight className="w-6 h-6 text-orange-500 group-hover:translate-x-2 transition-transform" />
                 </Link>

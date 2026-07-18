@@ -4,10 +4,22 @@ export const COMPANY_CONTACT = {
   phone: "+91 7902650101",
   phoneDisplay: "7902650101",
   phoneHref: "tel:+917902650101",
+  /** Digits only, country code included — used by wa.me links */
+  whatsappNumber: "917902650101",
   whatsappHref: "https://wa.me/917902650101",
   primaryEmail: "Ekhofutur@gmail.com",
   location: "Industrial Hub, Kerala, India",
 } as const;
+
+/** Build a WhatsApp deep link, optionally with a prefilled message. */
+export function whatsappUrl(
+  message?: string,
+  phone: string = COMPANY_CONTACT.whatsappNumber,
+): string {
+  const base = `https://wa.me/${phone.replace(/\D/g, "")}`;
+  if (!message?.trim()) return base;
+  return `${base}?text=${encodeURIComponent(message.trim())}`;
+}
 
 export type BrandResource = {
   id: string;

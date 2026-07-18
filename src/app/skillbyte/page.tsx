@@ -16,13 +16,12 @@ import {
 } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { getVentureById } from "../constants/site";
-import { getBrandById } from "../constants/brandResources";
+import { getVentureById, whatsappUrl } from "../constants/site";
 
 const venture = getVentureById("skillbyte")!;
-const brand = getBrandById("skillbyte");
 const imgs = venture.images;
 const accent = venture.accent ?? "#4f46e5";
+const WA = whatsappUrl("Hi! I'd like to enroll in Ekho SkillByte AI Digital Marketing.");
 
 const MODULES = [
   {
@@ -109,22 +108,22 @@ export default function SkillbytePage() {
               content creation with hands-on projects from the Echo Futur ecosystem.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Link
-                href="/contact"
+              <a
+                href={WA}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-10 py-4 rounded-full font-black uppercase tracking-widest text-[10px] text-white shadow-lg"
                 style={{ backgroundColor: accent }}
               >
                 Enroll now
                 <ArrowRight className="w-4 h-4" />
+              </a>
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-10 py-4 rounded-full border-2 border-white/30 text-white font-black uppercase tracking-widest text-[10px] hover:bg-white/10 transition-colors"
+              >
+                Contact form
               </Link>
-              {brand?.email && (
-                <a
-                  href={`mailto:${brand.email}`}
-                  className="inline-flex items-center px-10 py-4 rounded-full border-2 border-white/30 text-white font-black uppercase tracking-widest text-[10px] hover:bg-white/10 transition-colors"
-                >
-                  {brand.email}
-                </a>
-              )}
             </div>
           </motion.div>
         </div>
@@ -244,13 +243,15 @@ export default function SkillbytePage() {
             New batches for the Advanced AI Digital Marketing course open regularly. Contact us for
             fees, schedules, and corporate training.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href={WA}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-14 py-5 rounded-full font-black uppercase tracking-widest text-[11px] text-white"
             style={{ backgroundColor: accent }}
           >
             Join SkillByte <ArrowRight className="w-5 h-5" />
-          </Link>
+          </a>
         </div>
       </section>
 

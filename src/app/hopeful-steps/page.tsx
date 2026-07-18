@@ -20,7 +20,8 @@ import {
 } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { getVentureById } from "../constants/site";
+import { WhatsAppLeadForm } from "../components/ui/WhatsAppLeadForm";
+import { getVentureById, whatsappUrl } from "../constants/site";
 
 const venture = getVentureById("hopeful-steps")!;
 const imgs = venture.images;
@@ -29,6 +30,11 @@ const INSTAGRAM_URL = "https://www.instagram.com/hopefulsteps_dxb";
 const WEBSITE_URL = "https://hopefulstepsdxb.com";
 const PHONE = "+971 55 394 1711";
 const PHONE_HREF = "tel:+971553941711";
+const WHATSAPP_PHONE = "971553941711";
+const WA = whatsappUrl(
+  "Hi Hopeful Steps — I'd like to book a pediatric therapy assessment.",
+  WHATSAPP_PHONE,
+);
 const EMAIL = "info@hopefulstepsdxb.com";
 const ADDRESS = "Al Nasr Palace — Shop No. 2, Oud Metha, Dubai, UAE";
 
@@ -186,7 +192,9 @@ export default function HopefulStepsPage() {
             className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
           >
             <a
-              href={PHONE_HREF}
+              href={WA}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-emerald-500 text-white px-10 py-5 rounded-[2rem] font-black uppercase tracking-widest text-sm hover:bg-emerald-600 transition-all shadow-xl shadow-emerald-100 flex items-center justify-center gap-3"
             >
               Book Assessment <Calendar className="w-5 h-5" />
@@ -489,44 +497,52 @@ export default function HopefulStepsPage() {
             </div>
           </div>
           <div className="p-6 sm:p-10 md:p-16 lg:p-20 bg-emerald-50/40 flex flex-col justify-center">
-            <form className="form-stack">
-              <div className="form-stack-2">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  autoComplete="name"
-                  className="form-field form-field-accent-emerald rounded-3xl"
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  autoComplete="tel"
-                  className="form-field form-field-accent-emerald rounded-3xl"
-                />
-              </div>
-              <input
-                type="email"
-                placeholder="Email Address"
-                autoComplete="email"
-                className="form-field form-field-accent-emerald rounded-3xl"
-              />
-              <select className="form-field form-field-accent-emerald rounded-3xl appearance-none">
-                <option>Choose Therapy Type</option>
-                <option>Speech & Language Therapy</option>
-                <option>Occupational Therapy</option>
-                <option>Physiotherapy</option>
-                <option>Sensory Integration</option>
-                <option>Feeding Therapy</option>
-                <option>Group Therapy</option>
-                <option>Early Intervention</option>
-              </select>
-              <button
-                type="button"
-                className="w-full bg-emerald-500 text-white font-black uppercase tracking-widest py-4 md:py-6 rounded-3xl hover:bg-emerald-600 transition-all shadow-xl shadow-emerald-100 min-h-[48px]"
-              >
-                Book Appointment
-              </button>
-            </form>
+            <WhatsAppLeadForm
+              topic="Hopeful Steps therapy booking"
+              phone={WHATSAPP_PHONE}
+              className="form-stack"
+              submitLabel="Book Appointment"
+              submitClassName="w-full bg-emerald-500 text-white font-black uppercase tracking-widest py-4 md:py-6 rounded-3xl hover:bg-emerald-600 transition-all shadow-xl shadow-emerald-100 min-h-[48px]"
+              fields={[
+                {
+                  name: "name",
+                  placeholder: "Your Name",
+                  autoComplete: "name",
+                  className: "form-field form-field-accent-emerald rounded-3xl",
+                },
+                {
+                  name: "phone",
+                  type: "tel",
+                  placeholder: "Phone Number",
+                  autoComplete: "tel",
+                  className: "form-field form-field-accent-emerald rounded-3xl",
+                },
+                {
+                  name: "email",
+                  type: "email",
+                  placeholder: "Email Address",
+                  autoComplete: "email",
+                  required: false,
+                  className: "form-field form-field-accent-emerald rounded-3xl",
+                },
+                {
+                  name: "therapy",
+                  type: "select",
+                  placeholder: "Choose Therapy Type",
+                  className: "form-field form-field-accent-emerald rounded-3xl",
+                  options: [
+                    "Choose Therapy Type",
+                    "Speech & Language Therapy",
+                    "Occupational Therapy",
+                    "Physiotherapy",
+                    "Sensory Integration",
+                    "Feeding Therapy",
+                    "Group Therapy",
+                    "Early Intervention",
+                  ],
+                },
+              ]}
+            />
           </div>
         </div>
       </section>

@@ -1,9 +1,10 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { SiteShell } from "../components/layout/SiteShell";
 import { PageHero } from "../components/ui/PageHero";
 import { BrandContactsGrid } from "../components/contact/BrandContactsGrid";
 import { Reveal } from "../components/ui/Reveal";
-import { COMPANY_CONTACT } from "../constants/site";
+import { WhatsAppLeadForm } from "../components/ui/WhatsAppLeadForm";
+import { COMPANY_CONTACT, whatsappUrl } from "../constants/site";
 import { SITE_MEDIA } from "../constants/media";
 
 export default function ContactPage() {
@@ -17,7 +18,6 @@ export default function ContactPage() {
       />
       <section className="section-padding">
         <div className="container-site space-y-14 md:space-y-16">
-          {/* Header + form */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div className="space-y-8">
               <Reveal className="space-y-4">
@@ -29,8 +29,15 @@ export default function ContactPage() {
                 </p>
               </Reveal>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
                 {[
+                  {
+                    icon: MessageCircle,
+                    label: "WhatsApp",
+                    val: "Chat on WhatsApp",
+                    href: whatsappUrl("Hi Ekho Future — I'd like to get in touch."),
+                    external: true,
+                  },
                   {
                     icon: Phone,
                     label: "Call",
@@ -64,6 +71,9 @@ export default function ContactPage() {
                       {"href" in item && item.href ? (
                         <a
                           href={item.href}
+                          {...("external" in item && item.external
+                            ? { target: "_blank", rel: "noopener noreferrer" }
+                            : {})}
                           className="text-black text-sm font-bold hover:text-yellow-600 transition-colors break-all"
                         >
                           {item.val}
@@ -78,44 +88,46 @@ export default function ContactPage() {
             </div>
 
             <Reveal delay={80}>
-              <form className="bg-black p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl shadow-xl form-stack lg:sticky lg:top-28">
-                <div>
-                  <label className="form-label text-white/40 ml-1 sm:ml-2">Your Name</label>
-                  <input
-                    className="form-field form-field-dark mt-2 rounded-full"
-                    type="text"
-                    placeholder="Your name"
-                    autoComplete="name"
-                  />
-                </div>
-                <div>
-                  <label className="form-label text-white/40 ml-1 sm:ml-2">Your Email</label>
-                  <input
-                    className="form-field form-field-dark mt-2 rounded-full"
-                    type="email"
-                    placeholder="you@email.com"
-                    autoComplete="email"
-                  />
-                </div>
-                <div>
-                  <label className="form-label text-white/40 ml-1 sm:ml-2">Message</label>
-                  <textarea
-                    rows={4}
-                    className="form-field form-field-dark mt-2 resize-none"
-                    placeholder="How can we help?"
-                  />
-                </div>
-                <button
-                  type="button"
-                  className="w-full bg-yellow-400 text-black py-4 rounded-full font-black uppercase tracking-widest text-xs hover:bg-yellow-300 transition-colors min-h-[48px]"
-                >
-                  Send Message
-                </button>
-              </form>
+              <WhatsAppLeadForm
+                topic="website contact inquiry"
+                className="bg-black p-6 sm:p-8 md:p-10 rounded-2xl md:rounded-3xl shadow-xl form-stack lg:sticky lg:top-28"
+                submitLabel="Send on WhatsApp"
+                submitClassName="w-full bg-yellow-400 text-black py-4 rounded-full font-black uppercase tracking-widest text-xs hover:bg-yellow-300 transition-colors min-h-[48px]"
+                fields={[
+                  {
+                    name: "name",
+                    label: "Your Name",
+                    labelClassName: "form-label text-white/40 ml-1 sm:ml-2",
+                    placeholder: "Your name",
+                    autoComplete: "name",
+                    className: "form-field form-field-dark mt-2 rounded-full",
+                    wrapperClassName: "space-y-0",
+                  },
+                  {
+                    name: "email",
+                    label: "Your Email",
+                    labelClassName: "form-label text-white/40 ml-1 sm:ml-2",
+                    type: "email",
+                    placeholder: "you@email.com",
+                    autoComplete: "email",
+                    className: "form-field form-field-dark mt-2 rounded-full",
+                    wrapperClassName: "space-y-0",
+                  },
+                  {
+                    name: "message",
+                    label: "Message",
+                    labelClassName: "form-label text-white/40 ml-1 sm:ml-2",
+                    type: "textarea",
+                    placeholder: "How can we help?",
+                    rows: 4,
+                    className: "form-field form-field-dark mt-2 resize-none",
+                    wrapperClassName: "space-y-0",
+                  },
+                ]}
+              />
             </Reveal>
           </div>
 
-          {/* Brand contacts — full width, no scroll */}
           <Reveal>
             <div className="pt-10 md:pt-12 border-t border-slate-100">
               <BrandContactsGrid />

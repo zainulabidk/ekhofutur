@@ -15,13 +15,12 @@ import {
 } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { getVentureById } from "../constants/site";
-import { getBrandById } from "../constants/brandResources";
+import { getVentureById, whatsappUrl } from "../constants/site";
 
 const venture = getVentureById("ekhodigix")!;
-const brand = getBrandById("ekhodigix");
 const imgs = venture.images;
 const accent = venture.accent ?? "#4682B4";
+const WA = whatsappUrl("Hi! I'd like to start a project with Ekho Digix.");
 
 const SERVICES = [
   {
@@ -112,22 +111,22 @@ export default function EkhoDigixPage() {
               reliable digital products, not just slides.
             </p>
             <div className="flex flex-wrap gap-4 pt-2">
-              <Link
-                href="/contact"
+              <a
+                href={WA}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-10 py-4 rounded-full font-black uppercase tracking-widest text-[10px] text-white transition-opacity hover:opacity-90"
                 style={{ backgroundColor: accent }}
               >
                 Start a project
                 <ArrowRight className="w-4 h-4" />
+              </a>
+              <Link
+                href="/contact"
+                className="inline-flex items-center px-10 py-4 rounded-full border border-white/20 text-white font-black uppercase tracking-widest text-[10px] hover:bg-white/10 transition-colors"
+              >
+                Contact form
               </Link>
-              {brand?.email && (
-                <a
-                  href={`mailto:${brand.email}`}
-                  className="inline-flex items-center px-10 py-4 rounded-full border border-white/20 text-white font-black uppercase tracking-widest text-[10px] hover:bg-white/10 transition-colors"
-                >
-                  {brand.email}
-                </a>
-              )}
             </div>
           </motion.div>
         </div>
@@ -254,13 +253,15 @@ export default function EkhoDigixPage() {
             Tell us about your website, app, or software idea — we will scope it and deliver a clear
             plan.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href={WA}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-14 py-5 rounded-full font-black uppercase tracking-widest text-[11px] text-white"
             style={{ backgroundColor: accent }}
           >
             Get a quote <ArrowRight className="w-5 h-5" />
-          </Link>
+          </a>
         </div>
       </section>
 

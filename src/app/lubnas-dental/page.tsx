@@ -16,10 +16,12 @@ import {
 } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { getVentureById } from "../constants/site";
+import { WhatsAppLeadForm } from "../components/ui/WhatsAppLeadForm";
+import { COMPANY_CONTACT, getVentureById, whatsappUrl } from "../constants/site";
 
 const venture = getVentureById("lubnas")!;
 const imgs = venture.images;
+const WA = whatsappUrl("Hi! I'd like to book an appointment at Lubnas Dental Clinic.");
 
 const SERVICES = [
   { title: "Dental Cleaning", desc: "Professional plaque removal and polishing for a healthy, bright smile.", icon: <CheckCircle className="w-6 h-6" /> },
@@ -73,26 +75,40 @@ export default function DentalClinicPage() {
              transition={{ delay: 0.5 }}
              className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
            >
-             <button className="bg-blue-600 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-blue-700 transition-all shadow-xl shadow-blue-200 flex items-center justify-center gap-3">
+             <a
+               href={WA}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="bg-blue-600 text-white px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-blue-700 transition-all shadow-xl shadow-blue-200 flex items-center justify-center gap-3"
+             >
                 Book Appointment <Calendar className="w-5 h-5" />
-             </button>
-             <button className="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-sm hover:border-blue-600 transition-all flex items-center justify-center gap-3">
+             </a>
+             <a
+               href={COMPANY_CONTACT.phoneHref}
+               className="bg-white text-slate-900 border border-slate-200 px-10 py-5 rounded-2xl font-black uppercase tracking-widest text-sm hover:border-blue-600 transition-all flex items-center justify-center gap-3"
+             >
                 Call Now <Phone className="w-5 h-5" />
-             </button>
+             </a>
            </motion.div>
         </div>
 
         {/* Floating Info */}
         <div className="absolute right-10 bottom-10 hidden lg:flex gap-4">
              {[
-                 { label: "Emergency", value: "+91 7902650101", icon: <Phone className="w-5 h-5" /> },
+                 { label: "Emergency", value: COMPANY_CONTACT.phone, icon: <Phone className="w-5 h-5" />, href: COMPANY_CONTACT.phoneHref },
                  { label: "Hours", value: "9 AM - 8 PM", icon: <Clock className="w-5 h-5" /> }
              ].map((item, i) => (
                  <div key={i} className="bg-white p-6 rounded-3xl shadow-2xl border border-slate-100 flex items-start gap-4">
                      <div className="size-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">{item.icon}</div>
                      <div>
                          <p className="text-[10px] uppercase font-black tracking-widest text-slate-400 leading-none mb-1">{item.label}</p>
-                         <p className="text-sm font-bold text-slate-900">{item.value}</p>
+                         {"href" in item && item.href ? (
+                           <a href={item.href} className="text-sm font-bold text-slate-900 hover:text-blue-600 transition-colors">
+                             {item.value}
+                           </a>
+                         ) : (
+                           <p className="text-sm font-bold text-slate-900">{item.value}</p>
+                         )}
                      </div>
                  </div>
              ))}
@@ -213,35 +229,51 @@ export default function DentalClinicPage() {
                     </div>
                     <div className="flex items-center gap-4 md:gap-6">
                         <div className="size-10 md:size-12 shrink-0 rounded-2xl bg-white/10 flex items-center justify-center text-white"><Phone className="w-5 h-5 md:w-6 md:h-6" /></div>
-                        <p className="font-bold text-sm md:text-base">+91 7902650101</p>
+                        <a href={COMPANY_CONTACT.phoneHref} className="font-bold text-sm md:text-base hover:underline">
+                          {COMPANY_CONTACT.phone}
+                        </a>
                     </div>
                 </div>
             </div>
             <div className="p-6 sm:p-10 md:p-16 lg:p-20 flex flex-col justify-center">
-                <form className="form-stack-2">
-                    <div className="space-y-2">
-                        <label className="form-label text-slate-400">Full Name</label>
-                        <input type="text" placeholder="John Doe" autoComplete="name" className="form-field form-field-accent-blue" />
-                    </div>
-                    <div className="space-y-2">
-                        <label className="form-label text-slate-400">Phone</label>
-                        <input type="tel" placeholder="+91 7902650101" autoComplete="tel" className="form-field form-field-accent-blue" />
-                    </div>
-                    <div className="sm:col-span-2 space-y-2">
-                        <label className="form-label text-slate-400">Treatment</label>
-                        <select className="form-field form-field-accent-blue appearance-none">
-                            <option>Orthodontic Braces</option>
-                            <option>Teeth Whitening</option>
-                            <option>Dental Implant</option>
-                            <option>Root Canal</option>
-                        </select>
-                    </div>
-                    <div className="sm:col-span-2 pt-2 md:pt-4">
-                        <button type="button" className="w-full bg-blue-600 text-white font-black uppercase tracking-widest py-4 md:py-5 rounded-2xl hover:bg-slate-900 transition-all shadow-xl shadow-blue-200 min-h-[48px]">
-                            Confirm Appointment
-                        </button>
-                    </div>
-                </form>
+                <WhatsAppLeadForm
+                  topic="Lubnas Dental appointment request"
+                  className="form-stack"
+                  submitLabel="Confirm Appointment"
+                  submitClassName="w-full bg-blue-600 text-white font-black uppercase tracking-widest py-4 md:py-5 rounded-2xl hover:bg-slate-900 transition-all shadow-xl shadow-blue-200 min-h-[48px]"
+                  fields={[
+                    {
+                      name: "name",
+                      label: "Full Name",
+                      labelClassName: "form-label text-slate-400",
+                      placeholder: "John Doe",
+                      autoComplete: "name",
+                      className: "form-field form-field-accent-blue",
+                    },
+                    {
+                      name: "phone",
+                      label: "Phone",
+                      labelClassName: "form-label text-slate-400",
+                      type: "tel",
+                      placeholder: "+91 7902650101",
+                      autoComplete: "tel",
+                      className: "form-field form-field-accent-blue",
+                    },
+                    {
+                      name: "treatment",
+                      label: "Treatment",
+                      labelClassName: "form-label text-slate-400",
+                      type: "select",
+                      className: "form-field form-field-accent-blue",
+                      options: [
+                        "Orthodontic Braces",
+                        "Teeth Whitening",
+                        "Dental Implant",
+                        "Root Canal",
+                      ],
+                    },
+                  ]}
+                />
             </div>
          </div>
       </section>

@@ -6,10 +6,11 @@ import Link from "next/link";
 import { ArrowRight, ShoppingBag } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { getVentureById } from "../constants/site";
+import { getVentureById, whatsappUrl } from "../constants/site";
 
 const venture = getVentureById("trend-setter")!;
 const imgs = venture.images;
+const WA = whatsappUrl("Hi! I'm interested in Trendsetter apparel.");
 
 const COLLECTIONS = [
   { name: "Monochrome Vest", category: "Apparel", image: imgs[0] },
@@ -179,9 +180,14 @@ export default function TrendSetterPage() {
                 Lead The <br /> Movement.
             </h2>
             <div className="flex flex-col md:flex-row items-center justify-center gap-10">
-                <button className="bg-black text-white px-14 py-5 font-black uppercase tracking-widest text-[10px] hover:bg-gray-800 transition-all flex items-center gap-4">
+                <a
+                  href={WA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black text-white px-14 py-5 font-black uppercase tracking-widest text-[10px] hover:bg-gray-800 transition-all flex items-center gap-4"
+                >
                     Explore Collection <ArrowRight className="w-4 h-4" />
-                </button>
+                </a>
                 <Link href="/contact" className="text-[10px] font-black uppercase tracking-widest border-b-2 border-black pb-1">
                     Book Private Showing
                 </Link>

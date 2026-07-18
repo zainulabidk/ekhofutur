@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { 
   Flame, 
   Utensils, 
@@ -13,10 +14,11 @@ import {
 } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { getVentureById } from "../constants/site";
+import { getVentureById, whatsappUrl } from "../constants/site";
 
 const venture = getVentureById("pots-and-pans")!;
 const imgs = venture.images;
+const WA = whatsappUrl("Hi! I'm interested in Pots & Pans cookware.");
 
 const COLLECTIONS = [
   { name: "Iron-Core Series", material: "Enamelled Cast Iron", img: imgs[0] },
@@ -68,12 +70,20 @@ export default function PotsAndPanPage() {
              transition={{ delay: 0.5 }}
              className="flex flex-col sm:flex-row gap-6 justify-center"
            >
-             <button className="bg-slate-900 text-white px-12 py-6 rounded-full font-black uppercase tracking-widest text-xs hover:bg-[#8B4513] transition-all flex items-center justify-center gap-4 group">
+             <a
+               href={WA}
+               target="_blank"
+               rel="noopener noreferrer"
+               className="bg-slate-900 text-white px-12 py-6 rounded-full font-black uppercase tracking-widest text-xs hover:bg-[#8B4513] transition-all flex items-center justify-center gap-4 group"
+             >
                 Shop Collection <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-             </button>
-             <button className="bg-white text-slate-900 border border-slate-200 px-12 py-6 rounded-full font-black uppercase tracking-widest text-xs hover:border-[#8B4513] transition-all">
+             </a>
+             <Link
+               href="/contact"
+               className="bg-white text-slate-900 border border-slate-200 px-12 py-6 rounded-full font-black uppercase tracking-widest text-xs hover:border-[#8B4513] transition-all inline-flex items-center justify-center"
+             >
                 The Guide
-             </button>
+             </Link>
            </motion.div>
         </div>
       </section>
@@ -127,9 +137,14 @@ export default function PotsAndPanPage() {
       <section className="px-6 md:px-12 lg:px-24 py-16 md:py-28 lg:py-40 bg-slate-100 rounded-3xl md:rounded-[4rem] lg:rounded-[5rem] mx-0 sm:mx-4 md:mx-12 lg:mx-24 mb-16 md:mb-28 lg:mb-40 border border-slate-200">
          <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-24">
             <h2 className="text-5xl md:text-8xl font-black uppercase italic tracking-tighter text-slate-900">Forged <br /> For <span className="text-[#8B4513]">Chefs.</span></h2>
-            <button className="text-[#8B4513] flex items-center gap-3 font-black uppercase tracking-widest text-xs group">
+            <a
+              href={WA}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#8B4513] flex items-center gap-3 font-black uppercase tracking-widest text-xs group"
+            >
                 Full Catalogue <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
          </div>
 
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -161,9 +176,14 @@ export default function PotsAndPanPage() {
                 Taste The <br /> <span className="text-[#8B4513]">Precision.</span>
             </h2>
             <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-                <button className="bg-[#8B4513] text-white px-16 py-8 rounded-full font-black uppercase tracking-widest text-[14px] hover:bg-slate-900 transition-all flex items-center gap-4">
+                <a
+                  href={WA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#8B4513] text-white px-16 py-8 rounded-full font-black uppercase tracking-widest text-[14px] hover:bg-slate-900 transition-all flex items-center gap-4"
+                >
                     Upgrade Your Kitchen <ArrowRight className="w-6 h-6" />
-                </button>
+                </a>
                 <div className="text-left">
                     <p className="font-black italic uppercase text-lg text-[#8B4513]">Lifetime Warranty</p>
                     <p className="text-xs uppercase font-black tracking-[0.2em] text-slate-400">Guaranteed for the next century</p>

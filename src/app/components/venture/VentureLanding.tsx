@@ -8,7 +8,7 @@ import { Reveal } from "../ui/Reveal";
 import { ServiceVentureContent } from "../services/ServiceVentureContent";
 import { VentureMediaShowcase } from "./VentureMediaShowcase";
 import type { Venture } from "@/app/constants/site";
-import { getBrandById } from "@/app/constants/brandResources";
+import { whatsappUrl } from "@/app/constants/brandResources";
 import { getVentureContent } from "@/app/constants/ventureContent";
 import { getVentureMedia } from "@/lib/venture-media";
 
@@ -17,10 +17,10 @@ type VentureLandingProps = {
 };
 
 export function VentureLanding({ venture }: VentureLandingProps) {
-  const brand = getBrandById(venture.id);
   const accent = venture.accent ?? "#FFD700";
   const content = getVentureContent(venture.id);
   const media = getVentureMedia(venture.id);
+  const WA = whatsappUrl(`Hi! I'm interested in ${venture.title}.`);
 
   return (
     <SiteShell>
@@ -32,22 +32,22 @@ export function VentureLanding({ venture }: VentureLandingProps) {
 
       <section className="section-padding-tight border-b border-black/5 bg-surface">
         <div className="container-site flex flex-wrap items-center justify-between gap-4">
-          <Link
-            href="/contact"
+          <a
+            href={WA}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-black uppercase tracking-widest text-[10px] text-white transition-opacity hover:opacity-90"
             style={{ backgroundColor: accent }}
           >
             Get in touch
             <ArrowRight className="w-4 h-4" />
+          </a>
+          <Link
+            href="/contact"
+            className="text-sm text-slate-500 font-bold hover:text-black transition-colors"
+          >
+            Contact form →
           </Link>
-          {brand?.email && (
-            <a
-              href={`mailto:${brand.email}`}
-              className="text-sm text-slate-500 font-bold hover:text-black transition-colors"
-            >
-              {brand.email}
-            </a>
-          )}
         </div>
       </section>
 
@@ -100,13 +100,15 @@ export function VentureLanding({ venture }: VentureLandingProps) {
                     ? "Book a live AI demo or workshop"
                     : "See our work in action"}
                 </p>
-                <Link
-                  href="/contact"
+                <a
+                  href={WA}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-primary"
                   style={{ backgroundColor: accent }}
                 >
                   Request a session
-                </Link>
+                </a>
               </div>
             </Reveal>
           </div>
