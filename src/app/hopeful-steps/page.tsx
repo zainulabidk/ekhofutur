@@ -14,7 +14,7 @@ import {
   Activity,
   Utensils,
   Users,
-  Instagram,
+  Camera,
   ExternalLink,
   HandHeart,
 } from "lucide-react";
@@ -165,7 +165,7 @@ export default function HopefulStepsPage() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-white text-slate-600 border border-emerald-100 px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest hover:border-emerald-400 hover:text-emerald-600 transition-colors"
               >
-                <Instagram className="w-3.5 h-3.5" />
+                <Camera className="w-3.5 h-3.5" />
                 @hopefulsteps_dxb
               </a>
             </div>
@@ -339,7 +339,7 @@ export default function HopefulStepsPage() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div className="space-y-3">
             <p className="text-xs font-black uppercase tracking-widest text-emerald-500 flex items-center gap-2">
-              <Instagram className="w-4 h-4" /> From @hopefulsteps_dxb
+              <Camera className="w-4 h-4" /> From @hopefulsteps_dxb
             </p>
             <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">
               Progress in <span className="text-emerald-500 italic">pictures.</span>
@@ -480,7 +480,7 @@ export default function HopefulStepsPage() {
                 className="flex items-center gap-4 md:gap-6 group"
               >
                 <div className="size-10 md:size-12 shrink-0 rounded-full bg-pink-50 flex items-center justify-center text-pink-500">
-                  <Instagram className="w-5 h-5 md:w-6 md:h-6" />
+                  <Camera className="w-5 h-5 md:w-6 md:h-6" />
                 </div>
                 <p className="font-bold text-slate-600 text-sm md:text-base group-hover:text-emerald-600 transition-colors">
                   @hopefulsteps_dxb
