@@ -19,6 +19,9 @@ export const viewport = {
 export const metadata: Metadata = {
   title: `${SITE.name} | ${SITE.tagline}`,
   description: SITE.description,
+  verification: {
+    google: "cUC8KdU6ueSfNF6LHjLoBLxwbm0w9gtR9Ney37MhgS4",
+  },
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "32x32", type: "image/png" },
