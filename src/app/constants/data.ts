@@ -72,7 +72,7 @@ export const TESTIMONIALS = [
   {
     id: 3,
     name: "Amira Hassan",
-    role: "Trendsetter Customer",
+    role: "Trendsetters Customer",
     text: "Found the perfect outdoor look for my trip. The collection is stunning and the staff made shopping a delightful experience.",
     image: getVentureImage("trend-setter", 1)!,
   },

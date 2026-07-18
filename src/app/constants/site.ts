@@ -18,7 +18,7 @@ export const MAIN_NAV = [
 
 export const FOOTER_VENTURE_LINKS = [
   { name: "Old School", href: "/old-school" },
-  { name: "Trendsetter", href: "/trend-setter" },
+  { name: "Trendsetters", href: "/trend-setter" },
   { name: "Lubnas Dental", href: "/lubnas-dental" },
   { name: "Compliment", href: "/compliment" },
   { name: "Ekho Digix", href: "/ekho-digix" },
@@ -95,7 +95,7 @@ export const VENTURES: Venture[] = [
   },
   {
     id: "trend-setter",
-    title: "Trendsetter",
+    title: "Trendsetters",
     category: "Outdoor Clothing",
     description:
       "Innovative and ahead of the curve, we create designs that set trends in the industry.",

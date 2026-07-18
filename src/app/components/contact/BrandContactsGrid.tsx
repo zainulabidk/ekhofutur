@@ -5,7 +5,7 @@ import { BRAND_RESOURCES } from "@/app/constants/site";
 const BRAND_LABELS: Record<string, string> = {
   "old-school": "Old School",
   compliment: "Complikit",
-  "trend-setter": "Trendsetter",
+  "trend-setter": "Trendsetters",
   builders: "Ekho Builders & Realtors",
   "builders-solar": "Ekho Nova",
   "builders-lift": "Ekho Elevators",

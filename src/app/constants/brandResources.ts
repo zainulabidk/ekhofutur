@@ -43,7 +43,7 @@ export const BRAND_RESOURCES: BrandResource[] = [
   },
   {
     id: "trend-setter",
-    name: "Trendsetter",
+    name: "Trendsetters",
     email: "trendsetters0101@gmail.com",
     sitePath: "/trend-setter",
   },

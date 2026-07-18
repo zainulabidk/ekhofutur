@@ -328,19 +328,19 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
   },
 
   "trend-setter": {
-    displayTitle: "Trendsetter",
+    displayTitle: "Trendsetters",
     headline: "Redefining the Modern Masculine Aesthetic",
     subheadline:
       "Premium Outdoor Apparel for the Man Who Leads, Never Follows.",
     intro: [
-      "Style isn't just about what you wear; it's about the statement you make. Trendsetter is the premier menswear destination within the Ekho Future group, dedicated to the man who demands a fusion of high-street fashion and outdoor performance. We don't just follow the latest styles—we define them.",
+      "Style isn't just about what you wear; it's about the statement you make. Trendsetters is the premier menswear destination within the Ekho Future group, dedicated to the man who demands a fusion of high-street fashion and outdoor performance. We don't just follow the latest styles—we define them.",
     ],
     blocks: [
       {
-        heading: "The Trendsetter Vision",
+        heading: "The Trendsetters Vision",
         quote: "Where the pavement ends, the style begins.",
         paragraphs: [
-          "We believe that \"outdoor\" doesn't have to mean \"bulky.\" Trendsetter curates a collection of premium clothing that transitions seamlessly from a high-stakes meeting to a mountain-side retreat. Our pieces are selected for the man who values sharp silhouettes, technical fabrics, and an undeniable presence.",
+          "We believe that \"outdoor\" doesn't have to mean \"bulky.\" Trendsetters curates a collection of premium clothing that transitions seamlessly from a high-stakes meeting to a mountain-side retreat. Our pieces are selected for the man who values sharp silhouettes, technical fabrics, and an undeniable presence.",
         ],
       },
       {
@@ -357,9 +357,9 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
         ],
       },
       {
-        heading: "Why Trendsetter?",
+        heading: "Why Trendsetters?",
         bullets: [
-          "Curation Over Collection: We don't stock everything; we only stock the best. Every garment is handpicked for its \"Trendsetter\" status.",
+          "Curation Over Collection: We don't stock everything; we only stock the best. Every garment is handpicked for its \"Trendsetters\" status.",
           "The Modern Fit: Our clothing is designed for the modern physique—sharp, clean lines that flatter while allowing for total freedom of movement.",
           "Echo Futur Innovation: Leveraging the visionary spirit of Echo Futur, we bring you the latest textile technology and global fashion trends before they hit the mainstream.",
         ],
@@ -372,7 +372,7 @@ export const VENTURE_CONTENT: Record<string, VentureContent> = {
       },
     ],
     closing: {
-      tagline: "Trendsetter: For those who set the pace.",
+      tagline: "Trendsetters: For those who set the pace.",
     },
   },
 

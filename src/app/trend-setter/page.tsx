@@ -10,7 +10,7 @@ import { getVentureById, whatsappUrl } from "../constants/site";
 
 const venture = getVentureById("trend-setter")!;
 const imgs = venture.images;
-const WA = whatsappUrl("Hi! I'm interested in Trendsetter apparel.");
+const WA = whatsappUrl("Hi! I'm interested in Trendsetters apparel.");
 
 const COLLECTIONS = [
   { name: "Monochrome Vest", category: "Apparel", image: imgs[0] },
@@ -31,7 +31,7 @@ export default function TrendSetterPage() {
         <div className="absolute inset-0 overflow-hidden">
           <Image 
             src={imgs[0]} 
-            alt="Trendsetter Hero" 
+            alt="Trendsetters Hero" 
             fill 
             className="object-cover"
             priority
@@ -46,7 +46,7 @@ export default function TrendSetterPage() {
             transition={{ duration: 1.5, ease: "easeOut" }}
             className="text-6xl md:text-[10rem] font-black uppercase"
           >
-            Trend <br className="md:hidden" /> Setter
+            Trend <br className="md:hidden" /> Setters
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export default function TrendSetterPage() {
                 <span className="font-black italic uppercase">Precision.</span>
             </h2>
             <p className="text-gray-500 text-lg md:text-xl font-light leading-relaxed max-w-md">
-                Trendsetter operates at the intersection of modern architecture and wearable art. Every piece is a study in geometry, fabric integrity, and monochrome balance.
+                Trendsetters operates at the intersection of modern architecture and wearable art. Every piece is a study in geometry, fabric integrity, and monochrome balance.
             </p>
             <div className="flex items-center gap-6">
                  <div className="size-16 rounded-full border border-black/10 flex items-center justify-center">
